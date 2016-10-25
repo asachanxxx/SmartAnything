@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RIT_ATModelStoreContainer" CdmEntityContainer="RIT_ATEntities">
+    <EntitySetMapping Name="M_Area">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Area">
+        <MappingFragment StoreEntitySet="M_Area">
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Descri" ColumnName="Descri" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Bank">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Bank">
+        <MappingFragment StoreEntitySet="M_Bank">
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="BANK_NAME" ColumnName="BANK_NAME" />
+          <ScalarProperty Name="BANK_DTRANSFER" ColumnName="BANK_DTRANSFER" />
+          <ScalarProperty Name="BANK_EXBATCH" ColumnName="BANK_EXBATCH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Company">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Company">
+        <MappingFragment StoreEntitySet="M_Company">
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="Add1" ColumnName="Add1" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="Add3" ColumnName="Add3" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Emailx" ColumnName="Emailx" />
+          <ScalarProperty Name="Tpno" ColumnName="Tpno" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Loca">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Loca">
+        <MappingFragment StoreEntitySet="M_Loca">
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Companycode" ColumnName="Companycode" />
+          <ScalarProperty Name="StockCode" ColumnName="StockCode" />
+          <ScalarProperty Name="Locaname" ColumnName="Locaname" />
+          <ScalarProperty Name="Add1" ColumnName="Add1" />
+          <ScalarProperty Name="Add2" ColumnName="Add2" />
+          <ScalarProperty Name="Add3" ColumnName="Add3" />
+          <ScalarProperty Name="Tpno" ColumnName="Tpno" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Emailx" ColumnName="Emailx" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Route">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Route">
+        <MappingFragment StoreEntitySet="M_Route">
+          <ScalarProperty Name="Routecode" ColumnName="Routecode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="TerritoryCode" ColumnName="TerritoryCode" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Suppliers">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Suppliers">
+        <MappingFragment StoreEntitySet="M_Suppliers">
+          <ScalarProperty Name="SupID" ColumnName="SupID" />
+          <ScalarProperty Name="suppName" ColumnName="suppName" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Territory">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Territory">
+        <MappingFragment StoreEntitySet="M_Territory">
+          <ScalarProperty Name="TerritoryCode" ColumnName="TerritoryCode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="UserNamex" ColumnName="UserNamex" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Vehicles">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Vehicles">
+        <MappingFragment StoreEntitySet="M_Vehicles">
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Driver" ColumnName="Driver" />
+          <ScalarProperty Name="Milage" ColumnName="Milage" />
+          <ScalarProperty Name="FuelEfficiency" ColumnName="FuelEfficiency" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Route" ColumnName="Route" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Category">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Category">
+        <MappingFragment StoreEntitySet="M_Category">
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="Lockedby" ColumnName="Lockedby" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="Codex" ColumnName="Codex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_ProductPriceChange">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_ProductPriceChange">
+        <MappingFragment StoreEntitySet="M_ProductPriceChange">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="NewSelling" ColumnName="NewSelling" />
+          <ScalarProperty Name="CurrentSelling" ColumnName="CurrentSelling" />
+          <ScalarProperty Name="NewCost" ColumnName="NewCost" />
+          <ScalarProperty Name="Currentcost" ColumnName="Currentcost" />
+          <ScalarProperty Name="ChangedPlace" ColumnName="ChangedPlace" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_AutoNumber">
+      <EntityTypeMapping TypeName="RIT_ATModel.P_AutoNumber">
+        <MappingFragment StoreEntitySet="P_AutoNumber">
+          <ScalarProperty Name="TempIndex" ColumnName="TempIndex" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Screen" ColumnName="Screen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_BankBranch">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_BankBranch">
+        <MappingFragment StoreEntitySet="M_BankBranch">
+          <ScalarProperty Name="BBRANCH_EXBATCH" ColumnName="BBRANCH_EXBATCH" />
+          <ScalarProperty Name="BBRANCH_DTRANSFER" ColumnName="BBRANCH_DTRANSFER" />
+          <ScalarProperty Name="BBRANCH_CTIME" ColumnName="BBRANCH_CTIME" />
+          <ScalarProperty Name="BBRANCH_NAME" ColumnName="BBRANCH_NAME" />
+          <ScalarProperty Name="BBRANCH_CODE" ColumnName="BBRANCH_CODE" />
+          <ScalarProperty Name="BBRANCH_BANK" ColumnName="BBRANCH_BANK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Employees">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Employees">
+        <MappingFragment StoreEntitySet="M_Employees">
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_CNReason">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_CNReason">
+        <MappingFragment StoreEntitySet="M_CNReason">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="StockType" ColumnName="StockType" />
+          <ScalarProperty Name="NeedToUpdateStock" ColumnName="NeedToUpdateStock" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_CNTypes">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_CNTypes">
+        <MappingFragment StoreEntitySet="M_CNTypes">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Stock">
+      <EntityTypeMapping TypeName="RIT_ATModel.T_Stock">
+        <MappingFragment StoreEntitySet="T_Stock">
+          <ScalarProperty Name="DateCr" ColumnName="DateCr" />
+          <ScalarProperty Name="Usercode" ColumnName="Usercode" />
+          <ScalarProperty Name="EXPDate" ColumnName="EXPDate" />
+          <ScalarProperty Name="SIH" ColumnName="SIH" />
+          <ScalarProperty Name="FixedGP" ColumnName="FixedGP" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="InitialCost" ColumnName="InitialCost" />
+          <ScalarProperty Name="AvgCost" ColumnName="AvgCost" />
+          <ScalarProperty Name="CompanyPrice" ColumnName="CompanyPrice" />
+          <ScalarProperty Name="MrpPrice" ColumnName="MrpPrice" />
+          <ScalarProperty Name="WholeSalePrice" ColumnName="WholeSalePrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="ReservedStock" ColumnName="ReservedStock" />
+          <ScalarProperty Name="InitialStock" ColumnName="InitialStock" />
+          <ScalarProperty Name="OpnStock" ColumnName="OpnStock" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Suppid" ColumnName="Suppid" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="StockCode" ColumnName="StockCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Levels">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Levels">
+        <MappingFragment StoreEntitySet="M_Levels">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="dateModified" ColumnName="dateModified" />
+          <ScalarProperty Name="userModified" ColumnName="userModified" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="userCreated" ColumnName="userCreated" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="levelId" ColumnName="levelId" />
+          <ScalarProperty Name="code" ColumnName="code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Product_Has_Supplier">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Product_Has_Supplier">
+        <MappingFragment StoreEntitySet="M_Product_Has_Supplier">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="supplierId" ColumnName="supplierId" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_cancelAutoNumber">
+      <EntityTypeMapping TypeName="RIT_ATModel.P_cancelAutoNumber">
+        <MappingFragment StoreEntitySet="P_cancelAutoNumber">
+          <ScalarProperty Name="autoNo" ColumnName="autoNo" />
+          <ScalarProperty Name="master" ColumnName="master" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="u_UserRoles">
+      <EntityTypeMapping TypeName="RIT_ATModel.u_UserRolex">
+        <MappingFragment StoreEntitySet="u_UserRoles">
+          <ScalarProperty Name="activate" ColumnName="activate" />
+          <ScalarProperty Name="dateModified" ColumnName="dateModified" />
+          <ScalarProperty Name="userModified" ColumnName="userModified" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="userCreated" ColumnName="userCreated" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Agents">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Agents">
+        <MappingFragment StoreEntitySet="M_Agents">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="TimeTo" ColumnName="TimeTo" />
+          <ScalarProperty Name="TimeFrom" ColumnName="TimeFrom" />
+          <ScalarProperty Name="userx" ColumnName="userx" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+          <ScalarProperty Name="NICno" ColumnName="NICno" />
+          <ScalarProperty Name="AccNo" ColumnName="AccNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TPPersonal" ColumnName="TPPersonal" />
+          <ScalarProperty Name="TPOffice" ColumnName="TPOffice" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Namex" ColumnName="Namex" />
+          <ScalarProperty Name="AgentCode" ColumnName="AgentCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_SalesMan">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_SalesMan">
+        <MappingFragment StoreEntitySet="M_SalesMan">
+          <ScalarProperty Name="NICNo" ColumnName="NICNo" />
+          <ScalarProperty Name="Gradex" ColumnName="Gradex" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="SalesmanName" ColumnName="SalesmanName" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="SalesmanID" ColumnName="SalesmanID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_CushasAgents">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_CushasAgents">
+        <MappingFragment StoreEntitySet="M_CushasAgents">
+          <ScalarProperty Name="userx" ColumnName="userx" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="AgentCode" ColumnName="AgentCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_StockDamage">
+      <EntityTypeMapping TypeName="RIT_ATModel.T_StockDamage">
+        <MappingFragment StoreEntitySet="T_StockDamage">
+          <ScalarProperty Name="DateCr" ColumnName="DateCr" />
+          <ScalarProperty Name="Usercode" ColumnName="Usercode" />
+          <ScalarProperty Name="EXPDate" ColumnName="EXPDate" />
+          <ScalarProperty Name="SIH" ColumnName="SIH" />
+          <ScalarProperty Name="FixedGP" ColumnName="FixedGP" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="InitialCost" ColumnName="InitialCost" />
+          <ScalarProperty Name="AvgCost" ColumnName="AvgCost" />
+          <ScalarProperty Name="CompanyPrice" ColumnName="CompanyPrice" />
+          <ScalarProperty Name="MrpPrice" ColumnName="MrpPrice" />
+          <ScalarProperty Name="WholeSalePrice" ColumnName="WholeSalePrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="ReservedStock" ColumnName="ReservedStock" />
+          <ScalarProperty Name="InitialStock" ColumnName="InitialStock" />
+          <ScalarProperty Name="OpnStock" ColumnName="OpnStock" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Suppid" ColumnName="Suppid" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="StockCode" ColumnName="StockCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="u_User">
+      <EntityTypeMapping TypeName="RIT_ATModel.u_Userxcc">
+        <MappingFragment StoreEntitySet="u_User">
+          <ScalarProperty Name="NICNo" ColumnName="NICNo" />
+          <ScalarProperty Name="Gradex" ColumnName="Gradex" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="dateModified" ColumnName="dateModified" />
+          <ScalarProperty Name="userModified" ColumnName="userModified" />
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="userCreated" ColumnName="userCreated" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_CustomerCategory">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_CustomerCategory">
+        <MappingFragment StoreEntitySet="M_CustomerCategory">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CusCateID" ColumnName="CusCateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_CustomerSub">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_CustomerSub">
+        <MappingFragment StoreEntitySet="M_CustomerSub">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="CussubID" ColumnName="CussubID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Customers">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Customers">
+        <MappingFragment StoreEntitySet="M_Customers">
+          <ScalarProperty Name="subcat" ColumnName="subcat" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="customerAccountCode" ColumnName="customerAccountCode" />
+          <ScalarProperty Name="controlAccountCode" ColumnName="controlAccountCode" />
+          <ScalarProperty Name="pointsEarned" ColumnName="pointsEarned" />
+          <ScalarProperty Name="customerOS" ColumnName="customerOS" />
+          <ScalarProperty Name="CusCurBal" ColumnName="CusCurBal" />
+          <ScalarProperty Name="CusOpenBal" ColumnName="CusOpenBal" />
+          <ScalarProperty Name="ApplyingDisc" ColumnName="ApplyingDisc" />
+          <ScalarProperty Name="MinDisc" ColumnName="MinDisc" />
+          <ScalarProperty Name="MaxDisc" ColumnName="MaxDisc" />
+          <ScalarProperty Name="CreditPeriod" ColumnName="CreditPeriod" />
+          <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+          <ScalarProperty Name="Gradex" ColumnName="Gradex" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Address3" ColumnName="Address3" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="CusID" ColumnName="CusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Products">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Products">
+        <MappingFragment StoreEntitySet="M_Products">
+          <ScalarProperty Name="AutoIndex" ColumnName="AutoIndex" />
+          <ScalarProperty Name="SubCategory" ColumnName="SubCategory" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CommissionPer" ColumnName="CommissionPer" />
+          <ScalarProperty Name="CommissionAmount" ColumnName="CommissionAmount" />
+          <ScalarProperty Name="CustomerWarrenty" ColumnName="CustomerWarrenty" />
+          <ScalarProperty Name="SupplierWarrenty" ColumnName="SupplierWarrenty" />
+          <ScalarProperty Name="WholesalePrice" ColumnName="WholesalePrice" />
+          <ScalarProperty Name="IsMaintainStockLot" ColumnName="IsMaintainStockLot" />
+          <ScalarProperty Name="isOpenPrice" ColumnName="isOpenPrice" />
+          <ScalarProperty Name="StockLot" ColumnName="StockLot" />
+          <ScalarProperty Name="OpenPrice" ColumnName="OpenPrice" />
+          <ScalarProperty Name="Norefundable" ColumnName="Norefundable" />
+          <ScalarProperty Name="VatApplicable" ColumnName="VatApplicable" />
+          <ScalarProperty Name="NegativeQTY" ColumnName="NegativeQTY" />
+          <ScalarProperty Name="SalesCommAllowed" ColumnName="SalesCommAllowed" />
+          <ScalarProperty Name="DiscountAllowed" ColumnName="DiscountAllowed" />
+          <ScalarProperty Name="FrezzItem" ColumnName="FrezzItem" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LockItem" ColumnName="LockItem" />
+          <ScalarProperty Name="ApplyingDisc" ColumnName="ApplyingDisc" />
+          <ScalarProperty Name="MinDisc" ColumnName="MinDisc" />
+          <ScalarProperty Name="MaxDisc" ColumnName="MaxDisc" />
+          <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+          <ScalarProperty Name="ReorderQTY" ColumnName="ReorderQTY" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Suplier" ColumnName="Suplier" />
+          <ScalarProperty Name="Unitx" ColumnName="Unitx" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="PrintName" ColumnName="PrintName" />
+          <ScalarProperty Name="Namex" ColumnName="Namex" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="IDX" ColumnName="IDX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_SubCategory">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_SubCategory">
+        <MappingFragment StoreEntitySet="M_SubCategory">
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="Lockedby" ColumnName="Lockedby" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Codex" ColumnName="Codex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_ProductParts">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_ProductParts">
+        <MappingFragment StoreEntitySet="M_ProductParts">
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="ReOrderQty" ColumnName="ReOrderQty" />
+          <ScalarProperty Name="EOQty" ColumnName="EOQty" />
+          <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+          <ScalarProperty Name="ReOrderLevel" ColumnName="ReOrderLevel" />
+          <ScalarProperty Name="PackSize" ColumnName="PackSize" />
+          <ScalarProperty Name="AvgPrice" ColumnName="AvgPrice" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="UnitOfMeasure" ColumnName="UnitOfMeasure" />
+          <ScalarProperty Name="MfctCode" ColumnName="MfctCode" />
+          <ScalarProperty Name="SuppCode" ColumnName="SuppCode" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="ModelNO" ColumnName="ModelNO" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="IDX" ColumnName="IDX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_Product_Has_Parts">
+      <EntityTypeMapping TypeName="RIT_ATModel.M_Product_Has_Parts">
+        <MappingFragment StoreEntitySet="M_Product_Has_Parts">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="PartId" ColumnName="PartId" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RIT_ATModel2StoreContainer" CdmEntityContainer="RIT_ATEntities2">
+    <EntitySetMapping Name="T_packingdet">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_packingdet">
+        <MappingFragment StoreEntitySet="T_packingdet">
+          <ScalarProperty Name="TTLCartons" ColumnName="TTLCartons" />
+          <ScalarProperty Name="datex" ColumnName="datex" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Dono" ColumnName="Dono" />
+          <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_packinghead">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_packinghead">
+        <MappingFragment StoreEntitySet="T_packinghead">
+          <ScalarProperty Name="Glupdated" ColumnName="Glupdated" />
+          <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="Driver" ColumnName="Driver" />
+          <ScalarProperty Name="Vehicle" ColumnName="Vehicle" />
+          <ScalarProperty Name="NoOfCartons" ColumnName="NoOfCartons" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+          <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CreditNoteHead">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_CreditNoteHead">
+        <MappingFragment StoreEntitySet="T_CreditNoteHead">
+          <ScalarProperty Name="ApprovedUser" ColumnName="ApprovedUser" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="GroupedUser" ColumnName="GroupedUser" />
+          <ScalarProperty Name="GroupedDate" ColumnName="GroupedDate" />
+          <ScalarProperty Name="Grouped" ColumnName="Grouped" />
+          <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AgentStatus" ColumnName="AgentStatus" />
+          <ScalarProperty Name="DeliveryStatus" ColumnName="DeliveryStatus" />
+          <ScalarProperty Name="PackingList" ColumnName="PackingList" />
+          <ScalarProperty Name="DeliveredDate" ColumnName="DeliveredDate" />
+          <ScalarProperty Name="ManualID" ColumnName="ManualID" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Statusx" ColumnName="Statusx" />
+          <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+          <ScalarProperty Name="TypeX" ColumnName="TypeX" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Dono" ColumnName="Dono" />
+          <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+          <ScalarProperty Name="OFNo" ColumnName="OFNo" />
+          <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_OrderFormHead">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_OrderFormHead">
+        <MappingFragment StoreEntitySet="T_OrderFormHead">
+          <ScalarProperty Name="INVCreatedUser" ColumnName="INVCreatedUser" />
+          <ScalarProperty Name="InvCreatedDate" ColumnName="InvCreatedDate" />
+          <ScalarProperty Name="InvCreated" ColumnName="InvCreated" />
+          <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="NetTotal" ColumnName="NetTotal" />
+          <ScalarProperty Name="TotalDisc" ColumnName="TotalDisc" />
+          <ScalarProperty Name="ItemdiscTotal" ColumnName="ItemdiscTotal" />
+          <ScalarProperty Name="SubtotalDisc" ColumnName="SubtotalDisc" />
+          <ScalarProperty Name="DiscountPer" ColumnName="DiscountPer" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="BRANCH" ColumnName="BRANCH" />
+          <ScalarProperty Name="BANK" ColumnName="BANK" />
+          <ScalarProperty Name="CQDate" ColumnName="CQDate" />
+          <ScalarProperty Name="CQNO" ColumnName="CQNO" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="RecivedDate" ColumnName="RecivedDate" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="CheckedBy" ColumnName="CheckedBy" />
+          <ScalarProperty Name="RecivedBy" ColumnName="RecivedBy" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+          <ScalarProperty Name="TRNType" ColumnName="TRNType" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SalesCustomerAlloc">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_SalesCustomerAlloc">
+        <MappingFragment StoreEntitySet="T_SalesCustomerAlloc">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SalesItemAlloc">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_SalesItemAlloc">
+        <MappingFragment StoreEntitySet="T_SalesItemAlloc">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CustomerItemAlloc">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_CustomerItemAlloc">
+        <MappingFragment StoreEntitySet="T_CustomerItemAlloc">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_DIliveryHed">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_DIliveryHed">
+        <MappingFragment StoreEntitySet="T_DIliveryHed">
+          <ScalarProperty Name="AuditRemarks" ColumnName="AuditRemarks" />
+          <ScalarProperty Name="ReportedProblems" ColumnName="ReportedProblems" />
+          <ScalarProperty Name="PackingListUser" ColumnName="PackingListUser" />
+          <ScalarProperty Name="PackingListDate" ColumnName="PackingListDate" />
+          <ScalarProperty Name="PackingListNo" ColumnName="PackingListNo" />
+          <ScalarProperty Name="PackingListCreated" ColumnName="PackingListCreated" />
+          <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+          <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+          <ScalarProperty Name="Audited" ColumnName="Audited" />
+          <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PrintUser" ColumnName="PrintUser" />
+          <ScalarProperty Name="NoOfPrints" ColumnName="NoOfPrints" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DiliveryDate" ColumnName="DiliveryDate" />
+          <ScalarProperty Name="DiliveredUser" ColumnName="DiliveredUser" />
+          <ScalarProperty Name="Delivered" ColumnName="Delivered" />
+          <ScalarProperty Name="HandoverCartons" ColumnName="HandoverCartons" />
+          <ScalarProperty Name="HandoverDate" ColumnName="HandoverDate" />
+          <ScalarProperty Name="HandoverdUser" ColumnName="HandoverdUser" />
+          <ScalarProperty Name="Handovered" ColumnName="Handovered" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="ApprovedUser" ColumnName="ApprovedUser" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="Checkeddate" ColumnName="Checkeddate" />
+          <ScalarProperty Name="CheckedUser" ColumnName="CheckedUser" />
+          <ScalarProperty Name="Checked" ColumnName="Checked" />
+          <ScalarProperty Name="DispatchedUser" ColumnName="DispatchedUser" />
+          <ScalarProperty Name="DispatchedDate" ColumnName="DispatchedDate" />
+          <ScalarProperty Name="Dispatched" ColumnName="Dispatched" />
+          <ScalarProperty Name="NoOfCartons" ColumnName="NoOfCartons" />
+          <ScalarProperty Name="Lorry" ColumnName="Lorry" />
+          <ScalarProperty Name="Agent" ColumnName="Agent" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="CustomerDIscRate" ColumnName="CustomerDIscRate" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="InvoiceAmount" ColumnName="InvoiceAmount" />
+          <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+          <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="DoNo" ColumnName="DoNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_DIliveryAudit">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_DIliveryAudit">
+        <MappingFragment StoreEntitySet="T_DIliveryAudit">
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Variance" ColumnName="Variance" />
+          <ScalarProperty Name="ActualQTY" ColumnName="ActualQTY" />
+          <ScalarProperty Name="DoQty" ColumnName="DoQty" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Dono" ColumnName="Dono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_DiliveryDet">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_DiliveryDet">
+        <MappingFragment StoreEntitySet="T_DiliveryDet">
+          <ScalarProperty Name="CNNumber" ColumnName="CNNumber" />
+          <ScalarProperty Name="IsCNitem" ColumnName="IsCNitem" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ActualCartons" ColumnName="ActualCartons" />
+          <ScalarProperty Name="Carton" ColumnName="Carton" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="ItemNamex" ColumnName="ItemNamex" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="DoNo" ColumnName="DoNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_OrderTracking">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_OrderTracking">
+        <MappingFragment StoreEntitySet="T_OrderTracking">
+          <ScalarProperty Name="Dodate" ColumnName="Dodate" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="CompleteRemark" ColumnName="CompleteRemark" />
+          <ScalarProperty Name="HandOverLorry" ColumnName="HandOverLorry" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="PackingListUser" ColumnName="PackingListUser" />
+          <ScalarProperty Name="PackingListDate" ColumnName="PackingListDate" />
+          <ScalarProperty Name="PackingListNo" ColumnName="PackingListNo" />
+          <ScalarProperty Name="PackingListCreated" ColumnName="PackingListCreated" />
+          <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+          <ScalarProperty Name="CompletedUser" ColumnName="CompletedUser" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="HandedoverDate" ColumnName="HandedoverDate" />
+          <ScalarProperty Name="HandedoverUser" ColumnName="HandedoverUser" />
+          <ScalarProperty Name="Handedover" ColumnName="Handedover" />
+          <ScalarProperty Name="DispatchedUser" ColumnName="DispatchedUser" />
+          <ScalarProperty Name="DispatchedDate" ColumnName="DispatchedDate" />
+          <ScalarProperty Name="Dispatched" ColumnName="Dispatched" />
+          <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+          <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+          <ScalarProperty Name="Audited" ColumnName="Audited" />
+          <ScalarProperty Name="DOvPrintUser" ColumnName="DOvPrintUser" />
+          <ScalarProperty Name="DONoOfPrints" ColumnName="DONoOfPrints" />
+          <ScalarProperty Name="DOApprovedDate" ColumnName="DOApprovedDate" />
+          <ScalarProperty Name="DOApprovedUser" ColumnName="DOApprovedUser" />
+          <ScalarProperty Name="DOApproved" ColumnName="DOApproved" />
+          <ScalarProperty Name="DOProcessedDate" ColumnName="DOProcessedDate" />
+          <ScalarProperty Name="DOProcessedUser" ColumnName="DOProcessedUser" />
+          <ScalarProperty Name="DOProcessed" ColumnName="DOProcessed" />
+          <ScalarProperty Name="DOMultipleNO" ColumnName="DOMultipleNO" />
+          <ScalarProperty Name="DOAmount" ColumnName="DOAmount" />
+          <ScalarProperty Name="DONo" ColumnName="DONo" />
+          <ScalarProperty Name="DOCreated" ColumnName="DOCreated" />
+          <ScalarProperty Name="InvPrintUser" ColumnName="InvPrintUser" />
+          <ScalarProperty Name="InvNoOfPrints" ColumnName="InvNoOfPrints" />
+          <ScalarProperty Name="InvApprovedDate" ColumnName="InvApprovedDate" />
+          <ScalarProperty Name="InvApprovedUser" ColumnName="InvApprovedUser" />
+          <ScalarProperty Name="InvApproved" ColumnName="InvApproved" />
+          <ScalarProperty Name="InvAmount" ColumnName="InvAmount" />
+          <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+          <ScalarProperty Name="InvCreated" ColumnName="InvCreated" />
+          <ScalarProperty Name="OFPrintUser" ColumnName="OFPrintUser" />
+          <ScalarProperty Name="OFNoOfPrints" ColumnName="OFNoOfPrints" />
+          <ScalarProperty Name="OFApprovedDate" ColumnName="OFApprovedDate" />
+          <ScalarProperty Name="OFApprovedUser" ColumnName="OFApprovedUser" />
+          <ScalarProperty Name="OFApproved" ColumnName="OFApproved" />
+          <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+          <ScalarProperty Name="CustomerDIscRate" ColumnName="CustomerDIscRate" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="OFNo" ColumnName="OFNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CNGrouping">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_CNGrouping">
+        <MappingFragment StoreEntitySet="T_CNGrouping">
+          <ScalarProperty Name="CNnumber" ColumnName="CNnumber" />
+          <ScalarProperty Name="ShippedDO" ColumnName="ShippedDO" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+          <ScalarProperty Name="Shipped" ColumnName="Shipped" />
+          <ScalarProperty Name="balanceQTY" ColumnName="balanceQTY" />
+          <ScalarProperty Name="SelectedQTY" ColumnName="SelectedQTY" />
+          <ScalarProperty Name="Selected" ColumnName="Selected" />
+          <ScalarProperty Name="TagNumber" ColumnName="TagNumber" />
+          <ScalarProperty Name="BreakdownQTY" ColumnName="BreakdownQTY" />
+          <ScalarProperty Name="CNQTY" ColumnName="CNQTY" />
+          <ScalarProperty Name="InvoiceQty" ColumnName="InvoiceQty" />
+          <ScalarProperty Name="CNReason" ColumnName="CNReason" />
+          <ScalarProperty Name="CNType" ColumnName="CNType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="Docno" ColumnName="Docno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CNBreak">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_CNBreak">
+        <MappingFragment StoreEntitySet="T_CNBreak">
+          <ScalarProperty Name="BalanceQty" ColumnName="BalanceQty" />
+          <ScalarProperty Name="Grouped" ColumnName="Grouped" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="InvQTY" ColumnName="InvQTY" />
+          <ScalarProperty Name="Namex" ColumnName="Namex" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SalesAllocDet">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_SalesAllocDet">
+        <MappingFragment StoreEntitySet="T_SalesAllocDet">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+          <ScalarProperty Name="AllowedQTY" ColumnName="AllowedQTY" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+          <ScalarProperty Name="Docno" ColumnName="Docno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SalesAllocHead">
+      <EntityTypeMapping TypeName="RIT_ATModel2.T_SalesAllocHead">
+        <MappingFragment StoreEntitySet="T_SalesAllocHead">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Userx" ColumnName="Userx" />
+          <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+          <ScalarProperty Name="Docno" ColumnName="Docno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6EE730A1-6730-46F7-B100-B70E7954EA5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartAnything_DL</RootNamespace>
+    <AssemblyName>SmartAnything_DL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Distribution\T_Alloc.cs" />
+    <Compile Include="Distribution\T_CNBreak.cs" />
+    <Compile Include="Distribution\T_CNGrouping.cs" />
+    <Compile Include="Distribution\T_CNPart.cs" />
+    <Compile Include="Distribution\T_CreditNoteHead.cs" />
+    <Compile Include="Distribution\T_CustomerItemAlloc.cs" />
+    <Compile Include="Distribution\T_DIliveryAudit.cs" />
+    <Compile Include="Distribution\T_DiliveryDet.cs" />
+    <Compile Include="Distribution\T_DIliveryHed.cs" />
+    <Compile Include="Distribution\T_InvoiceDet.cs" />
+    <Compile Include="Distribution\T_InvoiceHed.cs" />
+    <Compile Include="Distribution\T_OrderFormDet.cs" />
+    <Compile Include="Distribution\T_OrderFormHead.cs" />
+    <Compile Include="Distribution\T_OrderTracking.cs" />
+    <Compile Include="Distribution\T_packingdet.cs" />
+    <Compile Include="Distribution\T_packinghead.cs" />
+    <Compile Include="Distribution\T_SalesAllocDet.cs" />
+    <Compile Include="Distribution\T_SalesAllocHead.cs" />
+    <Compile Include="M_CushasAgent.cs" />
+    <Compile Include="M_CustomerCategory.cs" />
+    <Compile Include="M_CustomerSub.cs" />
+    <Compile Include="M_ProductPart.cs" />
+    <Compile Include="M_Product_Has_Part.cs" />
+    <Compile Include="M_SubCategory.cs" />
+    <Compile Include="Payment\T_CusSettle.cs" />
+    <Compile Include="Payment\T_RecDet.cs" />
+    <Compile Include="Payment\T_RecHed.cs" />
+    <Compile Include="Distribution\T_SalesCustomerAlloc.cs" />
+    <Compile Include="Distribution\T_SalesItemAlloc.cs" />
+    <Compile Include="M_Agent.cs" />
+    <Compile Include="M_Area.cs" />
+    <Compile Include="M_BankBranch.cs" />
+    <Compile Include="M_BankDL.cs" />
+    <Compile Include="M_Category.cs" />
+    <Compile Include="M_CNReason.cs" />
+    <Compile Include="M_CNType.cs" />
+    <Compile Include="M_CompanyDL.cs" />
+    <Compile Include="M_Customer.cs" />
+    <Compile Include="M_Employee.cs" />
+    <Compile Include="M_Loca.cs" />
+    <Compile Include="M_Product.cs" />
+    <Compile Include="M_ProductPriceChange.cs" />
+    <Compile Include="M_Route.cs" />
+    <Compile Include="M_SalesMan.cs" />
+    <Compile Include="M_Supplier.cs" />
+    <Compile Include="M_Territory.cs" />
+    <Compile Include="M_Vehicle.cs" />
+    <Compile Include="Payment\M_PayMode.cs" />
+    <Compile Include="Payment\M_PayModeDetail.cs" />
+    <Compile Include="Payment\T_invoice_payment.cs" />
+    <Compile Include="Payment\T_Settlement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="bulk\u_MenuTag_DL.cs" />
+    <Compile Include="bulk\u_SysSetup_DL.cs" />
+    <Compile Include="bulk\u_UserRights_DL.cs" />
+    <Compile Include="bulk\u_User_DL.cs" />
+    <Compile Include="P_AutoNumber.cs" />
+    <Compile Include="ReportEngine.cs" />
+    <Compile Include="Transactions\T_adjustment_detail.cs" />
+    <Compile Include="Transactions\T_adjustment_head.cs" />
+    <Compile Include="Transactions\T_damage.cs" />
+    <Compile Include="Transactions\T_damage_detail.cs" />
+    <Compile Include="Transactions\T_grn.cs" />
+    <Compile Include="Transactions\T_grn_detail.cs" />
+    <Compile Include="Transactions\T_OpenStkHead.cs" />
+    <Compile Include="Transactions\T_PO_detail.cs" />
+    <Compile Include="Transactions\T_purchaseOrder.cs" />
+    <Compile Include="Transactions\T_purchaseRequisition.cs" />
+    <Compile Include="Transactions\T_purchaseReq_detail.cs" />
+    <Compile Include="Transactions\T_return.cs" />
+    <Compile Include="Transactions\T_return_detail.cs" />
+    <Compile Include="Transactions\T_staffUsage.cs" />
+    <Compile Include="Transactions\T_staffUsage_detail.cs" />
+    <Compile Include="Transactions\T_Stock_open.cs" />
+    <Compile Include="Transactions\T_transferIn_detail.cs" />
+    <Compile Include="Transactions\T_transfer_detail.cs" />
+    <Compile Include="Transactions\T_trnsferInNote.cs" />
+    <Compile Include="Transactions\T_trnsferNote.cs" />
+    <Compile Include="Transactions\T_wastage.cs" />
+    <Compile Include="Transactions\T_wastage_detail.cs" />
+    <Compile Include="T_Stock.cs" />
+    <Compile Include="T_StockRet.cs" />
+    <Compile Include="U_User.cs" />
+    <Compile Include="U_UserRole.cs" />
+    <Compile Include="xEnums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\smartOffice_Models\smartOffice_Models.csproj">
+      <Project>{8A844812-3FFC-4B90-9085-E7BC2D2F8260}</Project>
+      <Name>smartOffice_Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bulk\ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

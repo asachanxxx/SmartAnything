@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RIT_ATModel3StoreContainer" CdmEntityContainer="RIT_ATEntities3">
+    <EntitySetMapping Name="M_PayModeDetails">
+      <EntityTypeMapping TypeName="RIT_ATModel3.M_PayModeDetails">
+        <MappingFragment StoreEntitySet="M_PayModeDetails">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="pay_modeId" ColumnName="pay_modeId" />
+          <ScalarProperty Name="sub_payModeCode" ColumnName="sub_payModeCode" />
+          <ScalarProperty Name="sub_payDes" ColumnName="sub_payDes" />
+          <ScalarProperty Name="format" ColumnName="format" />
+          <ScalarProperty Name="exchangeRate" ColumnName="exchangeRate" />
+          <ScalarProperty Name="accountCode" ColumnName="accountCode" />
+          <ScalarProperty Name="CommissionAccCode" ColumnName="CommissionAccCode" />
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_invoice_payment">
+      <EntityTypeMapping TypeName="RIT_ATModel3.t_invoice_payment">
+        <MappingFragment StoreEntitySet="t_invoice_payment">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="voucherNumber" ColumnName="voucherNumber" />
+          <ScalarProperty Name="datex" ColumnName="datex" />
+          <ScalarProperty Name="subPayAmount" ColumnName="subPayAmount" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="subPayMode" ColumnName="subPayMode" />
+          <ScalarProperty Name="paymodeId" ColumnName="paymodeId" />
+          <ScalarProperty Name="teminalId" ColumnName="teminalId" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="invNo" ColumnName="invNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Alloc">
+      <EntityTypeMapping TypeName="RIT_ATModel3.T_Alloc">
+        <MappingFragment StoreEntitySet="T_Alloc">
+          <ScalarProperty Name="Dueamt" ColumnName="Dueamt" />
+          <ScalarProperty Name="PaidAmt" ColumnName="PaidAmt" />
+          <ScalarProperty Name="NetAmt" ColumnName="NetAmt" />
+          <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_RecHed">
+      <EntityTypeMapping TypeName="RIT_ATModel3.T_RecHed">
+        <MappingFragment StoreEntitySet="T_RecHed">
+          <ScalarProperty Name="CancelledDate" ColumnName="CancelledDate" />
+          <ScalarProperty Name="CancelledUser" ColumnName="CancelledUser" />
+          <ScalarProperty Name="iscancelled" ColumnName="iscancelled" />
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="Recivedfrom" ColumnName="Recivedfrom" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="Docno" ColumnName="Docno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="M_PayMode">
+      <EntityTypeMapping TypeName="RIT_ATModel3.M_PayMode">
+        <MappingFragment StoreEntitySet="M_PayMode">
+          <ScalarProperty Name="ischeque" ColumnName="ischeque" />
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="isPoint" ColumnName="isPoint" />
+          <ScalarProperty Name="isCredit" ColumnName="isCredit" />
+          <ScalarProperty Name="CommissionAccCode" ColumnName="CommissionAccCode" />
+          <ScalarProperty Name="accountCode" ColumnName="accountCode" />
+          <ScalarProperty Name="isVoucher" ColumnName="isVoucher" />
+          <ScalarProperty Name="isControlOverPayment" ColumnName="isControlOverPayment" />
+          <ScalarProperty Name="isAdvancePayment" ColumnName="isAdvancePayment" />
+          <ScalarProperty Name="isAddBalance" ColumnName="isAddBalance" />
+          <ScalarProperty Name="isSubPaymode" ColumnName="isSubPaymode" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Settlement">
+      <EntityTypeMapping TypeName="RIT_ATModel3.T_Settlement">
+        <MappingFragment StoreEntitySet="T_Settlement">
+          <ScalarProperty Name="Iscancelled" ColumnName="Iscancelled" />
+          <ScalarProperty Name="Settlement" ColumnName="Settlement" />
+          <ScalarProperty Name="DueAmt" ColumnName="DueAmt" />
+          <ScalarProperty Name="PaidAmt" ColumnName="PaidAmt" />
+          <ScalarProperty Name="InvAmt" ColumnName="InvAmt" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+          <ScalarProperty Name="Reciptno" ColumnName="Reciptno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_InvoiceDet">
+      <EntityTypeMapping TypeName="RIT_ATModel3.T_InvoiceDet">
+        <MappingFragment StoreEntitySet="T_InvoiceDet">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="DiscountPer" ColumnName="DiscountPer" />
+          <ScalarProperty Name="Unitx" ColumnName="Unitx" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_InvoiceHed">
+      <EntityTypeMapping TypeName="RIT_ATModel3.T_InvoiceHed">
+        <MappingFragment StoreEntitySet="T_InvoiceHed">
+          <ScalarProperty Name="CancelledUSer" ColumnName="CancelledUSer" />
+          <ScalarProperty Name="CancelledDate" ColumnName="CancelledDate" />
+          <ScalarProperty Name="Iscancelled" ColumnName="Iscancelled" />
+          <ScalarProperty Name="IsSettled" ColumnName="IsSettled" />
+          <ScalarProperty Name="PaidAmt" ColumnName="PaidAmt" />
+          <ScalarProperty Name="DueAmt" ColumnName="DueAmt" />
+          <ScalarProperty Name="MultipleDO" ColumnName="MultipleDO" />
+          <ScalarProperty Name="Glupdated" ColumnName="Glupdated" />
+          <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+          <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+          <ScalarProperty Name="BRANCH" ColumnName="BRANCH" />
+          <ScalarProperty Name="BANK" ColumnName="BANK" />
+          <ScalarProperty Name="CQDate" ColumnName="CQDate" />
+          <ScalarProperty Name="CQNO" ColumnName="CQNO" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+          <ScalarProperty Name="AprrovedBy" ColumnName="AprrovedBy" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="CheckedBy" ColumnName="CheckedBy" />
+          <ScalarProperty Name="Checked" ColumnName="Checked" />
+          <ScalarProperty Name="PrerairedBy" ColumnName="PrerairedBy" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="NoOfPieces" ColumnName="NoOfPieces" />
+          <ScalarProperty Name="Noofitems" ColumnName="Noofitems" />
+          <ScalarProperty Name="CreditPeriod" ColumnName="CreditPeriod" />
+          <ScalarProperty Name="NetAmt" ColumnName="NetAmt" />
+          <ScalarProperty Name="Vatamt" ColumnName="Vatamt" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="TotalDisc" ColumnName="TotalDisc" />
+          <ScalarProperty Name="ItemdiscTotal" ColumnName="ItemdiscTotal" />
+          <ScalarProperty Name="SubtotalDisc" ColumnName="SubtotalDisc" />
+          <ScalarProperty Name="SubtotaldiscPer" ColumnName="SubtotaldiscPer" />
+          <ScalarProperty Name="GrossAmt" ColumnName="GrossAmt" />
+          <ScalarProperty Name="DONumber" ColumnName="DONumber" />
+          <ScalarProperty Name="OrderFormNo" ColumnName="OrderFormNo" />
+          <ScalarProperty Name="ManualNo" ColumnName="ManualNo" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="Paymeth" ColumnName="Paymeth" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="InvID" ColumnName="InvID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_RecDet">
+      <EntityTypeMapping TypeName="RIT_ATModel3.T_RecDet">
+        <MappingFragment StoreEntitySet="T_RecDet">
+          <ScalarProperty Name="ReasontoRtn" ColumnName="ReasontoRtn" />
+          <ScalarProperty Name="ReturnUpdateUSer" ColumnName="ReturnUpdateUSer" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="isreturned" ColumnName="isreturned" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="ReconsileDate" ColumnName="ReconsileDate" />
+          <ScalarProperty Name="isReconsile" ColumnName="isReconsile" />
+          <ScalarProperty Name="BankDate" ColumnName="BankDate" />
+          <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="CQno" ColumnName="CQno" />
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+          <ScalarProperty Name="Amt" ColumnName="Amt" />
+          <ScalarProperty Name="HeadAmt" ColumnName="HeadAmt" />
+          <ScalarProperty Name="Paytype" ColumnName="Paytype" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="Docno" ColumnName="Docno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CusSettle">
+      <EntityTypeMapping TypeName="RIT_ATModel3.T_CusSettle">
+        <MappingFragment StoreEntitySet="T_CusSettle">
+          <ScalarProperty Name="Datex" ColumnName="Datex" />
+          <ScalarProperty Name="Settlement" ColumnName="Settlement" />
+          <ScalarProperty Name="DueAmt" ColumnName="DueAmt" />
+          <ScalarProperty Name="PaidAmt" ColumnName="PaidAmt" />
+          <ScalarProperty Name="NetAmt" ColumnName="NetAmt" />
+          <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

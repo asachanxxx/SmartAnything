@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RIT_ATModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RIT_ATModel1StoreContainer">
+    <EntitySet Name="t_adjustment_details" EntityType="RIT_ATModel1.Store.t_adjustment_details" store:Type="Tables" store:Schema="dbo" store:Name="t_adjustment_details">
+      <DefiningQuery>SELECT 
+      [t_adjustment_details].[adju_no] AS [adju_no], 
+      [t_adjustment_details].[location_id] AS [location_id], 
+      [t_adjustment_details].[line_no] AS [line_no], 
+      [t_adjustment_details].[item_code] AS [item_code], 
+      [t_adjustment_details].[cost] AS [cost], 
+      [t_adjustment_details].[stock] AS [stock], 
+      [t_adjustment_details].[physical_quantity] AS [physical_quantity], 
+      [t_adjustment_details].[variance] AS [variance], 
+      [t_adjustment_details].[triggerVal] AS [triggerVal]
+      FROM [dbo].[t_adjustment_details] AS [t_adjustment_details]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="t_adjustment_head" EntityType="RIT_ATModel1.Store.t_adjustment_head" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_damage" EntityType="RIT_ATModel1.Store.t_damage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_damage_detail" EntityType="RIT_ATModel1.Store.t_damage_detail" store:Type="Tables" store:Schema="dbo" store:Name="t_damage_detail">
+      <DefiningQuery>SELECT 
+      [t_damage_detail].[damageNo] AS [damageNo], 
+      [t_damage_detail].[locationId] AS [locationId], 
+      [t_damage_detail].[damageDate] AS [damageDate], 
+      [t_damage_detail].[itemCode] AS [itemCode], 
+      [t_damage_detail].[description] AS [description], 
+      [t_damage_detail].[quantity] AS [quantity], 
+      [t_damage_detail].[uom] AS [uom], 
+      [t_damage_detail].[costPrice] AS [costPrice], 
+      [t_damage_detail].[sellingPrice] AS [sellingPrice], 
+      [t_damage_detail].[amount] AS [amount], 
+      [t_damage_detail].[triggerVal] AS [triggerVal]
+      FROM [dbo].[t_damage_detail] AS [t_damage_detail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="t_grn" EntityType="RIT_ATModel1.Store.t_grn" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_grn_detail" EntityType="RIT_ATModel1.Store.t_grn_detail" store:Type="Tables" store:Schema="dbo" store:Name="t_grn_detail">
+      <DefiningQuery>SELECT 
+      [t_grn_detail].[grnNo] AS [grnNo], 
+      [t_grn_detail].[locationId] AS [locationId], 
+      [t_grn_detail].[productId] AS [productId], 
+      [t_grn_detail].[stock] AS [stock], 
+      [t_grn_detail].[tax] AS [tax], 
+      [t_grn_detail].[priceLevel] AS [priceLevel], 
+      [t_grn_detail].[quantity] AS [quantity], 
+      [t_grn_detail].[freeQty] AS [freeQty], 
+      [t_grn_detail].[amount] AS [amount], 
+      [t_grn_detail].[disPerc] AS [disPerc], 
+      [t_grn_detail].[disAmount] AS [disAmount], 
+      [t_grn_detail].[batchNo] AS [batchNo], 
+      [t_grn_detail].[expDate] AS [expDate], 
+      [t_grn_detail].[stockCode] AS [stockCode], 
+      [t_grn_detail].[costPrice] AS [costPrice], 
+      [t_grn_detail].[sellingPrice] AS [sellingPrice], 
+      [t_grn_detail].[returnedQuantity] AS [returnedQuantity], 
+      [t_grn_detail].[remainingQuantity] AS [remainingQuantity], 
+      [t_grn_detail].[triggerVal] AS [triggerVal]
+      FROM [dbo].[t_grn_detail] AS [t_grn_detail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="T_OpenStkHead" EntityType="RIT_ATModel1.Store.T_OpenStkHead" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_OrderFormDet" EntityType="RIT_ATModel1.Store.T_OrderFormDet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_PO_detail" EntityType="RIT_ATModel1.Store.t_PO_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_purchaseOrder" EntityType="RIT_ATModel1.Store.t_purchaseOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_purchaseReq_detail" EntityType="RIT_ATModel1.Store.t_purchaseReq_detail" store:Type="Tables" store:Schema="dbo" store:Name="t_purchaseReq_detail">
+      <DefiningQuery>SELECT 
+      [t_purchaseReq_detail].[purchaseReqNo] AS [purchaseReqNo], 
+      [t_purchaseReq_detail].[locationId] AS [locationId], 
+      [t_purchaseReq_detail].[ReqDate] AS [ReqDate], 
+      [t_purchaseReq_detail].[deleveryDate] AS [deleveryDate], 
+      [t_purchaseReq_detail].[productId] AS [productId], 
+      [t_purchaseReq_detail].[description] AS [description], 
+      [t_purchaseReq_detail].[quantity] AS [quantity], 
+      [t_purchaseReq_detail].[costPrice] AS [costPrice], 
+      [t_purchaseReq_detail].[amount] AS [amount], 
+      [t_purchaseReq_detail].[release] AS [release], 
+      [t_purchaseReq_detail].[r_value] AS [r_value], 
+      [t_purchaseReq_detail].[triggerVal] AS [triggerVal]
+      FROM [dbo].[t_purchaseReq_detail] AS [t_purchaseReq_detail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="t_purchaseRequisition" EntityType="RIT_ATModel1.Store.t_purchaseRequisition" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_return" EntityType="RIT_ATModel1.Store.t_return" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_return_detail" EntityType="RIT_ATModel1.Store.t_return_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_staffUsage" EntityType="RIT_ATModel1.Store.t_staffUsage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_staffUsage_detail" EntityType="RIT_ATModel1.Store.t_staffUsage_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_Stock_open" EntityType="RIT_ATModel1.Store.T_Stock_open" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_transfer_detail" EntityType="RIT_ATModel1.Store.t_transfer_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_transferIn_detail" EntityType="RIT_ATModel1.Store.t_transferIn_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_trnsferInNote" EntityType="RIT_ATModel1.Store.t_trnsferInNote" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_trnsferNote" EntityType="RIT_ATModel1.Store.t_trnsferNote" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_wastage" EntityType="RIT_ATModel1.Store.t_wastage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="t_wastage_detail" EntityType="RIT_ATModel1.Store.t_wastage_detail" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.t_adjustment_details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="t_adjustment_details">
+    <Key>
+      <PropertyRef Name="adju_no" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="adju_no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="location_id" Type="varchar" MaxLength="20" />
+    <Property Name="line_no" Type="int" />
+    <Property Name="item_code" Type="varchar" MaxLength="20" />
+    <Property Name="cost" Type="decimal" Scale="4" />
+    <Property Name="stock" Type="decimal" Scale="4" />
+    <Property Name="physical_quantity" Type="decimal" Scale="4" />
+    <Property Name="variance" Type="decimal" Scale="4" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_adjustment_head">
+    <Key>
+      <PropertyRef Name="adju_no" />
+    </Key>
+    <Property Name="adju_no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="location_id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="adjsment_date" Type="datetime" Nullable="false" />
+    <Property Name="remarks" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="user_id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="batch_no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="process" Type="bit" Nullable="false" />
+    <Property Name="process_user" Type="varchar" MaxLength="20" />
+    <Property Name="process_date" Type="datetime" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_damage">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="refNo" Type="varchar" MaxLength="20" />
+    <Property Name="refDate" Type="datetime" />
+    <Property Name="remarks" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="noOfItems" Type="decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="20" />
+    <Property Name="GLUpdate" Type="bit" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.t_damage_detail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="t_damage_detail">
+    <Key>
+      <PropertyRef Name="damageNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="damageNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="damageDate" Type="datetime" />
+    <Property Name="itemCode" Type="varchar" MaxLength="20" />
+    <Property Name="description" Type="varchar" MaxLength="150" />
+    <Property Name="quantity" Type="numeric" Scale="2" />
+    <Property Name="uom" Type="varchar" MaxLength="15" />
+    <Property Name="costPrice" Type="numeric" Scale="4" />
+    <Property Name="sellingPrice" Type="numeric" Scale="4" />
+    <Property Name="amount" Type="numeric" Scale="4" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_grn">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="locationId" Type="varchar" MaxLength="10" />
+    <Property Name="poNo" Type="varchar" MaxLength="20" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="refNo" Type="varchar" MaxLength="20" />
+    <Property Name="expireDate" Type="datetime" />
+    <Property Name="supplierId" Type="varchar" MaxLength="20" />
+    <Property Name="supInvoiceNo" Type="varchar" MaxLength="20" />
+    <Property Name="supInvoiceDate" Type="datetime" />
+    <Property Name="supInvoiceValue" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="supDoNo" Type="varchar" MaxLength="20" />
+    <Property Name="supDoDate" Type="datetime" />
+    <Property Name="remarks" Type="varchar" MaxLength="50" />
+    <Property Name="noOfItems" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="noOfPieces" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="30" />
+    <Property Name="netDiscount" Type="decimal" Scale="2" />
+    <Property Name="additions" Type="decimal" Scale="2" />
+    <Property Name="deductions" Type="decimal" Scale="2" />
+    <Property Name="netAmount" Type="decimal" Scale="2" />
+    <Property Name="isAllReturned" Type="bit" />
+    <Property Name="GLUpdate" Type="bit" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.t_grn_detail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="t_grn_detail">
+    <Key>
+      <PropertyRef Name="grnNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="grnNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="productId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="stock" Type="numeric" Scale="2" />
+    <Property Name="tax" Type="numeric" Scale="2" />
+    <Property Name="priceLevel" Type="varchar" MaxLength="10" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="freeQty" Type="int" />
+    <Property Name="amount" Type="numeric" Scale="2" />
+    <Property Name="disPerc" Type="numeric" Scale="2" />
+    <Property Name="disAmount" Type="numeric" Scale="2" />
+    <Property Name="batchNo" Type="varchar" MaxLength="20" />
+    <Property Name="expDate" Type="datetime" />
+    <Property Name="stockCode" Type="varchar" MaxLength="20" />
+    <Property Name="costPrice" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="sellingPrice" Type="decimal" Precision="10" Scale="5" />
+    <Property Name="returnedQuantity" Type="int" />
+    <Property Name="remainingQuantity" Type="int" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_OpenStkHead">
+    <Key>
+      <PropertyRef Name="Docno" />
+    </Key>
+    <Property Name="Docno" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="locationId" Type="varchar" MaxLength="10" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="supplier" Type="varchar" MaxLength="20" />
+    <Property Name="remarks" Type="varchar" MaxLength="50" />
+    <Property Name="grossAmount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="netAmount" Type="decimal" Scale="2" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="30" />
+    <Property Name="GLUpdate" Type="bit" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_OrderFormDet">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Name="Docno" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CompCode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="OFNo" Type="varchar" MaxLength="20" />
+    <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Quntity" Type="numeric" Scale="2" />
+    <Property Name="Barcode" Type="varchar" MaxLength="20" />
+    <Property Name="UnitPrice" Type="numeric" Scale="4" />
+    <Property Name="CostPrice" Type="numeric" Scale="4" />
+    <Property Name="Unit" Type="varchar" MaxLength="20" />
+    <Property Name="Amountx" Type="numeric" Scale="4" />
+    <Property Name="discper" Type="numeric" Scale="4" />
+    <Property Name="discount" Type="numeric" Scale="4" />
+  </EntityType>
+  <EntityType Name="t_PO_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="poNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="productId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="cost" Type="decimal" Scale="2" />
+    <Property Name="quantity" Type="decimal" Scale="2" />
+    <Property Name="amount" Type="decimal" Scale="2" />
+    <Property Name="priceLevel" Type="varchar" MaxLength="10" />
+    <Property Name="selling" Type="decimal" Scale="2" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_purchaseOrder">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="reqLocationId" Type="varchar" MaxLength="20" />
+    <Property Name="pReqNo" Type="varchar" MaxLength="20" />
+    <Property Name="poMethod" Type="varchar" MaxLength="20" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="supplierId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="DeliveryDate" Type="datetime" />
+    <Property Name="DLocationID" Type="varchar" MaxLength="20" />
+    <Property Name="noOfItems" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="remarks" Type="varchar" MaxLength="100" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="20" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.t_purchaseReq_detail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="t_purchaseReq_detail">
+    <Key>
+      <PropertyRef Name="purchaseReqNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="purchaseReqNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ReqDate" Type="datetime" />
+    <Property Name="deleveryDate" Type="datetime" />
+    <Property Name="productId" Type="varchar" MaxLength="20" />
+    <Property Name="description" Type="varchar" MaxLength="150" />
+    <Property Name="quantity" Type="decimal" Scale="2" />
+    <Property Name="costPrice" Type="decimal" Scale="2" />
+    <Property Name="amount" Type="decimal" Scale="2" />
+    <Property Name="release" Type="int" />
+    <Property Name="r_value" Type="int" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_purchaseRequisition">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="deleveryDate" Type="datetime" />
+    <Property Name="remarks" Type="varchar" MaxLength="150" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="supplierId" Type="varchar" MaxLength="20" />
+    <Property Name="noOfItems" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_return">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="refNo" Type="varchar" MaxLength="20" />
+    <Property Name="remarks" Type="varchar" MaxLength="150" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="supplierId" Type="varchar" MaxLength="20" />
+    <Property Name="noOfItems" Type="decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="GLUpdate" Type="bit" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_return_detail">
+    <Key>
+      <PropertyRef Name="returnNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="returnNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="stockCode" Type="varchar" MaxLength="20" />
+    <Property Name="productId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="quantity" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="costPrice" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="sellingPrice" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_staffUsage">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="refNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="remarks" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="noOfItems" Type="decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="20" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+    <Property Name="GLUpdate" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_staffUsage_detail">
+    <Key>
+      <PropertyRef Name="staffUsageNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="stockCode" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="staffUsageNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="stockCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="quantity" Type="decimal" Scale="2" />
+    <Property Name="costPrice" Type="decimal" Scale="4" />
+    <Property Name="amount" Type="decimal" Scale="4" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Stock_open">
+    <Key>
+      <PropertyRef Name="DocNo" />
+    </Key>
+    <Property Name="DocNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="StockCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Suppid" Type="varchar" MaxLength="20" />
+    <Property Name="ProductId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Stock" Type="numeric" Scale="2" />
+    <Property Name="OpnStock" Type="numeric" Scale="2" />
+    <Property Name="InitialStock" Type="numeric" Scale="2" />
+    <Property Name="ReservedStock" Type="numeric" Scale="2" />
+    <Property Name="CostPrice" Type="numeric" Scale="4" />
+    <Property Name="SellingPrice" Type="numeric" Scale="4" />
+    <Property Name="WholeSalePrice" Type="numeric" Scale="4" />
+    <Property Name="MrpPrice" Type="numeric" Scale="4" />
+    <Property Name="CompanyPrice" Type="numeric" Scale="4" />
+    <Property Name="AvgCost" Type="numeric" Scale="4" />
+    <Property Name="InitialCost" Type="numeric" Scale="4" />
+    <Property Name="Descr" Type="varchar" MaxLength="150" />
+    <Property Name="FixedGP" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="SIH" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="EXPDate" Type="datetime" />
+    <Property Name="Usercode" Type="varchar" MaxLength="20" />
+    <Property Name="DateCr" Type="datetime" />
+  </EntityType>
+  <EntityType Name="t_transfer_detail">
+    <Key>
+      <PropertyRef Name="transferNoteNo" />
+      <PropertyRef Name="sourceLocId" />
+      <PropertyRef Name="stockCode" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="transferNoteNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="sourceLocId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="transferDate" Type="datetime" />
+    <Property Name="stockCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="quantity" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="costPrice" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_transferIn_detail">
+    <Key>
+      <PropertyRef Name="transinrNo" />
+      <PropertyRef Name="sourceLocId" />
+      <PropertyRef Name="destinationLocId" />
+      <PropertyRef Name="stockCode" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="transinrNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="sourceLocId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="destinationLocId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="transferDate" Type="datetime" />
+    <Property Name="stockCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="quantity" Type="decimal" Scale="2" />
+    <Property Name="costPrice" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_trnsferInNote">
+    <Key>
+      <PropertyRef Name="transinNo" />
+    </Key>
+    <Property Name="transinNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="sourceLocId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="refNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="remarks" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="destinationLocId" Type="varchar" MaxLength="20" />
+    <Property Name="purchaseReqNo" Type="varchar" MaxLength="20" />
+    <Property Name="noOfItems" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="30" />
+    <Property Name="GLUpdate" Type="bit" Nullable="false" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_trnsferNote">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="sourceLocId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="refNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="remarks" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="destinationLocId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="purchaseReqNo" Type="varchar" MaxLength="20" />
+    <Property Name="noOfItems" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="20" />
+    <Property Name="GLUpdate" Type="bit" Nullable="false" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_wastage">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="refNo" Type="varchar" MaxLength="20" />
+    <Property Name="refDate" Type="datetime" />
+    <Property Name="remarks" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="noOfItems" Type="decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="decimal" Nullable="false" Precision="15" Scale="4" />
+    <Property Name="isSaved" Type="bit" />
+    <Property Name="isProcessed" Type="bit" />
+    <Property Name="processDate" Type="datetime" />
+    <Property Name="processUser" Type="varchar" MaxLength="30" />
+    <Property Name="GLUpdate" Type="bit" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_wastage_detail">
+    <Key>
+      <PropertyRef Name="wastageNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="itemCode" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="wastageNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="locationId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="wastageDate" Type="datetime" />
+    <Property Name="itemCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="description" Type="varchar" MaxLength="150" />
+    <Property Name="quantity" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="uom" Type="varchar" MaxLength="15" />
+    <Property Name="costPrice" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="sellingPrice" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,2 @@
+D:\Live\Source\SmartAnything\SmartAnything\smartOffice_Models\obj\Release\ResolveAssemblyReference.cache
+D:\Live\Source\SmartAnything\smartOffice_Models\obj\Release\smartOffice_Models.csprojResolveAssemblyReference.cache

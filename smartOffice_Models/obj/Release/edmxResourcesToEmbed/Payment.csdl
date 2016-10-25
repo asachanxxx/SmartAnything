@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RIT_ATModel3" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RIT_ATEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="M_PayModeDetails" EntityType="RIT_ATModel3.M_PayModeDetails" />
+    <EntitySet Name="t_invoice_payment" EntityType="RIT_ATModel3.t_invoice_payment" />
+    <EntitySet Name="T_Alloc" EntityType="RIT_ATModel3.T_Alloc" />
+    <EntitySet Name="T_RecHed" EntityType="RIT_ATModel3.T_RecHed" />
+    <EntitySet Name="M_PayMode" EntityType="RIT_ATModel3.M_PayMode" />
+    <EntitySet Name="T_Settlement" EntityType="RIT_ATModel3.T_Settlement" />
+    <EntitySet Name="T_InvoiceDet" EntityType="RIT_ATModel3.T_InvoiceDet" />
+    <EntitySet Name="T_InvoiceHed" EntityType="RIT_ATModel3.T_InvoiceHed" />
+    <EntitySet Name="T_RecDet" EntityType="RIT_ATModel3.T_RecDet" />
+    <EntitySet Name="T_CusSettle" EntityType="RIT_ATModel3.T_CusSettle" />
+  </EntityContainer>
+  <EntityType Name="M_PayModeDetails">
+    <Key>
+      <PropertyRef Name="pay_modeId" />
+      <PropertyRef Name="sub_payModeCode" />
+    </Key>
+    <Property Name="pay_modeId" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="sub_payModeCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="sub_payDes" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="format" Type="Int32" />
+    <Property Name="exchangeRate" Type="Decimal" Precision="10" Scale="5" />
+    <Property Name="accountCode" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="CommissionAccCode" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="triggerVal" Type="Int32" Nullable="false" />
+    <Property Type="Int32" Name="isActive" />
+  </EntityType>
+  <EntityType Name="t_invoice_payment">
+    <Key>
+      <PropertyRef Name="invNo" />
+      <PropertyRef Name="location" />
+      <PropertyRef Name="paymodeId" />
+      <PropertyRef Name="subPayMode" />
+    </Key>
+    <Property Type="String" Name="invNo" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="location" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="teminalId" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="paymodeId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subPayMode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="rate" Precision="18" Scale="4" />
+    <Property Type="String" Name="number" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="subPayAmount" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="datex" />
+    <Property Type="String" Name="voucherNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="totalAmount" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Alloc">
+    <Key>
+      <PropertyRef Name="DocNo" />
+      <PropertyRef Name="Customer" />
+    </Key>
+    <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" />
+    <Property Type="String" Name="Customer" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RefNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InvNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="NetAmt" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PaidAmt" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Dueamt" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="T_RecHed">
+    <Key>
+      <PropertyRef Name="Docno" />
+    </Key>
+    <Property Type="String" Name="Docno" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" />
+    <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="refNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Memo" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Recivedfrom" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="GLUpdate" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+    <Property Type="Boolean" Name="iscancelled" />
+    <Property Type="String" Name="CancelledUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CancelledDate" />
+  </EntityType>
+  <EntityType Name="M_PayMode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="String" Name="id" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="isActive" Nullable="false" />
+    <Property Type="Int32" Name="isSubPaymode" Nullable="false" />
+    <Property Type="Int32" Name="isAddBalance" Nullable="false" />
+    <Property Type="Int32" Name="isAdvancePayment" Nullable="false" />
+    <Property Type="Int32" Name="isControlOverPayment" Nullable="false" />
+    <Property Type="Int32" Name="isVoucher" Nullable="false" />
+    <Property Type="String" Name="accountCode" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CommissionAccCode" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="isCredit" Nullable="false" />
+    <Property Type="Int32" Name="isPoint" Nullable="false" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+    <Property Type="Int32" Name="ischeque" />
+  </EntityType>
+  <EntityType Name="T_Settlement">
+    <Key>
+      <PropertyRef Name="Reciptno" />
+      <PropertyRef Name="InvNo" />
+      <PropertyRef Name="Customer" />
+    </Key>
+    <Property Type="String" Name="Reciptno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InvNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="InvAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="PaidAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="DueAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Settlement" Precision="18" Scale="4" />
+    <Property Type="Boolean" Name="Iscancelled" />
+  </EntityType>
+  <EntityType Name="T_InvoiceDet">
+    <Key>
+      <PropertyRef Name="InvNo" />
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Type="String" Name="InvNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CostPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SellingPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Qty" Precision="18" Scale="2" />
+    <Property Type="String" Name="Unitx" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DiscountPer" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Discount" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Total" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="T_InvoiceHed">
+    <Key>
+      <PropertyRef Name="InvID" />
+    </Key>
+    <Property Type="String" Name="InvID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Paymeth" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RefNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ManualNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrderFormNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DONumber" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="GrossAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SubtotaldiscPer" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SubtotalDisc" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="ItemdiscTotal" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="TotalDisc" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Tax" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Vatamt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="NetAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="CreditPeriod" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Noofitems" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="NoOfPieces" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="Datex" />
+    <Property Type="String" Name="PrerairedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Checked" />
+    <Property Type="String" Name="CheckedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Approved" Nullable="false" />
+    <Property Type="String" Name="AprrovedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ApprovedDate" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CQNO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CQDate" />
+    <Property Type="String" Name="BANK" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BRANCH" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Processed" />
+    <Property Type="DateTime" Name="ProcessedDate" />
+    <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Glupdated" />
+    <Property Type="Int32" Name="MultipleDO" />
+    <Property Type="Decimal" Name="DueAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="PaidAmt" Precision="18" Scale="4" />
+    <Property Type="Boolean" Name="IsSettled" />
+    <Property Type="Boolean" Name="Iscancelled" />
+    <Property Type="DateTime" Name="CancelledDate" />
+    <Property Type="String" Name="CancelledUSer" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_RecDet">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="Sequence" />
+      <PropertyRef Name="Paytype" />
+    </Key>
+    <Property Type="String" Name="Docno" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Sequence" Nullable="false" />
+    <Property Type="String" Name="Paytype" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="HeadAmt" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Amt" Precision="18" Scale="2" />
+    <Property Type="String" Name="InvNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" />
+    <Property Type="String" Name="CQno" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Bank" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BankBranch" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="BankDate" />
+    <Property Type="Boolean" Name="isReconsile" />
+    <Property Type="DateTime" Name="ReconsileDate" />
+    <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isreturned" />
+    <Property Type="DateTime" Name="ReturnDate" />
+    <Property Type="String" Name="ReturnUpdateUSer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReasontoRtn" MaxLength="120" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_CusSettle">
+    <Key>
+      <PropertyRef Name="DocNo" />
+    </Key>
+    <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Type" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RefNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="NetAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="PaidAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="DueAmt" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Settlement" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="Datex" />
+  </EntityType>
+</Schema>

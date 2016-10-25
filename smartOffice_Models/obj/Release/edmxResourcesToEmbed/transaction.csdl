@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RIT_ATModel1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RIT_ATEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="t_purchaseRequisition" EntityType="RIT_ATModel1.t_purchaseRequisition" />
+    <EntitySet Name="t_purchaseReq_detail" EntityType="RIT_ATModel1.t_purchaseReq_detail" />
+    <EntitySet Name="t_PO_detail" EntityType="RIT_ATModel1.t_PO_detail" />
+    <EntitySet Name="t_purchaseOrder" EntityType="RIT_ATModel1.t_purchaseOrder" />
+    <EntitySet Name="t_grn" EntityType="RIT_ATModel1.t_grn" />
+    <EntitySet Name="t_grn_detail" EntityType="RIT_ATModel1.t_grn_detail" />
+    <EntitySet Name="t_return" EntityType="RIT_ATModel1.t_return" />
+    <EntitySet Name="t_return_detail" EntityType="RIT_ATModel1.t_return_detail" />
+    <EntitySet Name="t_transfer_detail" EntityType="RIT_ATModel1.t_transfer_detail" />
+    <EntitySet Name="t_transferIn_detail" EntityType="RIT_ATModel1.t_transferIn_detail" />
+    <EntitySet Name="t_trnsferInNote" EntityType="RIT_ATModel1.t_trnsferInNote" />
+    <EntitySet Name="t_trnsferNote" EntityType="RIT_ATModel1.t_trnsferNote" />
+    <EntitySet Name="t_adjustment_details" EntityType="RIT_ATModel1.t_adjustment_details" />
+    <EntitySet Name="t_adjustment_head" EntityType="RIT_ATModel1.t_adjustment_head" />
+    <EntitySet Name="t_damage" EntityType="RIT_ATModel1.t_damage" />
+    <EntitySet Name="t_damage_detail" EntityType="RIT_ATModel1.t_damage_detail" />
+    <EntitySet Name="t_staffUsage" EntityType="RIT_ATModel1.t_staffUsage" />
+    <EntitySet Name="t_staffUsage_detail" EntityType="RIT_ATModel1.t_staffUsage_detail" />
+    <EntitySet Name="t_wastage" EntityType="RIT_ATModel1.t_wastage" />
+    <EntitySet Name="t_wastage_detail" EntityType="RIT_ATModel1.t_wastage_detail" />
+    <EntitySet Name="T_OrderFormDet" EntityType="RIT_ATModel1.T_OrderFormDet" />
+    <EntitySet Name="T_OpenStkHead" EntityType="RIT_ATModel1.T_OpenStkHead" />
+    <EntitySet Name="T_Stock_open" EntityType="RIT_ATModel1.T_Stock_open" />
+  </EntityContainer>
+  <EntityType Name="t_purchaseRequisition">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="date" Type="DateTime" />
+    <Property Name="deleveryDate" Type="DateTime" />
+    <Property Name="remarks" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="processDate" Type="DateTime" />
+    <Property Name="processUser" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="locationId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="supplierId" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="noOfItems" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="noOfPeaces" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="grossAmount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="isSaved" Type="Boolean" />
+    <Property Name="isProcessed" Type="Boolean" />
+    <Property Name="triggerVal" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_purchaseReq_detail">
+    <Key>
+      <PropertyRef Name="purchaseReqNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="purchaseReqNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ReqDate" />
+    <Property Type="DateTime" Name="deleveryDate" />
+    <Property Type="String" Name="productId" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="quantity" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="costPrice" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="amount" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="release" />
+    <Property Type="Int32" Name="r_value" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_PO_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="poNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="productId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="cost" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="quantity" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="amount" Precision="18" Scale="2" />
+    <Property Type="String" Name="priceLevel" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="selling" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_purchaseOrder">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Type="String" Name="no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="reqLocationId" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pReqNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="poMethod" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" />
+    <Property Type="String" Name="supplierId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DeliveryDate" />
+    <Property Type="String" Name="DLocationID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="noOfItems" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="noOfPeaces" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="grossAmount" Precision="10" Scale="2" />
+    <Property Type="String" Name="remarks" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_grn">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Type="String" Name="no" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="poNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" />
+    <Property Type="String" Name="refNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="expireDate" />
+    <Property Type="String" Name="supplierId" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="supInvoiceNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="supInvoiceDate" />
+    <Property Type="Decimal" Name="supInvoiceValue" Precision="15" Scale="2" />
+    <Property Type="String" Name="supDoNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="supDoDate" />
+    <Property Type="String" Name="remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="noOfItems" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="noOfPieces" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="grossAmount" Precision="10" Scale="2" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="netDiscount" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="additions" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="deductions" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="netAmount" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="isAllReturned" />
+    <Property Type="Boolean" Name="GLUpdate" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_grn_detail">
+    <Key>
+      <PropertyRef Name="grnNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="grnNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="productId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="stock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="tax" Precision="18" Scale="2" />
+    <Property Type="String" Name="priceLevel" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="quantity" />
+    <Property Type="Int32" Name="freeQty" />
+    <Property Type="Decimal" Name="amount" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="disPerc" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="disAmount" Precision="18" Scale="2" />
+    <Property Type="String" Name="batchNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="expDate" />
+    <Property Type="String" Name="stockCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="costPrice" Precision="10" Scale="5" />
+    <Property Type="Decimal" Name="sellingPrice" Precision="10" Scale="5" />
+    <Property Type="Int32" Name="returnedQuantity" />
+    <Property Type="Int32" Name="remainingQuantity" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_return">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Type="String" Name="no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" />
+    <Property Type="String" Name="refNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="supplierId" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="noOfItems" Nullable="false" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="noOfPeaces" Nullable="false" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="grossAmount" Nullable="false" Precision="10" Scale="4" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="Boolean" Name="GLUpdate" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_return_detail">
+    <Key>
+      <PropertyRef Name="returnNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="returnNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stockCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="productId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="quantity" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="amount" Precision="10" Scale="4" />
+    <Property Type="Decimal" Name="costPrice" Precision="10" Scale="4" />
+    <Property Type="Decimal" Name="sellingPrice" Precision="10" Scale="4" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_transfer_detail">
+    <Key>
+      <PropertyRef Name="transferNoteNo" />
+      <PropertyRef Name="sourceLocId" />
+      <PropertyRef Name="stockCode" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="transferNoteNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sourceLocId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="transferDate" />
+    <Property Type="String" Name="stockCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="quantity" Precision="10" Scale="4" />
+    <Property Type="Decimal" Name="costPrice" Precision="10" Scale="4" />
+    <Property Type="Decimal" Name="amount" Precision="10" Scale="4" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_transferIn_detail">
+    <Key>
+      <PropertyRef Name="transinrNo" />
+      <PropertyRef Name="sourceLocId" />
+      <PropertyRef Name="destinationLocId" />
+      <PropertyRef Name="stockCode" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="transinrNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sourceLocId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="destinationLocId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="transferDate" />
+    <Property Type="String" Name="stockCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="quantity" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="costPrice" Precision="10" Scale="4" />
+    <Property Type="Decimal" Name="amount" Precision="10" Scale="4" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_trnsferInNote">
+    <Key>
+      <PropertyRef Name="transinNo" />
+    </Key>
+    <Property Type="String" Name="transinNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sourceLocId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" Nullable="false" />
+    <Property Type="String" Name="refNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="destinationLocId" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="purchaseReqNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="noOfItems" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="noOfPeaces" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="grossAmount" Precision="10" Scale="4" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="GLUpdate" Nullable="false" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_trnsferNote">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Type="String" Name="no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sourceLocId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" Nullable="false" />
+    <Property Type="String" Name="refNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="destinationLocId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="purchaseReqNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="noOfItems" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="noOfPeaces" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="grossAmount" Precision="10" Scale="4" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="GLUpdate" Nullable="false" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_adjustment_details">
+    <Key>
+      <PropertyRef Name="adju_no" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="adju_no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="location_id" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="line_no" />
+    <Property Type="String" Name="item_code" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="cost" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="stock" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="physical_quantity" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="variance" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_adjustment_head">
+    <Key>
+      <PropertyRef Name="adju_no" />
+    </Key>
+    <Property Type="String" Name="adju_no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="location_id" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="adjsment_date" Nullable="false" />
+    <Property Type="String" Name="remarks" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="user_id" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="batch_no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="process" Nullable="false" />
+    <Property Type="String" Name="process_user" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="process_date" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_damage">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Type="String" Name="no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" Nullable="false" />
+    <Property Type="String" Name="refNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="refDate" />
+    <Property Type="String" Name="remarks" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="noOfItems" Nullable="false" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="noOfPeaces" Nullable="false" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="grossAmount" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="GLUpdate" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_damage_detail">
+    <Key>
+      <PropertyRef Name="damageNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="damageNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="damageDate" />
+    <Property Type="String" Name="itemCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="quantity" Precision="18" Scale="2" />
+    <Property Type="String" Name="uom" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="costPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="sellingPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="amount" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_staffUsage">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Type="String" Name="no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" Nullable="false" />
+    <Property Type="String" Name="refNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="noOfItems" Nullable="false" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="noOfPeaces" Nullable="false" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="grossAmount" Nullable="false" Precision="10" Scale="4" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+    <Property Type="Boolean" Name="GLUpdate" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_staffUsage_detail">
+    <Key>
+      <PropertyRef Name="staffUsageNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="stockCode" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="staffUsageNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Date" />
+    <Property Type="String" Name="stockCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="quantity" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="costPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="amount" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_wastage">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Type="String" Name="no" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" Nullable="false" />
+    <Property Type="String" Name="refNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="refDate" />
+    <Property Type="String" Name="remarks" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="noOfItems" Nullable="false" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="noOfPeaces" Nullable="false" Precision="15" Scale="2" />
+    <Property Type="Decimal" Name="grossAmount" Nullable="false" Precision="15" Scale="4" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="GLUpdate" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_wastage_detail">
+    <Key>
+      <PropertyRef Name="wastageNo" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="itemCode" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="wastageNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="wastageDate" />
+    <Property Type="String" Name="itemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="quantity" Precision="10" Scale="2" />
+    <Property Type="String" Name="uom" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="costPrice" Precision="10" Scale="4" />
+    <Property Type="Decimal" Name="sellingPrice" Precision="10" Scale="4" />
+    <Property Type="Decimal" Name="amount" Precision="10" Scale="4" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_OrderFormDet">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Type="String" Name="Docno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OFNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Quntity" Precision="18" Scale="2" />
+    <Property Type="String" Name="Barcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UnitPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="CostPrice" Precision="18" Scale="4" />
+    <Property Type="String" Name="Unit" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Amountx" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="discper" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="discount" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="T_OpenStkHead">
+    <Key>
+      <PropertyRef Name="Docno" />
+    </Key>
+    <Property Type="String" Name="Docno" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="locationId" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="date" />
+    <Property Type="String" Name="supplier" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="grossAmount" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="netAmount" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="isSaved" />
+    <Property Type="Boolean" Name="isProcessed" />
+    <Property Type="DateTime" Name="processDate" />
+    <Property Type="String" Name="processUser" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="GLUpdate" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Stock_open">
+    <Key>
+      <PropertyRef Name="DocNo" />
+    </Key>
+    <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StockCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Suppid" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Stock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OpnStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="InitialStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ReservedStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CostPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SellingPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="WholeSalePrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="MrpPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="CompanyPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="AvgCost" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="InitialCost" Precision="18" Scale="4" />
+    <Property Type="String" Name="Descr" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="FixedGP" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SIH" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="EXPDate" />
+    <Property Type="String" Name="Usercode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateCr" />
+  </EntityType>
+</Schema>

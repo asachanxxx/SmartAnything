@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RIT_ATModel1StoreContainer" CdmEntityContainer="RIT_ATEntities1">
+    <EntitySetMapping Name="t_purchaseRequisition">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_purchaseRequisition">
+        <MappingFragment StoreEntitySet="t_purchaseRequisition">
+          <ScalarProperty Name="no" ColumnName="no" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="deleveryDate" ColumnName="deleveryDate" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="supplierId" ColumnName="supplierId" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="noOfPeaces" ColumnName="noOfPeaces" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_purchaseReq_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_purchaseReq_detail">
+        <MappingFragment StoreEntitySet="t_purchaseReq_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="r_value" ColumnName="r_value" />
+          <ScalarProperty Name="release" ColumnName="release" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="costPrice" ColumnName="costPrice" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="deleveryDate" ColumnName="deleveryDate" />
+          <ScalarProperty Name="ReqDate" ColumnName="ReqDate" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="purchaseReqNo" ColumnName="purchaseReqNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_PO_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_PO_detail">
+        <MappingFragment StoreEntitySet="t_PO_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="selling" ColumnName="selling" />
+          <ScalarProperty Name="priceLevel" ColumnName="priceLevel" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="poNo" ColumnName="poNo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_purchaseOrder">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_purchaseOrder">
+        <MappingFragment StoreEntitySet="t_purchaseOrder">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="noOfPeaces" ColumnName="noOfPeaces" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="DLocationID" ColumnName="DLocationID" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="supplierId" ColumnName="supplierId" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="poMethod" ColumnName="poMethod" />
+          <ScalarProperty Name="pReqNo" ColumnName="pReqNo" />
+          <ScalarProperty Name="reqLocationId" ColumnName="reqLocationId" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_grn">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_grn">
+        <MappingFragment StoreEntitySet="t_grn">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="isAllReturned" ColumnName="isAllReturned" />
+          <ScalarProperty Name="netAmount" ColumnName="netAmount" />
+          <ScalarProperty Name="deductions" ColumnName="deductions" />
+          <ScalarProperty Name="additions" ColumnName="additions" />
+          <ScalarProperty Name="netDiscount" ColumnName="netDiscount" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="noOfPieces" ColumnName="noOfPieces" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="supDoDate" ColumnName="supDoDate" />
+          <ScalarProperty Name="supDoNo" ColumnName="supDoNo" />
+          <ScalarProperty Name="supInvoiceValue" ColumnName="supInvoiceValue" />
+          <ScalarProperty Name="supInvoiceDate" ColumnName="supInvoiceDate" />
+          <ScalarProperty Name="supInvoiceNo" ColumnName="supInvoiceNo" />
+          <ScalarProperty Name="supplierId" ColumnName="supplierId" />
+          <ScalarProperty Name="expireDate" ColumnName="expireDate" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="poNo" ColumnName="poNo" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_grn_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_grn_detail">
+        <MappingFragment StoreEntitySet="t_grn_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="remainingQuantity" ColumnName="remainingQuantity" />
+          <ScalarProperty Name="returnedQuantity" ColumnName="returnedQuantity" />
+          <ScalarProperty Name="sellingPrice" ColumnName="sellingPrice" />
+          <ScalarProperty Name="costPrice" ColumnName="costPrice" />
+          <ScalarProperty Name="stockCode" ColumnName="stockCode" />
+          <ScalarProperty Name="expDate" ColumnName="expDate" />
+          <ScalarProperty Name="batchNo" ColumnName="batchNo" />
+          <ScalarProperty Name="disAmount" ColumnName="disAmount" />
+          <ScalarProperty Name="disPerc" ColumnName="disPerc" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="freeQty" ColumnName="freeQty" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="priceLevel" ColumnName="priceLevel" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="grnNo" ColumnName="grnNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_return">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_return">
+        <MappingFragment StoreEntitySet="t_return">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="noOfPeaces" ColumnName="noOfPeaces" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="supplierId" ColumnName="supplierId" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_return_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_return_detail">
+        <MappingFragment StoreEntitySet="t_return_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="sellingPrice" ColumnName="sellingPrice" />
+          <ScalarProperty Name="costPrice" ColumnName="costPrice" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="stockCode" ColumnName="stockCode" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="returnNo" ColumnName="returnNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_transfer_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_transfer_detail">
+        <MappingFragment StoreEntitySet="t_transfer_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="costPrice" ColumnName="costPrice" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="stockCode" ColumnName="stockCode" />
+          <ScalarProperty Name="transferDate" ColumnName="transferDate" />
+          <ScalarProperty Name="sourceLocId" ColumnName="sourceLocId" />
+          <ScalarProperty Name="transferNoteNo" ColumnName="transferNoteNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_transferIn_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_transferIn_detail">
+        <MappingFragment StoreEntitySet="t_transferIn_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="costPrice" ColumnName="costPrice" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="stockCode" ColumnName="stockCode" />
+          <ScalarProperty Name="transferDate" ColumnName="transferDate" />
+          <ScalarProperty Name="destinationLocId" ColumnName="destinationLocId" />
+          <ScalarProperty Name="sourceLocId" ColumnName="sourceLocId" />
+          <ScalarProperty Name="transinrNo" ColumnName="transinrNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_trnsferInNote">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_trnsferInNote">
+        <MappingFragment StoreEntitySet="t_trnsferInNote">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="noOfPeaces" ColumnName="noOfPeaces" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="purchaseReqNo" ColumnName="purchaseReqNo" />
+          <ScalarProperty Name="destinationLocId" ColumnName="destinationLocId" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="sourceLocId" ColumnName="sourceLocId" />
+          <ScalarProperty Name="transinNo" ColumnName="transinNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_trnsferNote">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_trnsferNote">
+        <MappingFragment StoreEntitySet="t_trnsferNote">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="noOfPeaces" ColumnName="noOfPeaces" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="purchaseReqNo" ColumnName="purchaseReqNo" />
+          <ScalarProperty Name="destinationLocId" ColumnName="destinationLocId" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="sourceLocId" ColumnName="sourceLocId" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_adjustment_details">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_adjustment_details">
+        <MappingFragment StoreEntitySet="t_adjustment_details">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="variance" ColumnName="variance" />
+          <ScalarProperty Name="physical_quantity" ColumnName="physical_quantity" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="item_code" ColumnName="item_code" />
+          <ScalarProperty Name="line_no" ColumnName="line_no" />
+          <ScalarProperty Name="location_id" ColumnName="location_id" />
+          <ScalarProperty Name="adju_no" ColumnName="adju_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_adjustment_head">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_adjustment_head">
+        <MappingFragment StoreEntitySet="t_adjustment_head">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="process_date" ColumnName="process_date" />
+          <ScalarProperty Name="process_user" ColumnName="process_user" />
+          <ScalarProperty Name="process" ColumnName="process" />
+          <ScalarProperty Name="batch_no" ColumnName="batch_no" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="adjsment_date" ColumnName="adjsment_date" />
+          <ScalarProperty Name="location_id" ColumnName="location_id" />
+          <ScalarProperty Name="adju_no" ColumnName="adju_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_damage">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_damage">
+        <MappingFragment StoreEntitySet="t_damage">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="noOfPeaces" ColumnName="noOfPeaces" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="refDate" ColumnName="refDate" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_damage_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_damage_detail">
+        <MappingFragment StoreEntitySet="t_damage_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="sellingPrice" ColumnName="sellingPrice" />
+          <ScalarProperty Name="costPrice" ColumnName="costPrice" />
+          <ScalarProperty Name="uom" ColumnName="uom" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="damageDate" ColumnName="damageDate" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="damageNo" ColumnName="damageNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_staffUsage">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_staffUsage">
+        <MappingFragment StoreEntitySet="t_staffUsage">
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="noOfPeaces" ColumnName="noOfPeaces" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_staffUsage_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_staffUsage_detail">
+        <MappingFragment StoreEntitySet="t_staffUsage_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="costPrice" ColumnName="costPrice" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="stockCode" ColumnName="stockCode" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="staffUsageNo" ColumnName="staffUsageNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_wastage">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_wastage">
+        <MappingFragment StoreEntitySet="t_wastage">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="noOfPeaces" ColumnName="noOfPeaces" />
+          <ScalarProperty Name="noOfItems" ColumnName="noOfItems" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="refDate" ColumnName="refDate" />
+          <ScalarProperty Name="refNo" ColumnName="refNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="no" ColumnName="no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_wastage_detail">
+      <EntityTypeMapping TypeName="RIT_ATModel1.t_wastage_detail">
+        <MappingFragment StoreEntitySet="t_wastage_detail">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="sellingPrice" ColumnName="sellingPrice" />
+          <ScalarProperty Name="costPrice" ColumnName="costPrice" />
+          <ScalarProperty Name="uom" ColumnName="uom" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="wastageDate" ColumnName="wastageDate" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="wastageNo" ColumnName="wastageNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_OrderFormDet">
+      <EntityTypeMapping TypeName="RIT_ATModel1.T_OrderFormDet">
+        <MappingFragment StoreEntitySet="T_OrderFormDet">
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="discper" ColumnName="discper" />
+          <ScalarProperty Name="Amountx" ColumnName="Amountx" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Quntity" ColumnName="Quntity" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="OFNo" ColumnName="OFNo" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="Docno" ColumnName="Docno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_OpenStkHead">
+      <EntityTypeMapping TypeName="RIT_ATModel1.T_OpenStkHead">
+        <MappingFragment StoreEntitySet="T_OpenStkHead">
+          <ScalarProperty Name="triggerVal" ColumnName="triggerVal" />
+          <ScalarProperty Name="GLUpdate" ColumnName="GLUpdate" />
+          <ScalarProperty Name="processUser" ColumnName="processUser" />
+          <ScalarProperty Name="processDate" ColumnName="processDate" />
+          <ScalarProperty Name="isProcessed" ColumnName="isProcessed" />
+          <ScalarProperty Name="isSaved" ColumnName="isSaved" />
+          <ScalarProperty Name="netAmount" ColumnName="netAmount" />
+          <ScalarProperty Name="grossAmount" ColumnName="grossAmount" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="locationId" ColumnName="locationId" />
+          <ScalarProperty Name="Docno" ColumnName="Docno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Stock_open">
+      <EntityTypeMapping TypeName="RIT_ATModel1.T_Stock_open">
+        <MappingFragment StoreEntitySet="T_Stock_open">
+          <ScalarProperty Name="DateCr" ColumnName="DateCr" />
+          <ScalarProperty Name="Usercode" ColumnName="Usercode" />
+          <ScalarProperty Name="EXPDate" ColumnName="EXPDate" />
+          <ScalarProperty Name="SIH" ColumnName="SIH" />
+          <ScalarProperty Name="FixedGP" ColumnName="FixedGP" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="InitialCost" ColumnName="InitialCost" />
+          <ScalarProperty Name="AvgCost" ColumnName="AvgCost" />
+          <ScalarProperty Name="CompanyPrice" ColumnName="CompanyPrice" />
+          <ScalarProperty Name="MrpPrice" ColumnName="MrpPrice" />
+          <ScalarProperty Name="WholeSalePrice" ColumnName="WholeSalePrice" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="ReservedStock" ColumnName="ReservedStock" />
+          <ScalarProperty Name="InitialStock" ColumnName="InitialStock" />
+          <ScalarProperty Name="OpnStock" ColumnName="OpnStock" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Suppid" ColumnName="Suppid" />
+          <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+          <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+          <ScalarProperty Name="StockCode" ColumnName="StockCode" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

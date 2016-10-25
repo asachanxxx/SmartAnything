@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RIT_ATModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RIT_ATModelStoreContainer">
+    <EntitySet Name="M_Agents" EntityType="RIT_ATModel.Store.M_Agents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Area" EntityType="RIT_ATModel.Store.M_Area" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Bank" EntityType="RIT_ATModel.Store.M_Bank" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_BankBranch" EntityType="RIT_ATModel.Store.M_BankBranch" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Category" EntityType="RIT_ATModel.Store.M_Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_CNReason" EntityType="RIT_ATModel.Store.M_CNReason" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_CNTypes" EntityType="RIT_ATModel.Store.M_CNTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Company" EntityType="RIT_ATModel.Store.M_Company" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_CushasAgents" EntityType="RIT_ATModel.Store.M_CushasAgents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Customers" EntityType="RIT_ATModel.Store.M_Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Employees" EntityType="RIT_ATModel.Store.M_Employees" store:Type="Tables" store:Schema="dbo" store:Name="M_Employees">
+      <DefiningQuery>SELECT 
+      [M_Employees].[EmpID] AS [EmpID], 
+      [M_Employees].[Compcode] AS [Compcode], 
+      [M_Employees].[Locacode] AS [Locacode], 
+      [M_Employees].[Name] AS [Name], 
+      [M_Employees].[TP] AS [TP], 
+      [M_Employees].[Fax] AS [Fax], 
+      [M_Employees].[Email] AS [Email], 
+      [M_Employees].[Address1] AS [Address1], 
+      [M_Employees].[Address2] AS [Address2], 
+      [M_Employees].[Address3] AS [Address3], 
+      [M_Employees].[ContactPerson] AS [ContactPerson], 
+      [M_Employees].[ContactPersonNo] AS [ContactPersonNo], 
+      [M_Employees].[CurrentStatus] AS [CurrentStatus], 
+      [M_Employees].[type] AS [type]
+      FROM [dbo].[M_Employees] AS [M_Employees]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="M_Levels" EntityType="RIT_ATModel.Store.M_Levels" store:Type="Tables" store:Schema="dbo" store:Name="M_Levels">
+      <DefiningQuery>SELECT 
+      [M_Levels].[code] AS [code], 
+      [M_Levels].[levelId] AS [levelId], 
+      [M_Levels].[description] AS [description], 
+      [M_Levels].[userCreated] AS [userCreated], 
+      [M_Levels].[dateCreated] AS [dateCreated], 
+      [M_Levels].[userModified] AS [userModified], 
+      [M_Levels].[dateModified] AS [dateModified], 
+      [M_Levels].[triggerVal] AS [triggerVal]
+      FROM [dbo].[M_Levels] AS [M_Levels]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="M_Loca" EntityType="RIT_ATModel.Store.M_Loca" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Product_Has_Supplier" EntityType="RIT_ATModel.Store.M_Product_Has_Supplier" store:Type="Tables" store:Schema="dbo" store:Name="M_Product_Has_Supplier">
+      <DefiningQuery>SELECT 
+      [M_Product_Has_Supplier].[productId] AS [productId], 
+      [M_Product_Has_Supplier].[supplierId] AS [supplierId], 
+      [M_Product_Has_Supplier].[triggerVal] AS [triggerVal]
+      FROM [dbo].[M_Product_Has_Supplier] AS [M_Product_Has_Supplier]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="M_ProductPriceChange" EntityType="RIT_ATModel.Store.M_ProductPriceChange" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Products" EntityType="RIT_ATModel.Store.M_Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Route" EntityType="RIT_ATModel.Store.M_Route" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_SalesMan" EntityType="RIT_ATModel.Store.M_SalesMan" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_SubCategory" EntityType="RIT_ATModel.Store.M_SubCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Suppliers" EntityType="RIT_ATModel.Store.M_Suppliers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Territory" EntityType="RIT_ATModel.Store.M_Territory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="M_Vehicles" EntityType="RIT_ATModel.Store.M_Vehicles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="P_AutoNumber" EntityType="RIT_ATModel.Store.P_AutoNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="P_cancelAutoNumber" EntityType="RIT_ATModel.Store.P_cancelAutoNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_Stock" EntityType="RIT_ATModel.Store.T_Stock" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_StockDamage" EntityType="RIT_ATModel.Store.T_StockDamage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="u_User" EntityType="RIT_ATModel.Store.u_User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="u_UserRoles" EntityType="RIT_ATModel.Store.u_UserRoles" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="M_Agents">
+    <Key>
+      <PropertyRef Name="AgentCode" />
+    </Key>
+    <Property Name="AgentCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Namex" Type="varchar" MaxLength="50" />
+    <Property Name="Address1" Type="varchar" MaxLength="150" />
+    <Property Name="Address2" Type="varchar" MaxLength="150" />
+    <Property Name="Address3" Type="varchar" MaxLength="150" />
+    <Property Name="TPOffice" Type="varchar" MaxLength="50" />
+    <Property Name="TPPersonal" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="20" />
+    <Property Name="AccNo" Type="varchar" MaxLength="20" />
+    <Property Name="NICno" Type="varchar" MaxLength="20" />
+    <Property Name="PassportNo" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="userx" Type="varchar" MaxLength="20" />
+    <Property Name="TimeFrom" Type="datetime" />
+    <Property Name="TimeTo" Type="datetime" />
+    <Property Name="District" Type="varchar" MaxLength="20" />
+    <Property Name="Remarks" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="M_Area">
+    <Key>
+      <PropertyRef Name="AreaCode" />
+    </Key>
+    <Property Name="AreaCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="50" />
+    <Property Name="Locacode" Type="varchar" MaxLength="50" />
+    <Property Name="Descri" Type="varchar" MaxLength="120" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="M_Bank">
+    <Key>
+      <PropertyRef Name="BANK_CODE" />
+    </Key>
+    <Property Name="BANK_CODE" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="BANK_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_DTRANSFER" Type="numeric" Precision="1" />
+    <Property Name="BANK_EXBATCH" Type="varchar" MaxLength="7" />
+  </EntityType>
+  <EntityType Name="M_BankBranch">
+    <Key>
+      <PropertyRef Name="BBRANCH_BANK" />
+      <PropertyRef Name="BBRANCH_CODE" />
+    </Key>
+    <Property Name="BBRANCH_BANK" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="BBRANCH_CODE" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="BBRANCH_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="BBRANCH_CTIME" Type="numeric" Precision="3" />
+    <Property Name="BBRANCH_DTRANSFER" Type="numeric" Precision="1" />
+    <Property Name="BBRANCH_EXBATCH" Type="varchar" MaxLength="7" />
+  </EntityType>
+  <EntityType Name="M_Category">
+    <Key>
+      <PropertyRef Name="Codex" />
+    </Key>
+    <Property Name="Codex" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Descr" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Lockedby" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Locked" Type="bit" />
+    <Property Name="Userx" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="M_CNReason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Reason" Type="varchar" MaxLength="40" />
+    <Property Name="NeedToUpdateStock" Type="bit" />
+    <Property Name="StockType" Type="varchar" MaxLength="10" />
+    <Property Name="UserCode" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="M_CNTypes">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TypeName" Type="varchar" MaxLength="40" />
+    <Property Name="UserCode" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="M_Company">
+    <Key>
+      <PropertyRef Name="CompCode" />
+    </Key>
+    <Property Name="CompCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Descr" Type="varchar" MaxLength="50" />
+    <Property Name="Add1" Type="varchar" MaxLength="50" />
+    <Property Name="Add2" Type="varchar" MaxLength="50" />
+    <Property Name="Add3" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Emailx" Type="varchar" MaxLength="50" />
+    <Property Name="Tpno" Type="varchar" MaxLength="20" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="M_CushasAgents">
+    <Key>
+      <PropertyRef Name="AgentCode" />
+      <PropertyRef Name="CustomerCode" />
+    </Key>
+    <Property Name="AgentCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CustomerCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="userx" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="M_Customers">
+    <Key>
+      <PropertyRef Name="CusID" />
+    </Key>
+    <Property Name="CusID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="CustName" Type="varchar" MaxLength="50" />
+    <Property Name="TP" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Address1" Type="varchar" MaxLength="50" />
+    <Property Name="Address2" Type="varchar" MaxLength="50" />
+    <Property Name="Address3" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="20" />
+    <Property Name="ContactPersonNo" Type="varchar" MaxLength="20" />
+    <Property Name="CurrentStatus" Type="varchar" MaxLength="10" />
+    <Property Name="Gradex" Type="varchar" MaxLength="20" />
+    <Property Name="CreditLimit" Type="numeric" Scale="2" />
+    <Property Name="CreditPeriod" Type="int" />
+    <Property Name="MaxDisc" Type="numeric" Scale="2" />
+    <Property Name="MinDisc" Type="numeric" Scale="2" />
+    <Property Name="ApplyingDisc" Type="numeric" Scale="2" />
+    <Property Name="CusOpenBal" Type="numeric" Scale="2" />
+    <Property Name="CusCurBal" Type="numeric" Scale="2" />
+    <Property Name="customerOS" Type="numeric" Scale="2" />
+    <Property Name="pointsEarned" Type="numeric" Scale="2" />
+    <Property Name="controlAccountCode" Type="varchar" MaxLength="15" />
+    <Property Name="customerAccountCode" Type="varchar" MaxLength="15" />
+    <Property Name="GLUpdate" Type="bit" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+    <Property Name="SalesMan" Type="varchar" MaxLength="20" />
+    <Property Name="Area" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.M_Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="M_Employees">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="TP" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Address1" Type="varchar" MaxLength="100" />
+    <Property Name="Address2" Type="varchar" MaxLength="100" />
+    <Property Name="Address3" Type="varchar" MaxLength="100" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPersonNo" Type="varchar" MaxLength="50" />
+    <Property Name="CurrentStatus" Type="varchar" MaxLength="20" />
+    <Property Name="type" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.M_Levels' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="M_Levels">
+    <Key>
+      <PropertyRef Name="code" />
+      <PropertyRef Name="levelId" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="code" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="levelId" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="userCreated" Type="varchar" MaxLength="10" />
+    <Property Name="dateCreated" Type="datetime" />
+    <Property Name="userModified" Type="varchar" MaxLength="10" />
+    <Property Name="dateModified" Type="datetime" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="M_Loca">
+    <Key>
+      <PropertyRef Name="Locacode" />
+    </Key>
+    <Property Name="Locacode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Companycode" Type="varchar" MaxLength="20" />
+    <Property Name="StockCode" Type="varchar" MaxLength="20" />
+    <Property Name="Locaname" Type="varchar" MaxLength="50" />
+    <Property Name="Add1" Type="varchar" MaxLength="50" />
+    <Property Name="Add2" Type="varchar" MaxLength="50" />
+    <Property Name="Add3" Type="varchar" MaxLength="50" />
+    <Property Name="Tpno" Type="varchar" MaxLength="20" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="Emailx" Type="varchar" MaxLength="50" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.M_Product_Has_Supplier' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="M_Product_Has_Supplier">
+    <Key>
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="supplierId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Name="productId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="supplierId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="triggerVal" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="M_ProductPriceChange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Product" Type="varchar" MaxLength="20" />
+    <Property Name="ChangedPlace" Type="varchar" MaxLength="30" />
+    <Property Name="Currentcost" Type="decimal" Scale="2" />
+    <Property Name="NewCost" Type="decimal" Scale="2" />
+    <Property Name="CurrentSelling" Type="decimal" Scale="2" />
+    <Property Name="NewSelling" Type="decimal" Scale="2" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="M_Products">
+    <Key>
+      <PropertyRef Name="IDX" />
+    </Key>
+    <Property Name="IDX" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="Namex" Type="varchar" MaxLength="150" />
+    <Property Name="PrintName" Type="varchar" MaxLength="150" />
+    <Property Name="Category" Type="varchar" MaxLength="30" />
+    <Property Name="Make" Type="varchar" MaxLength="30" />
+    <Property Name="Model" Type="varchar" MaxLength="30" />
+    <Property Name="Brand" Type="varchar" MaxLength="30" />
+    <Property Name="Color" Type="varchar" MaxLength="30" />
+    <Property Name="Unitx" Type="varchar" MaxLength="30" />
+    <Property Name="Suplier" Type="varchar" MaxLength="30" />
+    <Property Name="UnitPrice" Type="numeric" Scale="2" />
+    <Property Name="SellingPrice" Type="numeric" Scale="2" />
+    <Property Name="CostPrice" Type="numeric" Scale="2" />
+    <Property Name="ReorderQTY" Type="numeric" Scale="2" />
+    <Property Name="ReorderLevel" Type="numeric" Scale="2" />
+    <Property Name="MaxDisc" Type="numeric" Scale="2" />
+    <Property Name="MinDisc" Type="numeric" Scale="2" />
+    <Property Name="ApplyingDisc" Type="numeric" Scale="2" />
+    <Property Name="LockItem" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="FrezzItem" Type="bit" />
+    <Property Name="DiscountAllowed" Type="bit" />
+    <Property Name="SalesCommAllowed" Type="bit" />
+    <Property Name="NegativeQTY" Type="bit" />
+    <Property Name="VatApplicable" Type="bit" />
+    <Property Name="Norefundable" Type="bit" />
+    <Property Name="OpenPrice" Type="bit" />
+    <Property Name="StockLot" Type="bit" />
+    <Property Name="isOpenPrice" Type="bit" />
+    <Property Name="IsMaintainStockLot" Type="bit" />
+    <Property Name="WholesalePrice" Type="decimal" Scale="2" />
+    <Property Name="SupplierWarrenty" Type="numeric" Scale="2" />
+    <Property Name="CustomerWarrenty" Type="numeric" Scale="2" />
+    <Property Name="CommissionAmount" Type="numeric" Scale="2" />
+    <Property Name="CommissionPer" Type="numeric" Scale="2" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifyUser" Type="varchar" MaxLength="20" />
+    <Property Name="ModifyDate" Type="datetime" />
+    <Property Name="SubCategory" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="M_Route">
+    <Key>
+      <PropertyRef Name="Routecode" />
+    </Key>
+    <Property Name="Routecode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="TerritoryCode" Type="varchar" MaxLength="20" />
+    <Property Name="AreaCode" Type="varchar" MaxLength="20" />
+    <Property Name="Descr" Type="varchar" MaxLength="50" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="M_SalesMan">
+    <Key>
+      <PropertyRef Name="SalesmanID" />
+    </Key>
+    <Property Name="SalesmanID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="SalesmanName" Type="varchar" MaxLength="50" />
+    <Property Name="TP" Type="varchar" MaxLength="20" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Address1" Type="varchar" MaxLength="50" />
+    <Property Name="Address2" Type="varchar" MaxLength="50" />
+    <Property Name="Address3" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="20" />
+    <Property Name="ContactPersonNo" Type="varchar" MaxLength="50" />
+    <Property Name="CurrentStatus" Type="varchar" MaxLength="20" />
+    <Property Name="Gradex" Type="varchar" MaxLength="20" />
+    <Property Name="NICNo" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="M_SubCategory">
+    <Key>
+      <PropertyRef Name="Codex" />
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="Codex" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CategoryID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Descr" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="type" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Lockedby" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Locked" Type="bit" />
+    <Property Name="Userx" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="M_Suppliers">
+    <Key>
+      <PropertyRef Name="SupID" />
+    </Key>
+    <Property Name="SupID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="suppName" Type="varchar" MaxLength="100" />
+    <Property Name="CompCode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="TP" Type="varchar" MaxLength="30" />
+    <Property Name="Fax" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Address1" Type="varchar" MaxLength="50" />
+    <Property Name="Address2" Type="varchar" MaxLength="50" />
+    <Property Name="Address3" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPersonNo" Type="varchar" MaxLength="50" />
+    <Property Name="CurrentStatus" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="M_Territory">
+    <Key>
+      <PropertyRef Name="TerritoryCode" />
+    </Key>
+    <Property Name="TerritoryCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="AreaCode" Type="varchar" MaxLength="20" />
+    <Property Name="Descr" Type="varchar" MaxLength="50" />
+    <Property Name="UserNamex" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="M_Vehicles">
+    <Key>
+      <PropertyRef Name="VehicleID" />
+    </Key>
+    <Property Name="VehicleID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="20" />
+    <Property Name="CompCode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="Make" Type="varchar" MaxLength="30" />
+    <Property Name="Model" Type="varchar" MaxLength="30" />
+    <Property Name="Driver" Type="varchar" MaxLength="50" />
+    <Property Name="Milage" Type="varchar" MaxLength="50" />
+    <Property Name="FuelEfficiency" Type="numeric" Scale="2" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+    <Property Name="Route" Type="varchar" MaxLength="20" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="P_AutoNumber">
+    <Key>
+      <PropertyRef Name="Screen" />
+    </Key>
+    <Property Name="Screen" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ID" Type="varchar" MaxLength="50" />
+    <Property Name="Serial" Type="int" />
+    <Property Name="Mode" Type="int" />
+    <Property Name="Prefix" Type="varchar" MaxLength="5" />
+    <Property Name="LocaCode" Type="varchar" MaxLength="20" />
+    <Property Name="CompCode" Type="varchar" MaxLength="20" />
+    <Property Name="TempIndex" Type="decimal" />
+  </EntityType>
+  <EntityType Name="P_cancelAutoNumber">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Name="no" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="master" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="autoNo" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="T_Stock">
+    <Key>
+      <PropertyRef Name="StockCode" />
+      <PropertyRef Name="Locacode" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="StockCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Suppid" Type="varchar" MaxLength="20" />
+    <Property Name="ProductId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Stock" Type="numeric" Scale="2" />
+    <Property Name="OpnStock" Type="numeric" Scale="2" />
+    <Property Name="InitialStock" Type="numeric" Scale="2" />
+    <Property Name="ReservedStock" Type="numeric" Scale="2" />
+    <Property Name="CostPrice" Type="numeric" Scale="4" />
+    <Property Name="SellingPrice" Type="numeric" Scale="4" />
+    <Property Name="WholeSalePrice" Type="numeric" Scale="4" />
+    <Property Name="MrpPrice" Type="numeric" Scale="4" />
+    <Property Name="CompanyPrice" Type="numeric" Scale="4" />
+    <Property Name="AvgCost" Type="numeric" Scale="4" />
+    <Property Name="InitialCost" Type="numeric" Scale="4" />
+    <Property Name="Descr" Type="varchar" MaxLength="150" />
+    <Property Name="FixedGP" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="SIH" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="EXPDate" Type="datetime" />
+    <Property Name="Usercode" Type="varchar" MaxLength="20" />
+    <Property Name="DateCr" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_StockDamage">
+    <Key>
+      <PropertyRef Name="StockCode" />
+      <PropertyRef Name="Locacode" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="StockCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Suppid" Type="varchar" MaxLength="20" />
+    <Property Name="ProductId" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Stock" Type="numeric" Scale="2" />
+    <Property Name="OpnStock" Type="numeric" Scale="2" />
+    <Property Name="InitialStock" Type="numeric" Scale="2" />
+    <Property Name="ReservedStock" Type="numeric" Scale="2" />
+    <Property Name="CostPrice" Type="numeric" Scale="4" />
+    <Property Name="SellingPrice" Type="numeric" Scale="4" />
+    <Property Name="WholeSalePrice" Type="numeric" Scale="4" />
+    <Property Name="MrpPrice" Type="numeric" Scale="4" />
+    <Property Name="CompanyPrice" Type="numeric" Scale="4" />
+    <Property Name="AvgCost" Type="numeric" Scale="4" />
+    <Property Name="InitialCost" Type="numeric" Scale="4" />
+    <Property Name="Descr" Type="varchar" MaxLength="150" />
+    <Property Name="FixedGP" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="SIH" Type="numeric" Nullable="false" Scale="4" />
+    <Property Name="EXPDate" Type="datetime" />
+    <Property Name="Usercode" Type="varchar" MaxLength="20" />
+    <Property Name="DateCr" Type="datetime" />
+  </EntityType>
+  <EntityType Name="u_User">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="userName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="roleId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="userCreated" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+    <Property Name="userModified" Type="varchar" MaxLength="10" />
+    <Property Name="dateModified" Type="datetime" />
+    <Property Name="isActive" Type="int" Nullable="false" />
+    <Property Name="empId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="signOnTime" Type="datetime" />
+    <Property Name="signOnDate" Type="datetime" />
+    <Property Name="shiftNo" Type="int" />
+    <Property Name="isSignOn" Type="int" />
+    <Property Name="isSignOff" Type="int" />
+    <Property Name="signOffDate" Type="datetime" />
+    <Property Name="signOffTime" Type="datetime" />
+    <Property Name="dateTimeFormat" Type="varchar" MaxLength="50" />
+    <Property Name="mobile" Type="varchar" MaxLength="10" />
+    <Property Name="terminalID" Type="varchar" MaxLength="3" />
+    <Property Name="shiftOnLocation" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="u_UserRoles">
+    <Key>
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="roleId" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="description" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="userCreated" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="dateCreated" Type="datetime" Nullable="false" />
+    <Property Name="userModified" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="dateModified" Type="datetime" Nullable="false" />
+    <Property Name="activate" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

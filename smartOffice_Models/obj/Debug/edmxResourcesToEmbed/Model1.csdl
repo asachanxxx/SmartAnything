@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RIT_ATModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RIT_ATEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="M_Area" EntityType="RIT_ATModel.M_Area" />
+    <EntitySet Name="M_Bank" EntityType="RIT_ATModel.M_Bank" />
+    <EntitySet Name="M_Company" EntityType="RIT_ATModel.M_Company" />
+    <EntitySet Name="M_Loca" EntityType="RIT_ATModel.M_Loca" />
+    <EntitySet Name="M_Route" EntityType="RIT_ATModel.M_Route" />
+    <EntitySet Name="M_Suppliers" EntityType="RIT_ATModel.M_Suppliers" />
+    <EntitySet Name="M_Territory" EntityType="RIT_ATModel.M_Territory" />
+    <EntitySet Name="M_Vehicles" EntityType="RIT_ATModel.M_Vehicles" />
+    <EntitySet Name="M_Category" EntityType="RIT_ATModel.M_Category" />
+    <EntitySet Name="M_ProductPriceChange" EntityType="RIT_ATModel.M_ProductPriceChange" />
+    <EntitySet Name="P_AutoNumber" EntityType="RIT_ATModel.P_AutoNumber" />
+    <EntitySet Name="M_BankBranch" EntityType="RIT_ATModel.M_BankBranch" />
+    <EntitySet Name="M_Employees" EntityType="RIT_ATModel.M_Employees" />
+    <EntitySet Name="M_CNReason" EntityType="RIT_ATModel.M_CNReason" />
+    <EntitySet Name="M_CNTypes" EntityType="RIT_ATModel.M_CNTypes" />
+    <EntitySet Name="T_Stock" EntityType="RIT_ATModel.T_Stock" />
+    <EntitySet Name="M_Levels" EntityType="RIT_ATModel.M_Levels" />
+    <EntitySet Name="M_Product_Has_Supplier" EntityType="RIT_ATModel.M_Product_Has_Supplier" />
+    <EntitySet Name="P_cancelAutoNumber" EntityType="RIT_ATModel.P_cancelAutoNumber" />
+    <EntitySet Name="u_UserRoles" EntityType="RIT_ATModel.u_UserRolex" />
+    <EntitySet Name="M_Agents" EntityType="RIT_ATModel.M_Agents" />
+    <EntitySet Name="M_SalesMan" EntityType="RIT_ATModel.M_SalesMan" />
+    <EntitySet Name="M_CushasAgents" EntityType="RIT_ATModel.M_CushasAgents" />
+    <EntitySet Name="T_StockDamage" EntityType="RIT_ATModel.T_StockDamage" />
+    <EntitySet Name="u_User" EntityType="RIT_ATModel.u_Userxcc" />
+    <EntitySet Name="M_CustomerCategory" EntityType="RIT_ATModel.M_CustomerCategory" />
+    <EntitySet Name="M_CustomerSub" EntityType="RIT_ATModel.M_CustomerSub" />
+    <EntitySet Name="M_Customers" EntityType="RIT_ATModel.M_Customers" />
+    <EntitySet Name="M_Products" EntityType="RIT_ATModel.M_Products" />
+    <EntitySet Name="M_SubCategory" EntityType="RIT_ATModel.M_SubCategory" />
+    <EntitySet Name="M_ProductParts" EntityType="RIT_ATModel.M_ProductParts" />
+    <EntitySet Name="M_Product_Has_Parts" EntityType="RIT_ATModel.M_Product_Has_Parts" />
+  </EntityContainer>
+  <EntityType Name="M_Area">
+    <Key>
+      <PropertyRef Name="AreaCode" />
+    </Key>
+    <Property Name="AreaCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Compcode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Locacode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Descri" Type="String" MaxLength="120" Unicode="false" FixedLength="false" />
+    <Property Name="Datex" Type="DateTime" Precision="3" />
+    <Property Name="Userx" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="M_Bank">
+    <Key>
+      <PropertyRef Name="BANK_CODE" />
+    </Key>
+    <Property Name="BANK_CODE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="BANK_NAME" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BANK_DTRANSFER" Type="Decimal" Precision="1" Scale="0" />
+    <Property Name="BANK_EXBATCH" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="M_Company">
+    <Key>
+      <PropertyRef Name="CompCode" />
+    </Key>
+    <Property Name="CompCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Descr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Add1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Add2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Add3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Emailx" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Tpno" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Userx" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Datex" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Loca">
+    <Key>
+      <PropertyRef Name="Locacode" />
+    </Key>
+    <Property Name="Locacode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Companycode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="StockCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Locaname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Add1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Add2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Add3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Tpno" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Emailx" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Userx" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Datex" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Route">
+    <Key>
+      <PropertyRef Name="Routecode" />
+    </Key>
+    <Property Name="Routecode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Compcode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Locacode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TerritoryCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AreaCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Descr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Datex" Type="DateTime" Precision="3" />
+    <Property Name="Userx" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="M_Suppliers">
+    <Key>
+      <PropertyRef Name="SupID" />
+    </Key>
+    <Property Name="SupID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="suppName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CompCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Locacode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="TP" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactPerson" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactPersonNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CurrentStatus" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="M_Territory">
+    <Key>
+      <PropertyRef Name="TerritoryCode" />
+    </Key>
+    <Property Name="TerritoryCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Compcode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Locacode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="AreaCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Descr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserNamex" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Datex" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Vehicles">
+    <Key>
+      <PropertyRef Name="VehicleID" />
+    </Key>
+    <Property Name="VehicleID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="VehicleNo" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CompCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Locacode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Make" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Model" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Driver" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Milage" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FuelEfficiency" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Route" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Userx" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Datex" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Category">
+    <Key>
+      <PropertyRef Name="Codex" />
+    </Key>
+    <Property Name="Codex" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Descr" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Lockedby" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Locked" Type="Boolean" />
+    <Property Name="Userx" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="M_ProductPriceChange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Product" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ChangedPlace" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Currentcost" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="NewCost" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CurrentSelling" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="NewSelling" Precision="18" Scale="2" />
+    <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+  </EntityType>
+  <EntityType Name="P_AutoNumber">
+    <Key>
+      <PropertyRef Name="Screen" />
+    </Key>
+    <Property Type="String" Name="Screen" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Serial" />
+    <Property Type="Int32" Name="Mode" />
+    <Property Type="String" Name="Prefix" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="TempIndex" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="M_BankBranch">
+    <Key>
+      <PropertyRef Name="BBRANCH_BANK" />
+      <PropertyRef Name="BBRANCH_CODE" />
+    </Key>
+    <Property Type="String" Name="BBRANCH_BANK" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BBRANCH_CODE" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BBRANCH_NAME" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="BBRANCH_CTIME" Precision="3" Scale="0" />
+    <Property Type="Decimal" Name="BBRANCH_DTRANSFER" Precision="1" Scale="0" />
+    <Property Type="String" Name="BBRANCH_EXBATCH" MaxLength="7" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="M_Employees">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Type="String" Name="EmpID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TP" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address1" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address3" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactPerson" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurrentStatus" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="type" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="M_CNReason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Reason" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="NeedToUpdateStock" />
+    <Property Type="String" Name="StockType" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_CNTypes">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Type="String" Name="TypeID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TypeName" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_Stock">
+    <Key>
+      <PropertyRef Name="StockCode" />
+      <PropertyRef Name="Locacode" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Type="String" Name="StockCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Suppid" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Stock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OpnStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="InitialStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ReservedStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CostPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SellingPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="WholeSalePrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="MrpPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="CompanyPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="AvgCost" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="InitialCost" Precision="18" Scale="4" />
+    <Property Type="String" Name="Descr" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="FixedGP" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SIH" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="EXPDate" Precision="3" />
+    <Property Type="String" Name="Usercode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateCr" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Levels">
+    <Key>
+      <PropertyRef Name="code" />
+      <PropertyRef Name="levelId" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="code" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="levelId" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userCreated" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dateCreated" Precision="3" />
+    <Property Type="String" Name="userModified" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dateModified" Precision="3" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="M_Product_Has_Supplier">
+    <Key>
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="supplierId" />
+      <PropertyRef Name="triggerVal" />
+    </Key>
+    <Property Type="String" Name="productId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="supplierId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_cancelAutoNumber">
+    <Key>
+      <PropertyRef Name="no" />
+    </Key>
+    <Property Type="Int32" Name="no" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="master" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="autoNo" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="u_UserRolex">
+    <Key>
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Type="String" Name="roleId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userCreated" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dateCreated" Nullable="false" Precision="3" />
+    <Property Type="String" Name="userModified" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dateModified" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="activate" Nullable="false" />
+  </EntityType>
+  <EntityType Name="M_Agents">
+    <Key>
+      <PropertyRef Name="AgentCode" />
+    </Key>
+    <Property Type="String" Name="AgentCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Namex" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address1" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address2" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address3" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TPOffice" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TPPersonal" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AccNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NICno" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PassportNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+    <Property Type="String" Name="userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TimeFrom" Precision="3" />
+    <Property Type="DateTime" Name="TimeTo" Precision="3" />
+    <Property Type="String" Name="District" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="M_SalesMan">
+    <Key>
+      <PropertyRef Name="SalesmanID" />
+    </Key>
+    <Property Type="String" Name="SalesmanID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SalesmanName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TP" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address3" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactPerson" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurrentStatus" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Gradex" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NICNo" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="M_CushasAgents">
+    <Key>
+      <PropertyRef Name="AgentCode" />
+      <PropertyRef Name="CustomerCode" />
+    </Key>
+    <Property Type="String" Name="AgentCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+    <Property Type="String" Name="userx" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_StockDamage">
+    <Key>
+      <PropertyRef Name="StockCode" />
+      <PropertyRef Name="Locacode" />
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Type="String" Name="StockCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Suppid" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Stock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OpnStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="InitialStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ReservedStock" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CostPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SellingPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="WholeSalePrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="MrpPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="CompanyPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="AvgCost" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="InitialCost" Precision="18" Scale="4" />
+    <Property Type="String" Name="Descr" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="FixedGP" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SIH" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="EXPDate" Precision="3" />
+    <Property Type="String" Name="Usercode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateCr" Precision="3" />
+  </EntityType>
+  <EntityType Name="u_Userxcc">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Type="String" Name="userId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="roleId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userCreated" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dateCreated" Nullable="false" Precision="3" />
+    <Property Type="String" Name="userModified" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dateModified" Precision="3" />
+    <Property Type="Int32" Name="isActive" Nullable="false" />
+    <Property Type="String" Name="Type" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TP" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address3" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactPerson" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurrentStatus" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Gradex" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NICNo" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="M_CustomerCategory">
+    <Key>
+      <PropertyRef Name="CusCateID" />
+    </Key>
+    <Property Type="String" Name="CusCateID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_CustomerSub">
+    <Key>
+      <PropertyRef Name="CussubID" />
+      <PropertyRef Name="CatID" />
+    </Key>
+    <Property Type="String" Name="CussubID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CatID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+  </EntityType>
+  <EntityType Name="M_Customers">
+    <Key>
+      <PropertyRef Name="CusID" />
+    </Key>
+    <Property Type="String" Name="CusID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CustName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TP" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address3" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactPerson" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurrentStatus" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Gradex" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CreditLimit" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="CreditPeriod" />
+    <Property Type="Decimal" Name="MaxDisc" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="MinDisc" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ApplyingDisc" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CusOpenBal" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CusCurBal" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="customerOS" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="pointsEarned" Precision="18" Scale="2" />
+    <Property Type="String" Name="controlAccountCode" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="customerAccountCode" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="GLUpdate" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+    <Property Type="String" Name="SalesMan" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Area" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cat" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="subcat" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="M_Products">
+    <Key>
+      <PropertyRef Name="IDX" />
+    </Key>
+    <Property Type="String" Name="IDX" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Namex" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrintName" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Category" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Make" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Model" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Brand" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Color" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Unitx" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Suplier" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UnitPrice" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="SellingPrice" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CostPrice" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ReorderQTY" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ReorderLevel" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="MaxDisc" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="MinDisc" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ApplyingDisc" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="LockItem" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Boolean" Name="FrezzItem" />
+    <Property Type="Boolean" Name="DiscountAllowed" />
+    <Property Type="Boolean" Name="SalesCommAllowed" />
+    <Property Type="Boolean" Name="NegativeQTY" />
+    <Property Type="Boolean" Name="VatApplicable" />
+    <Property Type="Boolean" Name="Norefundable" />
+    <Property Type="Boolean" Name="OpenPrice" />
+    <Property Type="Boolean" Name="StockLot" />
+    <Property Type="Boolean" Name="isOpenPrice" />
+    <Property Type="Boolean" Name="IsMaintainStockLot" />
+    <Property Type="Decimal" Name="WholesalePrice" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="SupplierWarrenty" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CustomerWarrenty" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CommissionAmount" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CommissionPer" Precision="18" Scale="2" />
+    <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifyDate" Precision="3" />
+    <Property Type="String" Name="SubCategory" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AutoIndex" />
+  </EntityType>
+  <EntityType Name="M_SubCategory">
+    <Key>
+      <PropertyRef Name="Codex" />
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="Codex" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Descr" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Lockedby" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Locked" Type="Boolean" />
+    <Property Name="Userx" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="M_ProductParts">
+    <Key>
+      <PropertyRef Name="IDX" />
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="PartName" />
+      <PropertyRef Name="ModelNO" />
+      <PropertyRef Name="SerialNo" />
+      <PropertyRef Name="SKU" />
+      <PropertyRef Name="SuppCode" />
+      <PropertyRef Name="MfctCode" />
+      <PropertyRef Name="UnitOfMeasure" />
+      <PropertyRef Name="Color" />
+      <PropertyRef Name="Brand" />
+      <PropertyRef Name="Capacity" />
+    </Key>
+    <Property Type="String" Name="IDX" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PartNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PartName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ModelNO" Nullable="false" />
+    <Property Type="String" Name="SerialNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SKU" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SuppCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MfctCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UnitOfMeasure" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Color" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Brand" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Capacity" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="UnitPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="SellingPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="CostPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="AvgPrice" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="PackSize" Precision="10" Scale="0" />
+    <Property Type="Decimal" Name="ReOrderLevel" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="MinQty" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="EOQty" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="ReOrderQty" Precision="18" Scale="0" />
+    <Property Type="String" Name="CreateUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="String" Name="ModifyUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModifyDate" />
+  </EntityType>
+  <EntityType Name="M_Product_Has_Parts">
+    <Key>
+      <PropertyRef Name="productId" />
+      <PropertyRef Name="PartId" />
+    </Key>
+    <Property Type="String" Name="productId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PartId" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="triggerVal" Nullable="false" />
+  </EntityType>
+</Schema>

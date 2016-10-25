@@ -1,0 +1,1236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RIT_ATModel2.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RIT_ATModel2StoreContainer">
+          <EntitySet Name="T_CNBreak" EntityType="RIT_ATModel2.Store.T_CNBreak" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_CNGrouping" EntityType="RIT_ATModel2.Store.T_CNGrouping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_CNParts" EntityType="RIT_ATModel2.Store.T_CNParts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_CreditNoteHead" EntityType="RIT_ATModel2.Store.T_CreditNoteHead" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_CustomerItemAlloc" EntityType="RIT_ATModel2.Store.T_CustomerItemAlloc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DIliveryAudit" EntityType="RIT_ATModel2.Store.T_DIliveryAudit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DiliveryDet" EntityType="RIT_ATModel2.Store.T_DiliveryDet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DIliveryHed" EntityType="RIT_ATModel2.Store.T_DIliveryHed" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_OrderFormHead" EntityType="RIT_ATModel2.Store.T_OrderFormHead" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_OrderTracking" EntityType="RIT_ATModel2.Store.T_OrderTracking" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_packingdet" EntityType="RIT_ATModel2.Store.T_packingdet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_packinghead" EntityType="RIT_ATModel2.Store.T_packinghead" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_SalesAllocDet" EntityType="RIT_ATModel2.Store.T_SalesAllocDet" store:Type="Tables" store:Schema="dbo" store:Name="T_SalesAllocDet">
+            <DefiningQuery>SELECT 
+      [T_SalesAllocDet].[Docno] AS [Docno], 
+      [T_SalesAllocDet].[SalesMan] AS [SalesMan], 
+      [T_SalesAllocDet].[Customer] AS [Customer], 
+      [T_SalesAllocDet].[Item] AS [Item], 
+      [T_SalesAllocDet].[AllowedQTY] AS [AllowedQTY], 
+      [T_SalesAllocDet].[AllocQTY] AS [AllocQTY], 
+      [T_SalesAllocDet].[DateFrom] AS [DateFrom], 
+      [T_SalesAllocDet].[Dateto] AS [Dateto], 
+      [T_SalesAllocDet].[Userx] AS [Userx], 
+      [T_SalesAllocDet].[Datex] AS [Datex]
+      FROM [dbo].[T_SalesAllocDet] AS [T_SalesAllocDet]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="T_SalesAllocHead" EntityType="RIT_ATModel2.Store.T_SalesAllocHead" store:Type="Tables" store:Schema="dbo" store:Name="T_SalesAllocHead">
+            <DefiningQuery>SELECT 
+      [T_SalesAllocHead].[Docno] AS [Docno], 
+      [T_SalesAllocHead].[Salesman] AS [Salesman], 
+      [T_SalesAllocHead].[Item] AS [Item], 
+      [T_SalesAllocHead].[AllocQTY] AS [AllocQTY], 
+      [T_SalesAllocHead].[DateFrom] AS [DateFrom], 
+      [T_SalesAllocHead].[Dateto] AS [Dateto], 
+      [T_SalesAllocHead].[Userx] AS [Userx], 
+      [T_SalesAllocHead].[Datex] AS [Datex]
+      FROM [dbo].[T_SalesAllocHead] AS [T_SalesAllocHead]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="T_SalesCustomerAlloc" EntityType="RIT_ATModel2.Store.T_SalesCustomerAlloc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_SalesItemAlloc" EntityType="RIT_ATModel2.Store.T_SalesItemAlloc" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="T_CNBreak">
+          <Key>
+            <PropertyRef Name="DocNo" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="DocNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Namex" Type="varchar" MaxLength="150" />
+          <Property Name="InvQTY" Type="numeric" Scale="2" />
+          <Property Name="QTY" Type="numeric" Scale="2" />
+          <Property Name="Datex" Type="datetime" />
+          <Property Name="Userx" Type="varchar" MaxLength="20" />
+          <Property Name="Grouped" Type="bit" />
+          <Property Name="BalanceQty" Type="numeric" Scale="2" />
+        </EntityType>
+        <EntityType Name="T_CNGrouping">
+          <Key>
+            <PropertyRef Name="Docno" />
+            <PropertyRef Name="ItemCode" />
+            <PropertyRef Name="CNType" />
+            <PropertyRef Name="CNReason" />
+          </Key>
+          <Property Name="Docno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" MaxLength="150" />
+          <Property Name="CNType" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CNReason" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="InvoiceQty" Type="numeric" Scale="2" />
+          <Property Name="CNQTY" Type="numeric" Scale="2" />
+          <Property Name="BreakdownQTY" Type="numeric" Scale="2" />
+          <Property Name="TagNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Selected" Type="bit" />
+          <Property Name="SelectedQTY" Type="numeric" Scale="2" />
+          <Property Name="balanceQTY" Type="numeric" Scale="2" />
+          <Property Name="Shipped" Type="bit" />
+          <Property Name="ShippedDate" Type="datetime" />
+          <Property Name="ShippedDO" Type="varchar" MaxLength="20" />
+          <Property Name="CNnumber" Type="varchar" MaxLength="20" />
+          <Property Name="PartEntered" Type="bit" />
+        </EntityType>
+        <EntityType Name="T_CNParts">
+          <Key>
+            <PropertyRef Name="CNno" />
+            <PropertyRef Name="ItemCode" />
+            <PropertyRef Name="PartCode" />
+          </Key>
+          <Property Name="CNno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TagNumber" Type="varchar" MaxLength="20" />
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PartCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="QTY" Type="numeric" Scale="2" />
+          <Property Name="Saved" Type="bit" />
+          <Property Name="Processed" Type="bit" />
+          <Property Name="ProcessedDate" Type="datetime" />
+          <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="T_CreditNoteHead">
+          <Key>
+            <PropertyRef Name="DocNo" />
+          </Key>
+          <Property Name="DocNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CompCode" Type="varchar" MaxLength="20" />
+          <Property Name="LocaCode" Type="varchar" MaxLength="20" />
+          <Property Name="OFNo" Type="varchar" MaxLength="20" />
+          <Property Name="InvNo" Type="varchar" MaxLength="20" />
+          <Property Name="Dono" Type="varchar" MaxLength="20" />
+          <Property Name="CustomerID" Type="varchar" MaxLength="20" />
+          <Property Name="TypeX" Type="varchar" MaxLength="20" />
+          <Property Name="AuditUser" Type="varchar" MaxLength="20" />
+          <Property Name="Statusx" Type="varchar" MaxLength="10" />
+          <Property Name="Datex" Type="datetime" />
+          <Property Name="ManualID" Type="varchar" MaxLength="20" />
+          <Property Name="DeliveredDate" Type="datetime" />
+          <Property Name="PackingList" Type="varchar" MaxLength="20" />
+          <Property Name="DeliveryStatus" Type="varchar" MaxLength="10" />
+          <Property Name="AgentStatus" Type="varchar" MaxLength="10" />
+          <Property Name="Remarks" Type="varchar" MaxLength="150" />
+          <Property Name="Processed" Type="bit" />
+          <Property Name="ProcessedDate" Type="datetime" />
+          <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+          <Property Name="Grouped" Type="bit" />
+          <Property Name="GroupedDate" Type="datetime" />
+          <Property Name="GroupedUser" Type="varchar" MaxLength="20" />
+          <Property Name="Approved" Type="bit" />
+          <Property Name="ApprovedDate" Type="datetime" />
+          <Property Name="ApprovedUser" Type="varchar" MaxLength="20" />
+          <Property Name="PartEnterComplete" Type="bit" />
+          <Property Name="PartEnterCompleteDate" Type="datetime" />
+          <Property Name="PartEnterCompleteUser" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="T_CustomerItemAlloc">
+          <Key>
+            <PropertyRef Name="Customer" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Name="Customer" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AllocQTY" Type="numeric" Scale="2" />
+          <Property Name="DateFrom" Type="datetime" />
+          <Property Name="Dateto" Type="datetime" />
+          <Property Name="Userx" Type="varchar" MaxLength="20" />
+          <Property Name="Datex" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_DIliveryAudit">
+          <Key>
+            <PropertyRef Name="Dono" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Name="Dono" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="DoQty" Type="decimal" Scale="2" />
+          <Property Name="ActualQTY" Type="decimal" Scale="2" />
+          <Property Name="Variance" Type="decimal" Scale="2" />
+          <Property Name="Pass" Type="int" />
+        </EntityType>
+        <EntityType Name="T_DiliveryDet">
+          <Key>
+            <PropertyRef Name="DoNo" />
+            <PropertyRef Name="Item" />
+            <PropertyRef Name="IsCNitem" />
+          </Key>
+          <Property Name="DoNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ItemNamex" Type="varchar" MaxLength="50" />
+          <Property Name="Unit" Type="varchar" MaxLength="10" />
+          <Property Name="Qty" Type="numeric" Scale="2" />
+          <Property Name="Carton" Type="numeric" />
+          <Property Name="ActualCartons" Type="numeric" />
+          <Property Name="Remarks" Type="varchar" MaxLength="150" />
+          <Property Name="Pass" Type="bit" />
+          <Property Name="IsCNitem" Type="bit" Nullable="false" />
+          <Property Name="CNNumber" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="T_DIliveryHed">
+          <Key>
+            <PropertyRef Name="DoNo" />
+          </Key>
+          <Property Name="DoNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CompCode" Type="varchar" MaxLength="20" />
+          <Property Name="LocaCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="InvNo" Type="varchar" MaxLength="20" />
+          <Property Name="InvoiceAmount" Type="numeric" Scale="4" />
+          <Property Name="Customer" Type="varchar" MaxLength="20" />
+          <Property Name="CustomerDIscRate" Type="numeric" Scale="4" />
+          <Property Name="Datex" Type="datetime" />
+          <Property Name="Agent" Type="varchar" MaxLength="20" />
+          <Property Name="Lorry" Type="varchar" MaxLength="20" />
+          <Property Name="NoOfCartons" Type="numeric" Scale="2" />
+          <Property Name="Dispatched" Type="int" />
+          <Property Name="DispatchedDate" Type="datetime" />
+          <Property Name="DispatchedUser" Type="varchar" MaxLength="20" />
+          <Property Name="Checked" Type="int" />
+          <Property Name="CheckedUser" Type="varchar" MaxLength="20" />
+          <Property Name="Checkeddate" Type="datetime" />
+          <Property Name="Approved" Type="int" />
+          <Property Name="ApprovedUser" Type="varchar" MaxLength="20" />
+          <Property Name="ApprovedDate" Type="datetime" />
+          <Property Name="Handovered" Type="int" />
+          <Property Name="HandoverdUser" Type="varchar" MaxLength="20" />
+          <Property Name="HandoverDate" Type="datetime" />
+          <Property Name="HandoverCartons" Type="numeric" Scale="2" />
+          <Property Name="Delivered" Type="int" />
+          <Property Name="DiliveredUser" Type="varchar" MaxLength="20" />
+          <Property Name="DiliveryDate" Type="datetime" />
+          <Property Name="Remarks" Type="varchar" MaxLength="150" />
+          <Property Name="NoOfPrints" Type="numeric" Scale="2" />
+          <Property Name="PrintUser" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="Processed" Type="int" />
+          <Property Name="ProcessedDate" Type="datetime" />
+          <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+          <Property Name="Audited" Type="int" />
+          <Property Name="AuditDate" Type="datetime" />
+          <Property Name="AuditUser" Type="varchar" MaxLength="20" />
+          <Property Name="Completed" Type="int" />
+          <Property Name="CompletedDate" Type="datetime" />
+          <Property Name="PackingListCreated" Type="int" />
+          <Property Name="PackingListNo" Type="varchar" MaxLength="20" />
+          <Property Name="PackingListDate" Type="datetime" />
+          <Property Name="PackingListUser" Type="varchar" MaxLength="20" />
+          <Property Name="ReportedProblems" Type="varchar" MaxLength="250" />
+          <Property Name="AuditRemarks" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="T_OrderFormHead">
+          <Key>
+            <PropertyRef Name="DocNo" />
+          </Key>
+          <Property Name="DocNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Compcode" Type="varchar" MaxLength="20" />
+          <Property Name="Locacode" Type="varchar" MaxLength="20" />
+          <Property Name="TRNType" Type="varchar" MaxLength="10" />
+          <Property Name="SalesMan" Type="varchar" MaxLength="20" />
+          <Property Name="Customer" Type="varchar" MaxLength="20" />
+          <Property Name="Datex" Type="datetime" />
+          <Property Name="RecivedBy" Type="varchar" MaxLength="20" />
+          <Property Name="CheckedBy" Type="varchar" MaxLength="20" />
+          <Property Name="Approved" Type="int" Nullable="false" />
+          <Property Name="ApprovedBy" Type="varchar" MaxLength="20" />
+          <Property Name="ApprovedDate" Type="datetime" />
+          <Property Name="RecivedDate" Type="datetime" />
+          <Property Name="Userx" Type="varchar" MaxLength="20" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CQNO" Type="varchar" MaxLength="20" />
+          <Property Name="CQDate" Type="datetime" />
+          <Property Name="BANK" Type="varchar" MaxLength="20" />
+          <Property Name="BRANCH" Type="varchar" MaxLength="20" />
+          <Property Name="Subtotal" Type="numeric" Scale="2" />
+          <Property Name="DiscountPer" Type="numeric" Scale="2" />
+          <Property Name="SubtotalDisc" Type="numeric" Scale="4" />
+          <Property Name="ItemdiscTotal" Type="numeric" Scale="4" />
+          <Property Name="TotalDisc" Type="numeric" Scale="2" />
+          <Property Name="NetTotal" Type="numeric" Scale="2" />
+          <Property Name="Remarks" Type="varchar" MaxLength="250" />
+          <Property Name="Processed" Type="int" Nullable="false" />
+          <Property Name="ProcessedDate" Type="datetime" />
+          <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+          <Property Name="InvCreated" Type="int" />
+          <Property Name="InvCreatedDate" Type="datetime" />
+          <Property Name="INVCreatedUser" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="T_OrderTracking">
+          <Key>
+            <PropertyRef Name="OFNo" />
+          </Key>
+          <Property Name="OFNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CompCode" Type="varchar" MaxLength="20" />
+          <Property Name="LocaCode" Type="varchar" MaxLength="20" />
+          <Property Name="Customer" Type="varchar" MaxLength="20" />
+          <Property Name="CustomerDIscRate" Type="numeric" Scale="4" />
+          <Property Name="SalesMan" Type="varchar" MaxLength="20" />
+          <Property Name="OFApproved" Type="int" />
+          <Property Name="OFApprovedUser" Type="varchar" MaxLength="20" />
+          <Property Name="OFApprovedDate" Type="datetime" />
+          <Property Name="OFNoOfPrints" Type="numeric" />
+          <Property Name="OFPrintUser" Type="varchar" MaxLength="20" />
+          <Property Name="InvCreated" Type="int" />
+          <Property Name="InvNo" Type="varchar" MaxLength="20" />
+          <Property Name="InvAmount" Type="numeric" Scale="4" />
+          <Property Name="InvApproved" Type="int" />
+          <Property Name="InvApprovedUser" Type="varchar" MaxLength="20" />
+          <Property Name="InvApprovedDate" Type="datetime" />
+          <Property Name="InvNoOfPrints" Type="numeric" />
+          <Property Name="InvPrintUser" Type="varchar" MaxLength="20" />
+          <Property Name="DOCreated" Type="int" />
+          <Property Name="DONo" Type="varchar" MaxLength="20" />
+          <Property Name="DOAmount" Type="numeric" Scale="4" />
+          <Property Name="DOMultipleNO" Type="varchar" MaxLength="20" />
+          <Property Name="DOProcessed" Type="int" />
+          <Property Name="DOProcessedUser" Type="varchar" MaxLength="20" />
+          <Property Name="DOProcessedDate" Type="datetime" />
+          <Property Name="DOApproved" Type="int" />
+          <Property Name="DOApprovedUser" Type="varchar" MaxLength="20" />
+          <Property Name="DOApprovedDate" Type="datetime" />
+          <Property Name="DONoOfPrints" Type="numeric" />
+          <Property Name="DOvPrintUser" Type="varchar" MaxLength="20" />
+          <Property Name="Audited" Type="int" />
+          <Property Name="AuditDate" Type="datetime" />
+          <Property Name="AuditUser" Type="varchar" MaxLength="20" />
+          <Property Name="Dispatched" Type="int" />
+          <Property Name="DispatchedDate" Type="datetime" />
+          <Property Name="DispatchedUser" Type="varchar" MaxLength="20" />
+          <Property Name="Handedover" Type="int" />
+          <Property Name="HandedoverUser" Type="varchar" MaxLength="20" />
+          <Property Name="HandedoverDate" Type="datetime" />
+          <Property Name="Completed" Type="int" />
+          <Property Name="CompletedUser" Type="varchar" MaxLength="20" />
+          <Property Name="CompletedDate" Type="datetime" />
+          <Property Name="PackingListCreated" Type="int" />
+          <Property Name="PackingListNo" Type="varchar" MaxLength="20" />
+          <Property Name="PackingListDate" Type="datetime" />
+          <Property Name="PackingListUser" Type="varchar" MaxLength="20" />
+          <Property Name="Remarks" Type="varchar" MaxLength="250" />
+          <Property Name="HandOverLorry" Type="varchar" MaxLength="20" />
+          <Property Name="CompleteRemark" Type="varchar" MaxLength="250" />
+          <Property Name="OrderDate" Type="datetime" />
+          <Property Name="InvoiceDate" Type="datetime" />
+          <Property Name="Dodate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_packingdet">
+          <Key>
+            <PropertyRef Name="PackingNo" />
+            <PropertyRef Name="Dono" />
+          </Key>
+          <Property Name="PackingNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Dono" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Customer" Type="varchar" MaxLength="20" />
+          <Property Name="Agent" Type="varchar" MaxLength="20" />
+          <Property Name="datex" Type="datetime" />
+          <Property Name="TTLCartons" Type="numeric" Scale="2" />
+        </EntityType>
+        <EntityType Name="T_packinghead">
+          <Key>
+            <PropertyRef Name="PackingNo" />
+          </Key>
+          <Property Name="PackingNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RefNumber" Type="varchar" MaxLength="20" />
+          <Property Name="CompCode" Type="varchar" MaxLength="20" />
+          <Property Name="LocaCode" Type="varchar" MaxLength="20" />
+          <Property Name="Datex" Type="datetime" />
+          <Property Name="NoOfCartons" Type="numeric" Scale="2" />
+          <Property Name="Vehicle" Type="varchar" MaxLength="20" />
+          <Property Name="Driver" Type="varchar" MaxLength="20" />
+          <Property Name="CreatedUser" Type="varchar" MaxLength="20" />
+          <Property Name="CreatedTime" Type="datetime" />
+          <Property Name="Processed" Type="int" />
+          <Property Name="ProcessedDate" Type="datetime" />
+          <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+          <Property Name="Glupdated" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.T_SalesAllocDet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="T_SalesAllocDet">
+          <Key>
+            <PropertyRef Name="Docno" />
+            <PropertyRef Name="SalesMan" />
+            <PropertyRef Name="Customer" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Name="Docno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SalesMan" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Customer" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AllowedQTY" Type="numeric" Scale="2" />
+          <Property Name="AllocQTY" Type="numeric" Scale="2" />
+          <Property Name="DateFrom" Type="datetime" />
+          <Property Name="Dateto" Type="datetime" />
+          <Property Name="Userx" Type="varchar" MaxLength="20" />
+          <Property Name="Datex" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.T_SalesAllocHead' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="T_SalesAllocHead">
+          <Key>
+            <PropertyRef Name="Docno" />
+            <PropertyRef Name="Salesman" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Name="Docno" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Salesman" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AllocQTY" Type="numeric" Scale="2" />
+          <Property Name="DateFrom" Type="datetime" />
+          <Property Name="Dateto" Type="datetime" />
+          <Property Name="Userx" Type="varchar" MaxLength="20" />
+          <Property Name="Datex" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_SalesCustomerAlloc">
+          <Key>
+            <PropertyRef Name="SalesMan" />
+            <PropertyRef Name="Customer" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Name="SalesMan" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Customer" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AllocQTY" Type="numeric" Scale="2" />
+          <Property Name="DateFrom" Type="datetime" />
+          <Property Name="Dateto" Type="datetime" />
+          <Property Name="Userx" Type="varchar" MaxLength="20" />
+          <Property Name="Datex" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_SalesItemAlloc">
+          <Key>
+            <PropertyRef Name="Salesman" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Name="Salesman" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AllocQTY" Type="numeric" Scale="2" />
+          <Property Name="DateFrom" Type="datetime" />
+          <Property Name="Dateto" Type="datetime" />
+          <Property Name="Userx" Type="varchar" MaxLength="20" />
+          <Property Name="Datex" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RIT_ATModel2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="RIT_ATEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_packingdet" EntityType="RIT_ATModel2.T_packingdet" />
+          <EntitySet Name="T_packinghead" EntityType="RIT_ATModel2.T_packinghead" />
+          <EntitySet Name="T_CreditNoteHead" EntityType="RIT_ATModel2.T_CreditNoteHead" />
+          <EntitySet Name="T_OrderFormHead" EntityType="RIT_ATModel2.T_OrderFormHead" />
+          <EntitySet Name="T_SalesCustomerAlloc" EntityType="RIT_ATModel2.T_SalesCustomerAlloc" />
+          <EntitySet Name="T_SalesItemAlloc" EntityType="RIT_ATModel2.T_SalesItemAlloc" />
+          <EntitySet Name="T_CustomerItemAlloc" EntityType="RIT_ATModel2.T_CustomerItemAlloc" />
+          <EntitySet Name="T_DIliveryHed" EntityType="RIT_ATModel2.T_DIliveryHed" />
+          <EntitySet Name="T_DIliveryAudit" EntityType="RIT_ATModel2.T_DIliveryAudit" />
+          <EntitySet Name="T_OrderTracking" EntityType="RIT_ATModel2.T_OrderTracking" />
+          <EntitySet Name="T_CNGrouping" EntityType="RIT_ATModel2.T_CNGrouping" />
+          <EntitySet Name="T_CNBreak" EntityType="RIT_ATModel2.T_CNBreak" />
+          <EntitySet Name="T_SalesAllocDet" EntityType="RIT_ATModel2.T_SalesAllocDet" />
+          <EntitySet Name="T_SalesAllocHead" EntityType="RIT_ATModel2.T_SalesAllocHead" />
+          <EntitySet Name="T_DiliveryDet" EntityType="RIT_ATModel2.T_DiliveryDet" />
+          <EntitySet Name="T_CNParts" EntityType="RIT_ATModel2.T_CNParts" />
+        </EntityContainer>
+        <EntityType Name="T_packingdet">
+          <Key>
+            <PropertyRef Name="PackingNo" />
+            <PropertyRef Name="Dono" />
+          </Key>
+          <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Dono" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Agent" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="datex" Precision="3" />
+          <Property Type="Decimal" Name="TTLCartons" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="T_packinghead">
+          <Key>
+            <PropertyRef Name="PackingNo" />
+          </Key>
+          <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RefNumber" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Datex" Precision="3" />
+          <Property Type="Decimal" Name="NoOfCartons" Precision="18" Scale="2" />
+          <Property Type="String" Name="Vehicle" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Driver" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreatedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedTime" Precision="3" />
+          <Property Type="Int32" Name="Processed" />
+          <Property Type="DateTime" Name="ProcessedDate" Precision="3" />
+          <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Glupdated" />
+        </EntityType>
+        <EntityType Name="T_CreditNoteHead">
+          <Key>
+            <PropertyRef Name="DocNo" />
+          </Key>
+          <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OFNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InvNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Dono" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomerID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TypeX" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AuditUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Statusx" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Datex" Precision="3" />
+          <Property Type="String" Name="ManualID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DeliveredDate" Precision="3" />
+          <Property Type="String" Name="PackingList" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DeliveryStatus" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AgentStatus" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Processed" />
+          <Property Type="DateTime" Name="ProcessedDate" Precision="3" />
+          <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Grouped" />
+          <Property Type="DateTime" Name="GroupedDate" Precision="3" />
+          <Property Type="String" Name="GroupedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Approved" />
+          <Property Type="DateTime" Name="ApprovedDate" Precision="3" />
+          <Property Type="String" Name="ApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="PartEnterComplete" />
+          <Property Type="DateTime" Name="PartEnterCompleteDate" />
+          <Property Type="String" Name="PartEnterCompleteUser" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_OrderFormHead">
+          <Key>
+            <PropertyRef Name="DocNo" />
+          </Key>
+          <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Locacode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TRNType" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SalesMan" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Datex" Precision="3" />
+          <Property Type="String" Name="RecivedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CheckedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Approved" Nullable="false" />
+          <Property Type="String" Name="ApprovedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ApprovedDate" Precision="3" />
+          <Property Type="DateTime" Name="RecivedDate" Precision="3" />
+          <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+          <Property Type="String" Name="CQNO" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CQDate" Precision="3" />
+          <Property Type="String" Name="BANK" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BRANCH" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Subtotal" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="DiscountPer" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="SubtotalDisc" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="ItemdiscTotal" Precision="18" Scale="4" />
+          <Property Type="Decimal" Name="TotalDisc" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="NetTotal" Precision="18" Scale="2" />
+          <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Processed" Nullable="false" />
+          <Property Type="DateTime" Name="ProcessedDate" Precision="3" />
+          <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="InvCreated" />
+          <Property Type="DateTime" Name="InvCreatedDate" Precision="3" />
+          <Property Type="String" Name="INVCreatedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_SalesCustomerAlloc">
+          <Key>
+            <PropertyRef Name="SalesMan" />
+            <PropertyRef Name="Customer" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Type="String" Name="SalesMan" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Customer" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="AllocQTY" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="DateFrom" Precision="3" />
+          <Property Type="DateTime" Name="Dateto" Precision="3" />
+          <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Datex" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_SalesItemAlloc">
+          <Key>
+            <PropertyRef Name="Salesman" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Type="String" Name="Salesman" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="AllocQTY" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="DateFrom" Precision="3" />
+          <Property Type="DateTime" Name="Dateto" Precision="3" />
+          <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Datex" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_CustomerItemAlloc">
+          <Key>
+            <PropertyRef Name="Customer" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Type="String" Name="Customer" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="AllocQTY" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="DateFrom" Precision="3" />
+          <Property Type="DateTime" Name="Dateto" Precision="3" />
+          <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Datex" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_DIliveryHed">
+          <Key>
+            <PropertyRef Name="DoNo" />
+          </Key>
+          <Property Type="String" Name="DoNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LocaCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InvNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="InvoiceAmount" Precision="18" Scale="4" />
+          <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="CustomerDIscRate" Precision="18" Scale="4" />
+          <Property Type="DateTime" Name="Datex" Precision="3" />
+          <Property Type="String" Name="Agent" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Lorry" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="NoOfCartons" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Dispatched" />
+          <Property Type="DateTime" Name="DispatchedDate" Precision="3" />
+          <Property Type="String" Name="DispatchedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Checked" />
+          <Property Type="String" Name="CheckedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Checkeddate" Precision="3" />
+          <Property Type="Int32" Name="Approved" />
+          <Property Type="String" Name="ApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ApprovedDate" Precision="3" />
+          <Property Type="Int32" Name="Handovered" />
+          <Property Type="String" Name="HandoverdUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="HandoverDate" Precision="3" />
+          <Property Type="Decimal" Name="HandoverCartons" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Delivered" />
+          <Property Type="String" Name="DiliveredUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DiliveryDate" Precision="3" />
+          <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="NoOfPrints" Precision="18" Scale="2" />
+          <Property Type="String" Name="PrintUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Processed" />
+          <Property Type="DateTime" Name="ProcessedDate" Precision="3" />
+          <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Audited" />
+          <Property Type="DateTime" Name="AuditDate" Precision="3" />
+          <Property Type="String" Name="AuditUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Completed" />
+          <Property Type="DateTime" Name="CompletedDate" Precision="3" />
+          <Property Type="Int32" Name="PackingListCreated" />
+          <Property Type="String" Name="PackingListNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PackingListDate" Precision="3" />
+          <Property Type="String" Name="PackingListUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReportedProblems" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AuditRemarks" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_DIliveryAudit">
+          <Key>
+            <PropertyRef Name="Dono" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Type="String" Name="Dono" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="DoQty" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ActualQTY" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Variance" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Pass" />
+        </EntityType>
+        <EntityType Name="T_OrderTracking">
+          <Key>
+            <PropertyRef Name="OFNo" />
+          </Key>
+          <Property Type="String" Name="OFNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="CustomerDIscRate" Precision="18" Scale="4" />
+          <Property Type="String" Name="SalesMan" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OFApproved" />
+          <Property Type="String" Name="OFApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="OFApprovedDate" Precision="3" />
+          <Property Type="Decimal" Name="OFNoOfPrints" Precision="18" Scale="0" />
+          <Property Type="String" Name="OFPrintUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="InvCreated" />
+          <Property Type="String" Name="InvNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="InvAmount" Precision="18" Scale="4" />
+          <Property Type="Int32" Name="InvApproved" />
+          <Property Type="String" Name="InvApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="InvApprovedDate" Precision="3" />
+          <Property Type="Decimal" Name="InvNoOfPrints" Precision="18" Scale="0" />
+          <Property Type="String" Name="InvPrintUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DOCreated" />
+          <Property Type="String" Name="DONo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="DOAmount" Precision="18" Scale="4" />
+          <Property Type="String" Name="DOMultipleNO" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DOProcessed" />
+          <Property Type="String" Name="DOProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DOProcessedDate" Precision="3" />
+          <Property Type="Int32" Name="DOApproved" />
+          <Property Type="String" Name="DOApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DOApprovedDate" Precision="3" />
+          <Property Type="Decimal" Name="DONoOfPrints" Precision="18" Scale="0" />
+          <Property Type="String" Name="DOvPrintUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Audited" />
+          <Property Type="DateTime" Name="AuditDate" Precision="3" />
+          <Property Type="String" Name="AuditUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Dispatched" />
+          <Property Type="DateTime" Name="DispatchedDate" Precision="3" />
+          <Property Type="String" Name="DispatchedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Handedover" />
+          <Property Type="String" Name="HandedoverUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="HandedoverDate" Precision="3" />
+          <Property Type="Int32" Name="Completed" />
+          <Property Type="String" Name="CompletedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CompletedDate" Precision="3" />
+          <Property Type="Int32" Name="PackingListCreated" />
+          <Property Type="String" Name="PackingListNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PackingListDate" Precision="3" />
+          <Property Type="String" Name="PackingListUser" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HandOverLorry" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompleteRemark" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="OrderDate" Precision="3" />
+          <Property Type="DateTime" Name="InvoiceDate" Precision="3" />
+          <Property Type="DateTime" Name="Dodate" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_CNGrouping">
+          <Key>
+            <PropertyRef Name="Docno" />
+            <PropertyRef Name="ItemCode" />
+            <PropertyRef Name="CNType" />
+            <PropertyRef Name="CNReason" />
+          </Key>
+          <Property Type="String" Name="Docno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CNType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CNReason" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="InvoiceQty" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="CNQTY" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="BreakdownQTY" Precision="18" Scale="2" />
+          <Property Type="String" Name="TagNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Selected" />
+          <Property Type="Decimal" Name="SelectedQTY" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="balanceQTY" Precision="18" Scale="2" />
+          <Property Type="Boolean" Name="Shipped" />
+          <Property Type="DateTime" Name="ShippedDate" Precision="3" />
+          <Property Type="String" Name="ShippedDO" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CNnumber" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="PartEntered" />
+        </EntityType>
+        <EntityType Name="T_CNBreak">
+          <Key>
+            <PropertyRef Name="DocNo" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Namex" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="InvQTY" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="QTY" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="Datex" Precision="3" />
+          <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Grouped" />
+          <Property Type="Decimal" Name="BalanceQty" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="T_SalesAllocDet">
+          <Key>
+            <PropertyRef Name="Docno" />
+            <PropertyRef Name="SalesMan" />
+            <PropertyRef Name="Customer" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Name="Docno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SalesMan" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Customer" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AllowedQTY" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AllocQTY" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DateFrom" Type="DateTime" Precision="3" />
+          <Property Name="Dateto" Type="DateTime" Precision="3" />
+          <Property Name="Userx" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Datex" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_SalesAllocHead">
+          <Key>
+            <PropertyRef Name="Docno" />
+            <PropertyRef Name="Salesman" />
+            <PropertyRef Name="Item" />
+          </Key>
+          <Property Name="Docno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Salesman" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AllocQTY" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DateFrom" Type="DateTime" Precision="3" />
+          <Property Name="Dateto" Type="DateTime" Precision="3" />
+          <Property Name="Userx" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Datex" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_DiliveryDet">
+          <Key>
+            <PropertyRef Name="DoNo" />
+            <PropertyRef Name="Item" />
+            <PropertyRef Name="IsCNitem" />
+          </Key>
+          <Property Name="DoNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ItemNamex" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Qty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Carton" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ActualCartons" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Remarks" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Pass" Type="Boolean" />
+          <Property Name="IsCNitem" Type="Boolean" Nullable="false" />
+          <Property Name="CNNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_CNParts">
+          <Key>
+            <PropertyRef Name="CNno" />
+            <PropertyRef Name="ItemCode" />
+            <PropertyRef Name="PartCode" />
+          </Key>
+          <Property Type="String" Name="CNno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TagNumber" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PartCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="QTY" Precision="18" Scale="2" />
+          <Property Type="Boolean" Name="Saved" />
+          <Property Type="Boolean" Name="Processed" />
+          <Property Type="DateTime" Name="ProcessedDate" />
+          <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RIT_ATModel2StoreContainer" CdmEntityContainer="RIT_ATEntities2">
+          <EntitySetMapping Name="T_packingdet">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_packingdet">
+              <MappingFragment StoreEntitySet="T_packingdet">
+                <ScalarProperty Name="TTLCartons" ColumnName="TTLCartons" />
+                <ScalarProperty Name="datex" ColumnName="datex" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="Dono" ColumnName="Dono" />
+                <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_packinghead">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_packinghead">
+              <MappingFragment StoreEntitySet="T_packinghead">
+                <ScalarProperty Name="Glupdated" ColumnName="Glupdated" />
+                <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+                <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+                <ScalarProperty Name="Processed" ColumnName="Processed" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Driver" ColumnName="Driver" />
+                <ScalarProperty Name="Vehicle" ColumnName="Vehicle" />
+                <ScalarProperty Name="NoOfCartons" ColumnName="NoOfCartons" />
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+                <ScalarProperty Name="PackingNo" ColumnName="PackingNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_CreditNoteHead">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_CreditNoteHead">
+              <MappingFragment StoreEntitySet="T_CreditNoteHead">
+                <ScalarProperty Name="PartEnterCompleteUser" ColumnName="PartEnterCompleteUser" />
+                <ScalarProperty Name="PartEnterCompleteDate" ColumnName="PartEnterCompleteDate" />
+                <ScalarProperty Name="PartEnterComplete" ColumnName="PartEnterComplete" />
+                <ScalarProperty Name="ApprovedUser" ColumnName="ApprovedUser" />
+                <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+                <ScalarProperty Name="Approved" ColumnName="Approved" />
+                <ScalarProperty Name="GroupedUser" ColumnName="GroupedUser" />
+                <ScalarProperty Name="GroupedDate" ColumnName="GroupedDate" />
+                <ScalarProperty Name="Grouped" ColumnName="Grouped" />
+                <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+                <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+                <ScalarProperty Name="Processed" ColumnName="Processed" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="AgentStatus" ColumnName="AgentStatus" />
+                <ScalarProperty Name="DeliveryStatus" ColumnName="DeliveryStatus" />
+                <ScalarProperty Name="PackingList" ColumnName="PackingList" />
+                <ScalarProperty Name="DeliveredDate" ColumnName="DeliveredDate" />
+                <ScalarProperty Name="ManualID" ColumnName="ManualID" />
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="Statusx" ColumnName="Statusx" />
+                <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+                <ScalarProperty Name="TypeX" ColumnName="TypeX" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Dono" ColumnName="Dono" />
+                <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+                <ScalarProperty Name="OFNo" ColumnName="OFNo" />
+                <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_OrderFormHead">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_OrderFormHead">
+              <MappingFragment StoreEntitySet="T_OrderFormHead">
+                <ScalarProperty Name="INVCreatedUser" ColumnName="INVCreatedUser" />
+                <ScalarProperty Name="InvCreatedDate" ColumnName="InvCreatedDate" />
+                <ScalarProperty Name="InvCreated" ColumnName="InvCreated" />
+                <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+                <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+                <ScalarProperty Name="Processed" ColumnName="Processed" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="NetTotal" ColumnName="NetTotal" />
+                <ScalarProperty Name="TotalDisc" ColumnName="TotalDisc" />
+                <ScalarProperty Name="ItemdiscTotal" ColumnName="ItemdiscTotal" />
+                <ScalarProperty Name="SubtotalDisc" ColumnName="SubtotalDisc" />
+                <ScalarProperty Name="DiscountPer" ColumnName="DiscountPer" />
+                <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+                <ScalarProperty Name="BRANCH" ColumnName="BRANCH" />
+                <ScalarProperty Name="BANK" ColumnName="BANK" />
+                <ScalarProperty Name="CQDate" ColumnName="CQDate" />
+                <ScalarProperty Name="CQNO" ColumnName="CQNO" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Userx" ColumnName="Userx" />
+                <ScalarProperty Name="RecivedDate" ColumnName="RecivedDate" />
+                <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+                <ScalarProperty Name="Approved" ColumnName="Approved" />
+                <ScalarProperty Name="CheckedBy" ColumnName="CheckedBy" />
+                <ScalarProperty Name="RecivedBy" ColumnName="RecivedBy" />
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+                <ScalarProperty Name="TRNType" ColumnName="TRNType" />
+                <ScalarProperty Name="Locacode" ColumnName="Locacode" />
+                <ScalarProperty Name="Compcode" ColumnName="Compcode" />
+                <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SalesCustomerAlloc">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_SalesCustomerAlloc">
+              <MappingFragment StoreEntitySet="T_SalesCustomerAlloc">
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="Userx" ColumnName="Userx" />
+                <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SalesItemAlloc">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_SalesItemAlloc">
+              <MappingFragment StoreEntitySet="T_SalesItemAlloc">
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="Userx" ColumnName="Userx" />
+                <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_CustomerItemAlloc">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_CustomerItemAlloc">
+              <MappingFragment StoreEntitySet="T_CustomerItemAlloc">
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="Userx" ColumnName="Userx" />
+                <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_DIliveryHed">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_DIliveryHed">
+              <MappingFragment StoreEntitySet="T_DIliveryHed">
+                <ScalarProperty Name="AuditRemarks" ColumnName="AuditRemarks" />
+                <ScalarProperty Name="ReportedProblems" ColumnName="ReportedProblems" />
+                <ScalarProperty Name="PackingListUser" ColumnName="PackingListUser" />
+                <ScalarProperty Name="PackingListDate" ColumnName="PackingListDate" />
+                <ScalarProperty Name="PackingListNo" ColumnName="PackingListNo" />
+                <ScalarProperty Name="PackingListCreated" ColumnName="PackingListCreated" />
+                <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+                <ScalarProperty Name="Completed" ColumnName="Completed" />
+                <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+                <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+                <ScalarProperty Name="Audited" ColumnName="Audited" />
+                <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+                <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+                <ScalarProperty Name="Processed" ColumnName="Processed" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PrintUser" ColumnName="PrintUser" />
+                <ScalarProperty Name="NoOfPrints" ColumnName="NoOfPrints" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="DiliveryDate" ColumnName="DiliveryDate" />
+                <ScalarProperty Name="DiliveredUser" ColumnName="DiliveredUser" />
+                <ScalarProperty Name="Delivered" ColumnName="Delivered" />
+                <ScalarProperty Name="HandoverCartons" ColumnName="HandoverCartons" />
+                <ScalarProperty Name="HandoverDate" ColumnName="HandoverDate" />
+                <ScalarProperty Name="HandoverdUser" ColumnName="HandoverdUser" />
+                <ScalarProperty Name="Handovered" ColumnName="Handovered" />
+                <ScalarProperty Name="ApprovedDate" ColumnName="ApprovedDate" />
+                <ScalarProperty Name="ApprovedUser" ColumnName="ApprovedUser" />
+                <ScalarProperty Name="Approved" ColumnName="Approved" />
+                <ScalarProperty Name="Checkeddate" ColumnName="Checkeddate" />
+                <ScalarProperty Name="CheckedUser" ColumnName="CheckedUser" />
+                <ScalarProperty Name="Checked" ColumnName="Checked" />
+                <ScalarProperty Name="DispatchedUser" ColumnName="DispatchedUser" />
+                <ScalarProperty Name="DispatchedDate" ColumnName="DispatchedDate" />
+                <ScalarProperty Name="Dispatched" ColumnName="Dispatched" />
+                <ScalarProperty Name="NoOfCartons" ColumnName="NoOfCartons" />
+                <ScalarProperty Name="Lorry" ColumnName="Lorry" />
+                <ScalarProperty Name="Agent" ColumnName="Agent" />
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="CustomerDIscRate" ColumnName="CustomerDIscRate" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="InvoiceAmount" ColumnName="InvoiceAmount" />
+                <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+                <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="DoNo" ColumnName="DoNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_DIliveryAudit">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_DIliveryAudit">
+              <MappingFragment StoreEntitySet="T_DIliveryAudit">
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+                <ScalarProperty Name="Variance" ColumnName="Variance" />
+                <ScalarProperty Name="ActualQTY" ColumnName="ActualQTY" />
+                <ScalarProperty Name="DoQty" ColumnName="DoQty" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Dono" ColumnName="Dono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_OrderTracking">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_OrderTracking">
+              <MappingFragment StoreEntitySet="T_OrderTracking">
+                <ScalarProperty Name="Dodate" ColumnName="Dodate" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="CompleteRemark" ColumnName="CompleteRemark" />
+                <ScalarProperty Name="HandOverLorry" ColumnName="HandOverLorry" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="PackingListUser" ColumnName="PackingListUser" />
+                <ScalarProperty Name="PackingListDate" ColumnName="PackingListDate" />
+                <ScalarProperty Name="PackingListNo" ColumnName="PackingListNo" />
+                <ScalarProperty Name="PackingListCreated" ColumnName="PackingListCreated" />
+                <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+                <ScalarProperty Name="CompletedUser" ColumnName="CompletedUser" />
+                <ScalarProperty Name="Completed" ColumnName="Completed" />
+                <ScalarProperty Name="HandedoverDate" ColumnName="HandedoverDate" />
+                <ScalarProperty Name="HandedoverUser" ColumnName="HandedoverUser" />
+                <ScalarProperty Name="Handedover" ColumnName="Handedover" />
+                <ScalarProperty Name="DispatchedUser" ColumnName="DispatchedUser" />
+                <ScalarProperty Name="DispatchedDate" ColumnName="DispatchedDate" />
+                <ScalarProperty Name="Dispatched" ColumnName="Dispatched" />
+                <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+                <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+                <ScalarProperty Name="Audited" ColumnName="Audited" />
+                <ScalarProperty Name="DOvPrintUser" ColumnName="DOvPrintUser" />
+                <ScalarProperty Name="DONoOfPrints" ColumnName="DONoOfPrints" />
+                <ScalarProperty Name="DOApprovedDate" ColumnName="DOApprovedDate" />
+                <ScalarProperty Name="DOApprovedUser" ColumnName="DOApprovedUser" />
+                <ScalarProperty Name="DOApproved" ColumnName="DOApproved" />
+                <ScalarProperty Name="DOProcessedDate" ColumnName="DOProcessedDate" />
+                <ScalarProperty Name="DOProcessedUser" ColumnName="DOProcessedUser" />
+                <ScalarProperty Name="DOProcessed" ColumnName="DOProcessed" />
+                <ScalarProperty Name="DOMultipleNO" ColumnName="DOMultipleNO" />
+                <ScalarProperty Name="DOAmount" ColumnName="DOAmount" />
+                <ScalarProperty Name="DONo" ColumnName="DONo" />
+                <ScalarProperty Name="DOCreated" ColumnName="DOCreated" />
+                <ScalarProperty Name="InvPrintUser" ColumnName="InvPrintUser" />
+                <ScalarProperty Name="InvNoOfPrints" ColumnName="InvNoOfPrints" />
+                <ScalarProperty Name="InvApprovedDate" ColumnName="InvApprovedDate" />
+                <ScalarProperty Name="InvApprovedUser" ColumnName="InvApprovedUser" />
+                <ScalarProperty Name="InvApproved" ColumnName="InvApproved" />
+                <ScalarProperty Name="InvAmount" ColumnName="InvAmount" />
+                <ScalarProperty Name="InvNo" ColumnName="InvNo" />
+                <ScalarProperty Name="InvCreated" ColumnName="InvCreated" />
+                <ScalarProperty Name="OFPrintUser" ColumnName="OFPrintUser" />
+                <ScalarProperty Name="OFNoOfPrints" ColumnName="OFNoOfPrints" />
+                <ScalarProperty Name="OFApprovedDate" ColumnName="OFApprovedDate" />
+                <ScalarProperty Name="OFApprovedUser" ColumnName="OFApprovedUser" />
+                <ScalarProperty Name="OFApproved" ColumnName="OFApproved" />
+                <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+                <ScalarProperty Name="CustomerDIscRate" ColumnName="CustomerDIscRate" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="LocaCode" ColumnName="LocaCode" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="OFNo" ColumnName="OFNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_CNGrouping">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_CNGrouping">
+              <MappingFragment StoreEntitySet="T_CNGrouping">
+                <ScalarProperty Name="PartEntered" ColumnName="PartEntered" />
+                <ScalarProperty Name="CNnumber" ColumnName="CNnumber" />
+                <ScalarProperty Name="ShippedDO" ColumnName="ShippedDO" />
+                <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+                <ScalarProperty Name="Shipped" ColumnName="Shipped" />
+                <ScalarProperty Name="balanceQTY" ColumnName="balanceQTY" />
+                <ScalarProperty Name="SelectedQTY" ColumnName="SelectedQTY" />
+                <ScalarProperty Name="Selected" ColumnName="Selected" />
+                <ScalarProperty Name="TagNumber" ColumnName="TagNumber" />
+                <ScalarProperty Name="BreakdownQTY" ColumnName="BreakdownQTY" />
+                <ScalarProperty Name="CNQTY" ColumnName="CNQTY" />
+                <ScalarProperty Name="InvoiceQty" ColumnName="InvoiceQty" />
+                <ScalarProperty Name="CNReason" ColumnName="CNReason" />
+                <ScalarProperty Name="CNType" ColumnName="CNType" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Docno" ColumnName="Docno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_CNBreak">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_CNBreak">
+              <MappingFragment StoreEntitySet="T_CNBreak">
+                <ScalarProperty Name="BalanceQty" ColumnName="BalanceQty" />
+                <ScalarProperty Name="Grouped" ColumnName="Grouped" />
+                <ScalarProperty Name="Userx" ColumnName="Userx" />
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="InvQTY" ColumnName="InvQTY" />
+                <ScalarProperty Name="Namex" ColumnName="Namex" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SalesAllocDet">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_SalesAllocDet">
+              <MappingFragment StoreEntitySet="T_SalesAllocDet">
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="Userx" ColumnName="Userx" />
+                <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+                <ScalarProperty Name="AllowedQTY" ColumnName="AllowedQTY" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="SalesMan" ColumnName="SalesMan" />
+                <ScalarProperty Name="Docno" ColumnName="Docno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SalesAllocHead">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_SalesAllocHead">
+              <MappingFragment StoreEntitySet="T_SalesAllocHead">
+                <ScalarProperty Name="Datex" ColumnName="Datex" />
+                <ScalarProperty Name="Userx" ColumnName="Userx" />
+                <ScalarProperty Name="Dateto" ColumnName="Dateto" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="AllocQTY" ColumnName="AllocQTY" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+                <ScalarProperty Name="Docno" ColumnName="Docno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_DiliveryDet">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_DiliveryDet">
+              <MappingFragment StoreEntitySet="T_DiliveryDet">
+                <ScalarProperty Name="CNNumber" ColumnName="CNNumber" />
+                <ScalarProperty Name="IsCNitem" ColumnName="IsCNitem" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="ActualCartons" ColumnName="ActualCartons" />
+                <ScalarProperty Name="Carton" ColumnName="Carton" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="ItemNamex" ColumnName="ItemNamex" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="DoNo" ColumnName="DoNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_CNParts">
+            <EntityTypeMapping TypeName="RIT_ATModel2.T_CNParts">
+              <MappingFragment StoreEntitySet="T_CNParts">
+                <ScalarProperty Name="ProcessedUser" ColumnName="ProcessedUser" />
+                <ScalarProperty Name="ProcessedDate" ColumnName="ProcessedDate" />
+                <ScalarProperty Name="Processed" ColumnName="Processed" />
+                <ScalarProperty Name="Saved" ColumnName="Saved" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="PartCode" ColumnName="PartCode" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="TagNumber" ColumnName="TagNumber" />
+                <ScalarProperty Name="CNno" ColumnName="CNno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DIstribution">
+        <EntityTypeShape EntityType="RIT_ATModel2.T_packingdet" Width="1.5" PointX="0.75" PointY="0.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_packinghead" Width="1.5" PointX="0.75" PointY="1.5" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_CreditNoteHead" Width="1.5" PointX="2.75" PointY="1.5" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_OrderFormHead" Width="1.5" PointX="2.75" PointY="0.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_SalesCustomerAlloc" Width="1.5" PointX="4.5" PointY="0.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_SalesItemAlloc" Width="1.5" PointX="0.75" PointY="2.25" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_CustomerItemAlloc" Width="1.5" PointX="4.5" PointY="1.5" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_DIliveryHed" Width="1.5" PointX="2.75" PointY="2.25" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_DIliveryAudit" Width="1.5" PointX="6.125" PointY="0.75" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_OrderTracking" Width="1.5" PointX="6.125" PointY="2.25" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_CNGrouping" Width="1.5" PointX="6.125" PointY="1.5" Height="4.2879036458333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_CNBreak" Width="1.5" PointX="4.5" PointY="2.125" Height="0.4" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_SalesAllocDet" Width="1.5" PointX="2.75" PointY="2.75" IsExpanded="false" Height="0.4" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_SalesAllocHead" Width="1.5" PointX="4.5" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_DiliveryDet" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RIT_ATModel2.T_CNParts" Width="1.5" PointX="0.75" PointY="3.375" Height="0.4" IsExpanded="false" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

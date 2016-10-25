@@ -1,0 +1,80 @@
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.pdb
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.pdb
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.dll
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.dll
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.dll
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.pdb
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.dll
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\MySql.Data.dll
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.pdb
+G:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.csprojResolveAssemblyReference.cache
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\bin\Debug\SmartAnything_BL.dll
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\bin\Debug\SmartAnything_BL.pdb
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\bin\Debug\SmartAnything_DL.dll
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\bin\Debug\smartOffice_Models.dll
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\bin\Debug\MySql.Data.dll
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\bin\Debug\SmartAnything_DL.pdb
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\bin\Debug\smartOffice_Models.pdb
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.dll
+D:\Live\Source\SmartAnything\SmartAnything - Copy\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.pdb
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.dll
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.pdb
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.dll
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.dll
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\MySql.Data.dll
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.pdb
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.pdb
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.csprojResolveAssemblyReference.cache
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.dll
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.pdb
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.dll
+O:\IN\201-10-21\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.xml
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.dll
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.pdb
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.dll
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.dll
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.dll
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\MySql.Data.dll
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.pdb
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.pdb
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.xml
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.csprojResolveAssemblyReference.cache
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.dll
+D:\Live\Source\SmartAnything\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.pdb
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.dll
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.pdb
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.dll
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.dll
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.dll
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\MySql.Data.dll
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.pdb
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.pdb
+D:\Live\Source\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.xml
+D:\Live\Source\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.csprojResolveAssemblyReference.cache
+D:\Live\Source\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.dll
+D:\Live\Source\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.pdb
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.dll
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.pdb
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.dll
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.dll
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.dll
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\MySql.Data.dll
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.pdb
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.pdb
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.xml
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.csprojResolveAssemblyReference.cache
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.dll
+E:\Live\Source\SmartAnything\SmartAnything\Common\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.pdb
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.dll
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_BL.pdb
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.dll
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.dll
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.dll
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\MySql.Data.dll
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\SmartAnything_DL.pdb
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\smartOffice_Models.pdb
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\bin\Debug\EntityFramework.xml
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.csprojResolveAssemblyReference.cache
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.dll
+E:\Live\Source\SmartAnything\Common\SmartAnything\SmartAnything_BL\obj\x86\Debug\SmartAnything_BL.pdb

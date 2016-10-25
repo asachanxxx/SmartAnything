@@ -1,0 +1,2056 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="distribution" targetNamespace="http://tempuri.org/distribution.xsd" xmlns:mstns="http://tempuri.org/distribution.xsd" xmlns="http://tempuri.org/distribution.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RIT_ATConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RIT_ATConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartAnything.Properties.Settings.GlobalReference.Default.RIT_ATConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderFormPrintTableAdapter" GeneratorDataComponentClassName="OrderFormPrintTableAdapter" Name="OrderFormPrint" UserDataComponentName="OrderFormPrintTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_OrderFormHead.DocNo, dbo.T_OrderFormHead.TRNType, dbo.T_OrderFormHead.Customer, dbo.M_Customers.CustName, dbo.T_OrderFormHead.Datex, 
+                      dbo.T_OrderFormHead.RecivedBy, dbo.T_OrderFormHead.CheckedBy, dbo.T_OrderFormHead.Approved, dbo.T_OrderFormHead.ApprovedBy, 
+                      dbo.T_OrderFormHead.ApprovedDate, dbo.T_OrderFormHead.RecivedDate, dbo.T_OrderFormHead.Userx, dbo.T_OrderFormHead.CreatedDate, 
+                      dbo.T_OrderFormHead.CQNO, dbo.T_OrderFormHead.CQDate, dbo.T_OrderFormHead.BANK, dbo.T_OrderFormHead.BRANCH, dbo.T_OrderFormHead.Subtotal, 
+                      dbo.T_OrderFormHead.DiscountPer, dbo.T_OrderFormHead.SubtotalDisc, dbo.T_OrderFormHead.ItemdiscTotal, dbo.T_OrderFormHead.TotalDisc, 
+                      dbo.T_OrderFormHead.NetTotal, dbo.T_OrderFormHead.Remarks, dbo.T_OrderFormHead.Processed, dbo.T_OrderFormHead.ProcessedDate, 
+                      dbo.T_OrderFormHead.ProcessedUser, dbo.T_OrderFormDet.ItemCode, dbo.T_OrderFormDet.Quntity, dbo.T_OrderFormDet.Barcode, dbo.T_OrderFormDet.UnitPrice, 
+                      dbo.T_OrderFormDet.CostPrice, dbo.T_OrderFormDet.Unit, dbo.T_OrderFormDet.Amountx, dbo.T_OrderFormDet.discper, dbo.T_OrderFormDet.discount, 
+                      dbo.M_Products.Namex
+FROM         dbo.T_OrderFormHead INNER JOIN
+                      dbo.M_Customers ON dbo.T_OrderFormHead.Customer = dbo.M_Customers.CusID INNER JOIN
+                      dbo.T_OrderFormDet ON dbo.T_OrderFormHead.DocNo = dbo.T_OrderFormDet.Docno INNER JOIN
+                      dbo.M_Products ON dbo.T_OrderFormDet.ItemCode = dbo.M_Products.IDX
+WHERE     (dbo.T_OrderFormHead.DocNo = '0000000012')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DocNo" DataSetColumn="DocNo" />
+              <Mapping SourceColumn="TRNType" DataSetColumn="TRNType" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="Datex" DataSetColumn="Datex" />
+              <Mapping SourceColumn="RecivedBy" DataSetColumn="RecivedBy" />
+              <Mapping SourceColumn="CheckedBy" DataSetColumn="CheckedBy" />
+              <Mapping SourceColumn="Approved" DataSetColumn="Approved" />
+              <Mapping SourceColumn="ApprovedBy" DataSetColumn="ApprovedBy" />
+              <Mapping SourceColumn="ApprovedDate" DataSetColumn="ApprovedDate" />
+              <Mapping SourceColumn="RecivedDate" DataSetColumn="RecivedDate" />
+              <Mapping SourceColumn="Userx" DataSetColumn="Userx" />
+              <Mapping SourceColumn="CreatedDate" DataSetColumn="CreatedDate" />
+              <Mapping SourceColumn="CQNO" DataSetColumn="CQNO" />
+              <Mapping SourceColumn="CQDate" DataSetColumn="CQDate" />
+              <Mapping SourceColumn="BANK" DataSetColumn="BANK" />
+              <Mapping SourceColumn="BRANCH" DataSetColumn="BRANCH" />
+              <Mapping SourceColumn="Subtotal" DataSetColumn="Subtotal" />
+              <Mapping SourceColumn="DiscountPer" DataSetColumn="DiscountPer" />
+              <Mapping SourceColumn="SubtotalDisc" DataSetColumn="SubtotalDisc" />
+              <Mapping SourceColumn="ItemdiscTotal" DataSetColumn="ItemdiscTotal" />
+              <Mapping SourceColumn="TotalDisc" DataSetColumn="TotalDisc" />
+              <Mapping SourceColumn="NetTotal" DataSetColumn="NetTotal" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="Processed" DataSetColumn="Processed" />
+              <Mapping SourceColumn="ProcessedDate" DataSetColumn="ProcessedDate" />
+              <Mapping SourceColumn="ProcessedUser" DataSetColumn="ProcessedUser" />
+              <Mapping SourceColumn="ItemCode" DataSetColumn="ItemCode" />
+              <Mapping SourceColumn="Quntity" DataSetColumn="Quntity" />
+              <Mapping SourceColumn="Barcode" DataSetColumn="Barcode" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="CostPrice" DataSetColumn="CostPrice" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="Amountx" DataSetColumn="Amountx" />
+              <Mapping SourceColumn="discper" DataSetColumn="discper" />
+              <Mapping SourceColumn="discount" DataSetColumn="discount" />
+              <Mapping SourceColumn="Namex" DataSetColumn="Namex" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DO PrintTableAdapter" GeneratorDataComponentClassName="DO_PrintTableAdapter" Name="DO Print" UserDataComponentName="DO PrintTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_DIliveryHed.DoNo, dbo.T_DIliveryHed.InvNo, dbo.T_DIliveryHed.InvoiceAmount, dbo.T_DIliveryHed.Customer, dbo.M_Customers.CustName,dbo.T_DIliveryHed.Datex, dbo.T_DIliveryHed.Agent, dbo.M_Agents.Namex AS AgentName, dbo.T_DIliveryHed.Lorry, dbo.M_Vehicles.VehicleNo, dbo.T_DIliveryHed.NoOfCartons, 
+dbo.T_DIliveryHed.Checked, dbo.T_DIliveryHed.Checkeddate,dbo.T_DIliveryHed.Approved, dbo.T_DIliveryHed.ApprovedDate, dbo.T_DIliveryHed.ApprovedUser, dbo.T_DIliveryHed.HandoverCartons, dbo.T_DIliveryHed.Delivered,dbo.T_DIliveryHed.Remarks, dbo.T_DIliveryHed.PrintUser, dbo.T_DIliveryHed.Processed, dbo.T_DIliveryHed.Audited, dbo.T_DiliveryDet.Item,dbo.T_DiliveryDet.ItemNamex, dbo.T_DiliveryDet.Unit, dbo.T_DiliveryDet.Qty, dbo.T_DiliveryDet.Carton  
+FROM       dbo.T_DIliveryHed  INNER JOIN dbo.T_DiliveryDet 
+ON dbo.T_DIliveryHed.DoNo = dbo.T_DiliveryDet.DoNo 
+INNER JOIN dbo.M_Customers ON dbo.T_DIliveryHed.Customer = dbo.M_Customers.CusID 
+INNER JOIN dbo.M_Agents ON dbo.T_DIliveryHed.Agent = dbo.M_Agents.AgentCode 
+INNER JOIN dbo.M_Vehicles ON dbo.T_DIliveryHed.Lorry = dbo.M_Vehicles.VehicleID  </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DoNo" DataSetColumn="DoNo" />
+              <Mapping SourceColumn="InvNo" DataSetColumn="InvNo" />
+              <Mapping SourceColumn="InvoiceAmount" DataSetColumn="InvoiceAmount" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="Datex" DataSetColumn="Datex" />
+              <Mapping SourceColumn="Agent" DataSetColumn="Agent" />
+              <Mapping SourceColumn="AgentName" DataSetColumn="AgentName" />
+              <Mapping SourceColumn="Lorry" DataSetColumn="Lorry" />
+              <Mapping SourceColumn="VehicleNo" DataSetColumn="VehicleNo" />
+              <Mapping SourceColumn="NoOfCartons" DataSetColumn="NoOfCartons" />
+              <Mapping SourceColumn="Checked" DataSetColumn="Checked" />
+              <Mapping SourceColumn="Checkeddate" DataSetColumn="Checkeddate" />
+              <Mapping SourceColumn="Approved" DataSetColumn="Approved" />
+              <Mapping SourceColumn="ApprovedDate" DataSetColumn="ApprovedDate" />
+              <Mapping SourceColumn="ApprovedUser" DataSetColumn="ApprovedUser" />
+              <Mapping SourceColumn="HandoverCartons" DataSetColumn="HandoverCartons" />
+              <Mapping SourceColumn="Delivered" DataSetColumn="Delivered" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="PrintUser" DataSetColumn="PrintUser" />
+              <Mapping SourceColumn="Processed" DataSetColumn="Processed" />
+              <Mapping SourceColumn="Audited" DataSetColumn="Audited" />
+              <Mapping SourceColumn="Item" DataSetColumn="Item" />
+              <Mapping SourceColumn="ItemNamex" DataSetColumn="ItemNamex" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Carton" DataSetColumn="Carton" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Invoice PrintTableAdapter" GeneratorDataComponentClassName="Invoice_PrintTableAdapter" Name="Invoice Print" UserDataComponentName="Invoice PrintTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_RecHed.Docno, dbo.T_RecHed.Datex AS 'ReceiptDate', dbo.T_RecHed.Customer, dbo.M_Customers.CustName, dbo.T_RecHed.Status, dbo.T_RecHed.refNo, dbo.T_RecHed.Memo,dbo.T_RecHed.Recivedfrom, dbo.T_RecHed.remarks, dbo.T_RecHed.Amount, dbo.T_RecHed.isProcessed, dbo.T_RecHed.processDate, dbo.T_RecHed.processUser,dbo.T_RecHed.CancelledUser, dbo.T_RecHed.CancelledDate, dbo.T_RecDet.Sequence, dbo.T_RecDet.Paytype, dbo.T_RecDet.HeadAmt, dbo.T_RecDet.Amt,dbo.T_RecDet.InvNo, dbo.T_RecDet.Datex, dbo.T_RecDet.CQno, dbo.T_RecDet.Bank, dbo.T_RecDet.BankBranch, dbo.T_RecDet.BankDate, dbo.T_RecDet.isReconsile,dbo.T_RecDet.ReconsileDate, dbo.T_RecDet.isreturned, dbo.T_RecDet.ReturnDate, dbo.T_CusSettle.RefNo AS settleRefno, dbo.T_CusSettle.NetAmt,dbo.T_CusSettle.PaidAmt, dbo.T_CusSettle.DueAmt, dbo.T_CusSettle.Settlement
+FROM       dbo.T_RecHed INNER JOIN dbo.T_RecDet ON dbo.T_RecHed.Docno = dbo.T_RecDet.Docno INNER JOIN dbo.M_Customers ON dbo.T_RecHed.Customer = dbo.M_Customers.CusID INNER JOIN dbo.T_CusSettle ON dbo.T_RecHed.Customer = dbo.T_CusSettle.Customer
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="NetAmt" DataSetColumn="NetAmt" />
+              <Mapping SourceColumn="Datex" DataSetColumn="Datex" />
+              <Mapping SourceColumn="DueAmt" DataSetColumn="DueAmt" />
+              <Mapping SourceColumn="PaidAmt" DataSetColumn="PaidAmt" />
+              <Mapping SourceColumn="CancelledDate" DataSetColumn="CancelledDate" />
+              <Mapping SourceColumn="Docno" DataSetColumn="Docno" />
+              <Mapping SourceColumn="ReceiptDate" DataSetColumn="ReceiptDate" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="refNo" DataSetColumn="refNo" />
+              <Mapping SourceColumn="Memo" DataSetColumn="Memo" />
+              <Mapping SourceColumn="Recivedfrom" DataSetColumn="Recivedfrom" />
+              <Mapping SourceColumn="remarks" DataSetColumn="remarks" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="isProcessed" DataSetColumn="isProcessed" />
+              <Mapping SourceColumn="processDate" DataSetColumn="processDate" />
+              <Mapping SourceColumn="processUser" DataSetColumn="processUser" />
+              <Mapping SourceColumn="CancelledUser" DataSetColumn="CancelledUser" />
+              <Mapping SourceColumn="Sequence" DataSetColumn="Sequence" />
+              <Mapping SourceColumn="Paytype" DataSetColumn="Paytype" />
+              <Mapping SourceColumn="HeadAmt" DataSetColumn="HeadAmt" />
+              <Mapping SourceColumn="Amt" DataSetColumn="Amt" />
+              <Mapping SourceColumn="InvNo" DataSetColumn="InvNo" />
+              <Mapping SourceColumn="CQno" DataSetColumn="CQno" />
+              <Mapping SourceColumn="Bank" DataSetColumn="Bank" />
+              <Mapping SourceColumn="BankBranch" DataSetColumn="BankBranch" />
+              <Mapping SourceColumn="BankDate" DataSetColumn="BankDate" />
+              <Mapping SourceColumn="isReconsile" DataSetColumn="isReconsile" />
+              <Mapping SourceColumn="ReconsileDate" DataSetColumn="ReconsileDate" />
+              <Mapping SourceColumn="isreturned" DataSetColumn="isreturned" />
+              <Mapping SourceColumn="ReturnDate" DataSetColumn="ReturnDate" />
+              <Mapping SourceColumn="settleRefno" DataSetColumn="settleRefno" />
+              <Mapping SourceColumn="Settlement" DataSetColumn="Settlement" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DO PrintcTableAdapter" GeneratorDataComponentClassName="DO_PrintcTableAdapter" Name="DO Printc" UserDataComponentName="DO PrintcTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_DIliveryHed.DoNo, dbo.T_DIliveryHed.InvNo, dbo.T_DIliveryHed.Customer, dbo.M_Customers.CustName, dbo.M_Customers.TP, dbo.M_Customers.Fax,dbo.M_Customers.Email, dbo.M_Customers.Address1, dbo.M_Customers.Address2, dbo.M_Customers.Address3, dbo.T_DIliveryHed.Datex, dbo.T_DiliveryDet.Item,dbo.T_DiliveryDet.ItemNamex, dbo.T_DiliveryDet.Unit, dbo.T_DiliveryDet.Qty, dbo.T_DiliveryDet.Carton, dbo.T_DiliveryDet.ActualCartons, dbo.T_DiliveryDet.Remarks,dbo.T_DIliveryHed.Agent, dbo.T_DIliveryHed.Lorry, dbo.T_DIliveryHed.NoOfCartons, dbo.M_Agents.Namex AS [Agent Name] FROM         dbo.T_DIliveryHed INNER JOIN
+                      dbo.T_DiliveryDet ON dbo.T_DIliveryHed.DoNo = dbo.T_DiliveryDet.DoNo INNER JOIN dbo.M_Customers ON dbo.T_DIliveryHed.Customer = dbo.M_Customers.CusID INNER JOIN dbo.M_Agents ON dbo.T_DIliveryHed.Agent = dbo.M_Agents.AgentCode 
+                       </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DoNo" DataSetColumn="DoNo" />
+              <Mapping SourceColumn="InvNo" DataSetColumn="InvNo" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="TP" DataSetColumn="TP" />
+              <Mapping SourceColumn="Fax" DataSetColumn="Fax" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Address1" DataSetColumn="Address1" />
+              <Mapping SourceColumn="Address2" DataSetColumn="Address2" />
+              <Mapping SourceColumn="Address3" DataSetColumn="Address3" />
+              <Mapping SourceColumn="Datex" DataSetColumn="Datex" />
+              <Mapping SourceColumn="Item" DataSetColumn="Item" />
+              <Mapping SourceColumn="ItemNamex" DataSetColumn="ItemNamex" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Carton" DataSetColumn="Carton" />
+              <Mapping SourceColumn="ActualCartons" DataSetColumn="ActualCartons" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="Agent" DataSetColumn="Agent" />
+              <Mapping SourceColumn="Lorry" DataSetColumn="Lorry" />
+              <Mapping SourceColumn="NoOfCartons" DataSetColumn="NoOfCartons" />
+              <Mapping SourceColumn="Agent Name" DataSetColumn="Agent Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PackingListTableAdapter" GeneratorDataComponentClassName="PackingListTableAdapter" Name="PackingList" UserDataComponentName="PackingListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_packinghead.PackingNo, dbo.T_packinghead.RefNumber, dbo.T_packinghead.Datex, dbo.T_packinghead.NoOfCartons, dbo.T_packinghead.Vehicle, 
+                      dbo.T_packinghead.Driver, dbo.T_packinghead.CreatedUser, dbo.T_packinghead.CreatedTime, dbo.T_packingdet.Dono, dbo.T_packingdet.Customer, 
+                      dbo.M_Customers.CustName, dbo.M_Customers.TP, dbo.M_Customers.Address1, dbo.M_Customers.Address2, dbo.M_Customers.Address3, dbo.T_packingdet.Agent, 
+                      dbo.M_Agents.Namex, dbo.M_Agents.Address1 AS AgentAddress1, dbo.M_Agents.Address2 AS AgentAddress2, dbo.M_Agents.Address3 AS AgentAddress3, 
+                      dbo.M_Agents.TPOffice, dbo.M_Agents.TPPersonal, dbo.T_packingdet.datex AS DateCreated, dbo.T_packingdet.TTLCartons
+FROM         dbo.T_packinghead INNER JOIN
+                      dbo.T_packingdet ON dbo.T_packinghead.PackingNo = dbo.T_packingdet.PackingNo INNER JOIN
+                      dbo.M_Customers ON dbo.T_packingdet.Customer = dbo.M_Customers.CusID INNER JOIN
+                      dbo.M_Agents ON dbo.T_packingdet.Agent = dbo.M_Agents.AgentCode</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PackingNo" DataSetColumn="PackingNo" />
+              <Mapping SourceColumn="RefNumber" DataSetColumn="RefNumber" />
+              <Mapping SourceColumn="Datex" DataSetColumn="Datex" />
+              <Mapping SourceColumn="NoOfCartons" DataSetColumn="NoOfCartons" />
+              <Mapping SourceColumn="Vehicle" DataSetColumn="Vehicle" />
+              <Mapping SourceColumn="Driver" DataSetColumn="Driver" />
+              <Mapping SourceColumn="CreatedUser" DataSetColumn="CreatedUser" />
+              <Mapping SourceColumn="CreatedTime" DataSetColumn="CreatedTime" />
+              <Mapping SourceColumn="Dono" DataSetColumn="Dono" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="TP" DataSetColumn="TP" />
+              <Mapping SourceColumn="Address1" DataSetColumn="Address1" />
+              <Mapping SourceColumn="Address2" DataSetColumn="Address2" />
+              <Mapping SourceColumn="Address3" DataSetColumn="Address3" />
+              <Mapping SourceColumn="Agent" DataSetColumn="Agent" />
+              <Mapping SourceColumn="Namex" DataSetColumn="Namex" />
+              <Mapping SourceColumn="AgentAddress1" DataSetColumn="AgentAddress1" />
+              <Mapping SourceColumn="AgentAddress2" DataSetColumn="AgentAddress2" />
+              <Mapping SourceColumn="AgentAddress3" DataSetColumn="AgentAddress3" />
+              <Mapping SourceColumn="TPOffice" DataSetColumn="TPOffice" />
+              <Mapping SourceColumn="TPPersonal" DataSetColumn="TPPersonal" />
+              <Mapping SourceColumn="DateCreated" DataSetColumn="DateCreated" />
+              <Mapping SourceColumn="TTLCartons" DataSetColumn="TTLCartons" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReceiptPrintTableAdapter" GeneratorDataComponentClassName="ReceiptPrintTableAdapter" Name="ReceiptPrint" UserDataComponentName="ReceiptPrintTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_RecHed.Docno, dbo.T_RecHed.Datex AS 'ReceiptDate', dbo.T_RecHed.Customer, dbo.M_Customers.CustName, dbo.T_RecHed.Status, dbo.T_RecHed.refNo, dbo.T_RecHed.Memo,dbo.T_RecHed.Recivedfrom, dbo.T_RecHed.remarks, dbo.T_RecHed.Amount, dbo.T_RecHed.isProcessed, dbo.T_RecHed.processDate, dbo.T_RecHed.processUser,dbo.T_RecHed.CancelledUser, dbo.T_RecHed.CancelledDate, dbo.T_RecDet.Sequence, dbo.T_RecDet.Paytype, dbo.T_RecDet.HeadAmt, dbo.T_RecDet.Amt,dbo.T_RecDet.InvNo, dbo.T_RecDet.Datex, dbo.T_RecDet.CQno, dbo.T_RecDet.Bank, dbo.T_RecDet.BankBranch, dbo.T_RecDet.BankDate, dbo.T_RecDet.isReconsile,dbo.T_RecDet.ReconsileDate, dbo.T_RecDet.isreturned, dbo.T_RecDet.ReturnDate, dbo.T_CusSettle.RefNo AS settleRefno, dbo.T_CusSettle.NetAmt,dbo.T_CusSettle.PaidAmt, dbo.T_CusSettle.DueAmt, dbo.T_CusSettle.Settlement
+FROM       dbo.T_RecHed INNER JOIN dbo.T_RecDet ON dbo.T_RecHed.Docno = dbo.T_RecDet.Docno INNER JOIN dbo.M_Customers ON dbo.T_RecHed.Customer = dbo.M_Customers.CusID INNER JOIN dbo.T_CusSettle ON dbo.T_RecHed.Customer = dbo.T_CusSettle.Customer
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Docno" DataSetColumn="Docno" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="refNo" DataSetColumn="refNo" />
+              <Mapping SourceColumn="Memo" DataSetColumn="Memo" />
+              <Mapping SourceColumn="Recivedfrom" DataSetColumn="Recivedfrom" />
+              <Mapping SourceColumn="remarks" DataSetColumn="remarks" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="isProcessed" DataSetColumn="isProcessed" />
+              <Mapping SourceColumn="processDate" DataSetColumn="processDate" />
+              <Mapping SourceColumn="processUser" DataSetColumn="processUser" />
+              <Mapping SourceColumn="CancelledUser" DataSetColumn="CancelledUser" />
+              <Mapping SourceColumn="CancelledDate" DataSetColumn="CancelledDate" />
+              <Mapping SourceColumn="Sequence" DataSetColumn="Sequence" />
+              <Mapping SourceColumn="Paytype" DataSetColumn="Paytype" />
+              <Mapping SourceColumn="HeadAmt" DataSetColumn="HeadAmt" />
+              <Mapping SourceColumn="Amt" DataSetColumn="Amt" />
+              <Mapping SourceColumn="InvNo" DataSetColumn="InvNo" />
+              <Mapping SourceColumn="Datex" DataSetColumn="Datex" />
+              <Mapping SourceColumn="CQno" DataSetColumn="CQno" />
+              <Mapping SourceColumn="Bank" DataSetColumn="Bank" />
+              <Mapping SourceColumn="BankBranch" DataSetColumn="BankBranch" />
+              <Mapping SourceColumn="BankDate" DataSetColumn="BankDate" />
+              <Mapping SourceColumn="isReconsile" DataSetColumn="isReconsile" />
+              <Mapping SourceColumn="ReconsileDate" DataSetColumn="ReconsileDate" />
+              <Mapping SourceColumn="isreturned" DataSetColumn="isreturned" />
+              <Mapping SourceColumn="ReturnDate" DataSetColumn="ReturnDate" />
+              <Mapping SourceColumn="settleRefno" DataSetColumn="settleRefno" />
+              <Mapping SourceColumn="NetAmt" DataSetColumn="NetAmt" />
+              <Mapping SourceColumn="PaidAmt" DataSetColumn="PaidAmt" />
+              <Mapping SourceColumn="DueAmt" DataSetColumn="DueAmt" />
+              <Mapping SourceColumn="Settlement" DataSetColumn="Settlement" />
+              <Mapping SourceColumn="ReceiptDate" DataSetColumn="ReceiptDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PENDING_APPROVALSTableAdapter" GeneratorDataComponentClassName="PENDING_APPROVALSTableAdapter" Name="PENDING_APPROVALS" UserDataComponentName="PENDING_APPROVALSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_OrderTracking.OFNo, dbo.T_OrderTracking.Customer, dbo.M_Customers.CustName, dbo.T_OrderTracking.SalesMan, dbo.u_User.userName, 
+                      dbo.T_OrderTracking.OFApproved, dbo.T_OrderTracking.OFApprovedUser, dbo.T_OrderTracking.OFApprovedDate, dbo.T_OrderTracking.InvCreated, 
+                      dbo.T_OrderTracking.InvNo, dbo.T_OrderTracking.InvAmount, dbo.T_OrderTracking.InvApproved, dbo.T_OrderTracking.InvApprovedUser, 
+                      dbo.T_OrderTracking.InvApprovedDate, dbo.T_OrderTracking.DOCreated, dbo.T_OrderTracking.DONo, dbo.T_OrderTracking.DOAmount, 
+                      dbo.T_OrderTracking.DOMultipleNO, dbo.T_OrderTracking.DOProcessed, dbo.T_OrderTracking.DOProcessedUser, dbo.T_OrderTracking.DOProcessedDate, 
+                      dbo.T_OrderTracking.DOApproved, dbo.T_OrderTracking.DOApprovedUser, dbo.T_OrderTracking.DOApprovedDate, dbo.T_OrderTracking.Audited, 
+                      dbo.T_OrderTracking.AuditDate, dbo.T_OrderTracking.AuditUser, dbo.T_OrderTracking.Dispatched, dbo.T_OrderTracking.DispatchedDate, 
+                      dbo.T_OrderTracking.DispatchedUser, dbo.T_OrderTracking.Handedover, dbo.T_OrderTracking.HandedoverUser, dbo.T_OrderTracking.HandedoverDate, 
+                      dbo.T_OrderTracking.Completed, dbo.T_OrderTracking.CompletedUser, dbo.T_OrderTracking.CompletedDate, dbo.T_OrderTracking.PackingListCreated, 
+                      dbo.T_OrderTracking.PackingListNo, dbo.T_OrderTracking.PackingListDate, dbo.T_OrderTracking.PackingListUser, dbo.T_OrderTracking.Remarks, 
+                      dbo.T_OrderTracking.HandOverLorry, dbo.T_OrderTracking.CompleteRemark, dbo.T_OrderTracking.OrderDate, dbo.T_OrderTracking.InvoiceDate, 
+                      dbo.T_OrderTracking.Dodate
+FROM         dbo.T_OrderTracking INNER JOIN
+                      dbo.M_Customers ON dbo.T_OrderTracking.Customer = dbo.M_Customers.CusID INNER JOIN
+                      dbo.u_User ON dbo.T_OrderTracking.SalesMan = dbo.u_User.userId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OFNo" DataSetColumn="OFNo" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="SalesMan" DataSetColumn="SalesMan" />
+              <Mapping SourceColumn="userName" DataSetColumn="userName" />
+              <Mapping SourceColumn="OFApproved" DataSetColumn="OFApproved" />
+              <Mapping SourceColumn="OFApprovedUser" DataSetColumn="OFApprovedUser" />
+              <Mapping SourceColumn="OFApprovedDate" DataSetColumn="OFApprovedDate" />
+              <Mapping SourceColumn="InvCreated" DataSetColumn="InvCreated" />
+              <Mapping SourceColumn="InvNo" DataSetColumn="InvNo" />
+              <Mapping SourceColumn="InvAmount" DataSetColumn="InvAmount" />
+              <Mapping SourceColumn="InvApproved" DataSetColumn="InvApproved" />
+              <Mapping SourceColumn="InvApprovedUser" DataSetColumn="InvApprovedUser" />
+              <Mapping SourceColumn="InvApprovedDate" DataSetColumn="InvApprovedDate" />
+              <Mapping SourceColumn="DOCreated" DataSetColumn="DOCreated" />
+              <Mapping SourceColumn="DONo" DataSetColumn="DONo" />
+              <Mapping SourceColumn="DOAmount" DataSetColumn="DOAmount" />
+              <Mapping SourceColumn="DOMultipleNO" DataSetColumn="DOMultipleNO" />
+              <Mapping SourceColumn="DOProcessed" DataSetColumn="DOProcessed" />
+              <Mapping SourceColumn="DOProcessedUser" DataSetColumn="DOProcessedUser" />
+              <Mapping SourceColumn="DOProcessedDate" DataSetColumn="DOProcessedDate" />
+              <Mapping SourceColumn="DOApproved" DataSetColumn="DOApproved" />
+              <Mapping SourceColumn="DOApprovedUser" DataSetColumn="DOApprovedUser" />
+              <Mapping SourceColumn="DOApprovedDate" DataSetColumn="DOApprovedDate" />
+              <Mapping SourceColumn="Audited" DataSetColumn="Audited" />
+              <Mapping SourceColumn="AuditDate" DataSetColumn="AuditDate" />
+              <Mapping SourceColumn="AuditUser" DataSetColumn="AuditUser" />
+              <Mapping SourceColumn="Dispatched" DataSetColumn="Dispatched" />
+              <Mapping SourceColumn="DispatchedDate" DataSetColumn="DispatchedDate" />
+              <Mapping SourceColumn="DispatchedUser" DataSetColumn="DispatchedUser" />
+              <Mapping SourceColumn="Handedover" DataSetColumn="Handedover" />
+              <Mapping SourceColumn="HandedoverUser" DataSetColumn="HandedoverUser" />
+              <Mapping SourceColumn="HandedoverDate" DataSetColumn="HandedoverDate" />
+              <Mapping SourceColumn="Completed" DataSetColumn="Completed" />
+              <Mapping SourceColumn="CompletedUser" DataSetColumn="CompletedUser" />
+              <Mapping SourceColumn="CompletedDate" DataSetColumn="CompletedDate" />
+              <Mapping SourceColumn="PackingListCreated" DataSetColumn="PackingListCreated" />
+              <Mapping SourceColumn="PackingListNo" DataSetColumn="PackingListNo" />
+              <Mapping SourceColumn="PackingListDate" DataSetColumn="PackingListDate" />
+              <Mapping SourceColumn="PackingListUser" DataSetColumn="PackingListUser" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="HandOverLorry" DataSetColumn="HandOverLorry" />
+              <Mapping SourceColumn="CompleteRemark" DataSetColumn="CompleteRemark" />
+              <Mapping SourceColumn="OrderDate" DataSetColumn="OrderDate" />
+              <Mapping SourceColumn="InvoiceDate" DataSetColumn="InvoiceDate" />
+              <Mapping SourceColumn="Dodate" DataSetColumn="Dodate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PendingOrdersTableAdapter" GeneratorDataComponentClassName="PendingOrdersTableAdapter" Name="PendingOrders" UserDataComponentName="PendingOrdersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_OrderTracking.OFNo, dbo.T_OrderTracking.Customer, dbo.M_Customers.CustName, dbo.M_Customers.TP, dbo.M_Customers.Fax, dbo.M_Customers.Email, 
+                      dbo.M_Customers.Address1, dbo.M_Customers.Address2, dbo.M_Customers.Address3, dbo.T_OrderTracking.OFApproved, dbo.T_OrderTracking.OFApprovedUser, 
+                      dbo.T_OrderTracking.OFApprovedDate, dbo.T_OrderTracking.OFNoOfPrints, dbo.T_OrderTracking.OFPrintUser, dbo.T_OrderTracking.OrderDate
+FROM         dbo.T_OrderTracking INNER JOIN
+                      dbo.M_Customers ON dbo.T_OrderTracking.Customer = dbo.M_Customers.CusID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OFNo" DataSetColumn="OFNo" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="TP" DataSetColumn="TP" />
+              <Mapping SourceColumn="Fax" DataSetColumn="Fax" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Address1" DataSetColumn="Address1" />
+              <Mapping SourceColumn="Address2" DataSetColumn="Address2" />
+              <Mapping SourceColumn="Address3" DataSetColumn="Address3" />
+              <Mapping SourceColumn="OFApproved" DataSetColumn="OFApproved" />
+              <Mapping SourceColumn="OFApprovedUser" DataSetColumn="OFApprovedUser" />
+              <Mapping SourceColumn="OFApprovedDate" DataSetColumn="OFApprovedDate" />
+              <Mapping SourceColumn="OFNoOfPrints" DataSetColumn="OFNoOfPrints" />
+              <Mapping SourceColumn="OFPrintUser" DataSetColumn="OFPrintUser" />
+              <Mapping SourceColumn="OrderDate" DataSetColumn="OrderDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PendingInvoicesTableAdapter" GeneratorDataComponentClassName="PendingInvoicesTableAdapter" Name="PendingInvoices" UserDataComponentName="PendingInvoicesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_OrderTracking.OFNo, dbo.T_OrderTracking.Customer, dbo.M_Customers.CustName, dbo.T_OrderTracking.InvCreated, dbo.T_OrderTracking.InvNo, 
+                      dbo.T_OrderTracking.InvAmount, dbo.T_OrderTracking.InvApproved, dbo.T_OrderTracking.InvApprovedUser, dbo.T_OrderTracking.InvApprovedDate, 
+                      dbo.T_OrderTracking.InvNoOfPrints, dbo.T_OrderTracking.InvPrintUser, dbo.M_Customers.TP, dbo.M_Customers.Fax, dbo.M_Customers.Email, 
+                      dbo.M_Customers.Address1, dbo.M_Customers.Address2, dbo.M_Customers.Address3,dbo.T_OrderTracking.InvoiceDate
+
+FROM         dbo.T_OrderTracking INNER JOIN
+                      dbo.M_Customers ON dbo.T_OrderTracking.Customer = dbo.M_Customers.CusID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OFNo" DataSetColumn="OFNo" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="InvCreated" DataSetColumn="InvCreated" />
+              <Mapping SourceColumn="InvNo" DataSetColumn="InvNo" />
+              <Mapping SourceColumn="InvAmount" DataSetColumn="InvAmount" />
+              <Mapping SourceColumn="InvApproved" DataSetColumn="InvApproved" />
+              <Mapping SourceColumn="InvApprovedUser" DataSetColumn="InvApprovedUser" />
+              <Mapping SourceColumn="InvApprovedDate" DataSetColumn="InvApprovedDate" />
+              <Mapping SourceColumn="InvNoOfPrints" DataSetColumn="InvNoOfPrints" />
+              <Mapping SourceColumn="InvPrintUser" DataSetColumn="InvPrintUser" />
+              <Mapping SourceColumn="TP" DataSetColumn="TP" />
+              <Mapping SourceColumn="Fax" DataSetColumn="Fax" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Address1" DataSetColumn="Address1" />
+              <Mapping SourceColumn="Address2" DataSetColumn="Address2" />
+              <Mapping SourceColumn="Address3" DataSetColumn="Address3" />
+              <Mapping SourceColumn="InvoiceDate" DataSetColumn="InvoiceDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PendingDosTableAdapter" GeneratorDataComponentClassName="PendingDosTableAdapter" Name="PendingDos" UserDataComponentName="PendingDosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_OrderTracking.OFNo, dbo.T_OrderTracking.Customer, dbo.T_OrderTracking.DOAmount, dbo.T_OrderTracking.DOMultipleNO, dbo.T_OrderTracking.DOProcessed, 
+                      dbo.T_OrderTracking.DOProcessedUser, dbo.T_OrderTracking.DONo, dbo.T_OrderTracking.DOCreated, dbo.T_OrderTracking.DOProcessedDate, 
+                      dbo.T_OrderTracking.DOApproved, dbo.T_OrderTracking.DOApprovedUser, dbo.T_OrderTracking.DOApprovedDate, dbo.T_OrderTracking.DONoOfPrints, 
+                      dbo.T_OrderTracking.DOvPrintUser, dbo.M_Customers.CustName, dbo.M_Customers.TP, dbo.M_Customers.Fax, dbo.M_Customers.Email, 
+                      dbo.M_Customers.Address1, dbo.M_Customers.Address2, dbo.M_Customers.Address3, dbo.T_OrderTracking.Dodate
+FROM         dbo.T_OrderTracking INNER JOIN
+                      dbo.M_Customers ON dbo.T_OrderTracking.Customer = dbo.M_Customers.CusID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OFNo" DataSetColumn="OFNo" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="DOAmount" DataSetColumn="DOAmount" />
+              <Mapping SourceColumn="DOMultipleNO" DataSetColumn="DOMultipleNO" />
+              <Mapping SourceColumn="DOProcessed" DataSetColumn="DOProcessed" />
+              <Mapping SourceColumn="DOProcessedUser" DataSetColumn="DOProcessedUser" />
+              <Mapping SourceColumn="DONo" DataSetColumn="DONo" />
+              <Mapping SourceColumn="DOCreated" DataSetColumn="DOCreated" />
+              <Mapping SourceColumn="DOProcessedDate" DataSetColumn="DOProcessedDate" />
+              <Mapping SourceColumn="DOApproved" DataSetColumn="DOApproved" />
+              <Mapping SourceColumn="DOApprovedUser" DataSetColumn="DOApprovedUser" />
+              <Mapping SourceColumn="DOApprovedDate" DataSetColumn="DOApprovedDate" />
+              <Mapping SourceColumn="DONoOfPrints" DataSetColumn="DONoOfPrints" />
+              <Mapping SourceColumn="DOvPrintUser" DataSetColumn="DOvPrintUser" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="TP" DataSetColumn="TP" />
+              <Mapping SourceColumn="Fax" DataSetColumn="Fax" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Address1" DataSetColumn="Address1" />
+              <Mapping SourceColumn="Address2" DataSetColumn="Address2" />
+              <Mapping SourceColumn="Address3" DataSetColumn="Address3" />
+              <Mapping SourceColumn="Dodate" DataSetColumn="Dodate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TRACKINGTableAdapter" GeneratorDataComponentClassName="TRACKINGTableAdapter" Name="TRACKING" UserDataComponentName="TRACKINGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_OrderTracking.OFNo, dbo.T_OrderTracking.OrderDate, dbo.T_OrderTracking.InvoiceDate, DATEDIFF(DAY, dbo.T_OrderTracking.OrderDate, 
+                      dbo.T_OrderTracking.InvoiceDate) AS 'INVvari', dbo.T_OrderTracking.Dodate, DATEDIFF(DAY, dbo.T_OrderTracking.OrderDate, dbo.T_OrderTracking.Dodate) 
+                      AS 'DOvari', dbo.T_OrderTracking.AuditDate, DATEDIFF(DAY, dbo.T_OrderTracking.OrderDate, dbo.T_OrderTracking.AuditDate) AS 'AUDITvari', 
+                      dbo.T_OrderTracking.DispatchedDate, DATEDIFF(DAY, dbo.T_OrderTracking.OrderDate, dbo.T_OrderTracking.DispatchedDate) AS 'Dispatchvari', 
+                      dbo.T_OrderTracking.HandedoverDate, DATEDIFF(DAY, dbo.T_OrderTracking.OrderDate, dbo.T_OrderTracking.HandedoverDate) AS HandoeverVari, 
+                      dbo.T_OrderTracking.CompletedDate, DATEDIFF(DAY, dbo.T_OrderTracking.OrderDate, dbo.T_OrderTracking.CompletedDate) AS CompleteVari, 
+                      dbo.T_OrderTracking.Customer, dbo.M_Customers.CustName, dbo.M_Customers.TP, dbo.M_Customers.Fax, dbo.M_Customers.Email, dbo.M_Customers.Address1, 
+                      dbo.M_Customers.Address2, dbo.M_Customers.Address3
+FROM         dbo.T_OrderTracking INNER JOIN
+                      dbo.M_Customers ON dbo.T_OrderTracking.Customer = dbo.M_Customers.CusID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OFNo" DataSetColumn="OFNo" />
+              <Mapping SourceColumn="OrderDate" DataSetColumn="OrderDate" />
+              <Mapping SourceColumn="InvoiceDate" DataSetColumn="InvoiceDate" />
+              <Mapping SourceColumn="INVvari" DataSetColumn="INVvari" />
+              <Mapping SourceColumn="Dodate" DataSetColumn="Dodate" />
+              <Mapping SourceColumn="DOvari" DataSetColumn="DOvari" />
+              <Mapping SourceColumn="AuditDate" DataSetColumn="AuditDate" />
+              <Mapping SourceColumn="AUDITvari" DataSetColumn="AUDITvari" />
+              <Mapping SourceColumn="DispatchedDate" DataSetColumn="DispatchedDate" />
+              <Mapping SourceColumn="Dispatchvari" DataSetColumn="Dispatchvari" />
+              <Mapping SourceColumn="HandedoverDate" DataSetColumn="HandedoverDate" />
+              <Mapping SourceColumn="HandoeverVari" DataSetColumn="HandoeverVari" />
+              <Mapping SourceColumn="CompletedDate" DataSetColumn="CompletedDate" />
+              <Mapping SourceColumn="CompleteVari" DataSetColumn="CompleteVari" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="TP" DataSetColumn="TP" />
+              <Mapping SourceColumn="Fax" DataSetColumn="Fax" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Address1" DataSetColumn="Address1" />
+              <Mapping SourceColumn="Address2" DataSetColumn="Address2" />
+              <Mapping SourceColumn="Address3" DataSetColumn="Address3" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CusliabilityTableAdapter" GeneratorDataComponentClassName="CusliabilityTableAdapter" Name="Cusliability" UserDataComponentName="CusliabilityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.R_Customer_liabilitySum.Salesman, dbo.u_User.userName, dbo.R_Customer_liabilitySum.Customer, dbo.M_Customers.CustName, 
+                      dbo.R_Customer_liabilitySum.Outstanding, dbo.R_Customer_liabilitySum.Pd, dbo.R_Customer_liabilitySum.Rtn, dbo.R_Customer_liabilitySum.Unreqalized, 
+                      dbo.R_Customer_liabilitySum.Datex
+FROM         dbo.R_Customer_liabilitySum INNER JOIN
+                      dbo.M_Customers ON dbo.R_Customer_liabilitySum.Customer = dbo.M_Customers.CusID INNER JOIN
+                      dbo.u_User ON dbo.R_Customer_liabilitySum.Salesman = dbo.u_User.userId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Salesman" DataSetColumn="Salesman" />
+              <Mapping SourceColumn="userName" DataSetColumn="userName" />
+              <Mapping SourceColumn="Customer" DataSetColumn="Customer" />
+              <Mapping SourceColumn="CustName" DataSetColumn="CustName" />
+              <Mapping SourceColumn="Outstanding" DataSetColumn="Outstanding" />
+              <Mapping SourceColumn="Pd" DataSetColumn="Pd" />
+              <Mapping SourceColumn="Rtn" DataSetColumn="Rtn" />
+              <Mapping SourceColumn="Unreqalized" DataSetColumn="Unreqalized" />
+              <Mapping SourceColumn="Datex" DataSetColumn="Datex" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Z_SalessumTableAdapter" GeneratorDataComponentClassName="Z_SalessumTableAdapter" Name="Z_Salessum" UserDataComponentName="Z_SalessumTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectName="RIT_AT.dbo.Z_Salessum" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     CustomerID ,netamt , paidamt , dueamt ,
+		   ISNULL(SUM(CASE [paytype] WHEN 'CA' THEN Amt ELSE 0 END), 0) AS 'Cash',
+		   ISNULL(SUM(CASE [paytype] WHEN 'CQ' THEN Amt ELSE 0 END), 0) AS 'Cheque',
+		   ISNULL(SUM(CASE [paytype] WHEN ('CQ')THEN  0 WHEN ('CA') THEN 0 ELSE Amt END), 0) AS 'Other'
+FROM       dbo.Z_Salessum
+GROUP BY CustomerID,netamt , paidamt , dueamt </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerID" DataSetColumn="CustomerID" />
+              <Mapping SourceColumn="netamt" DataSetColumn="netamt" />
+              <Mapping SourceColumn="paidamt" DataSetColumn="paidamt" />
+              <Mapping SourceColumn="dueamt" DataSetColumn="dueamt" />
+              <Mapping SourceColumn="Cash" DataSetColumn="Cash" />
+              <Mapping SourceColumn="Cheque" DataSetColumn="Cheque" />
+              <Mapping SourceColumn="Other" DataSetColumn="Other" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="distribution" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="distribution" msprop:Generator_UserDSName="distribution">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderFormPrint" msprop:Generator_TableClassName="OrderFormPrintDataTable" msprop:Generator_TableVarName="tableOrderFormPrint" msprop:Generator_RowChangedName="OrderFormPrintRowChanged" msprop:Generator_TablePropName="OrderFormPrint" msprop:Generator_RowDeletingName="OrderFormPrintRowDeleting" msprop:Generator_RowChangingName="OrderFormPrintRowChanging" msprop:Generator_RowEvHandlerName="OrderFormPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="OrderFormPrintRowDeleted" msprop:Generator_RowClassName="OrderFormPrintRow" msprop:Generator_UserTableName="OrderFormPrint" msprop:Generator_RowEvArgName="OrderFormPrintRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DocNo" msprop:Generator_ColumnVarNameInTable="columnDocNo" msprop:Generator_ColumnPropNameInRow="DocNo" msprop:Generator_ColumnPropNameInTable="DocNoColumn" msprop:Generator_UserColumnName="DocNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRNType" msprop:Generator_ColumnVarNameInTable="columnTRNType" msprop:Generator_ColumnPropNameInRow="TRNType" msprop:Generator_ColumnPropNameInTable="TRNTypeColumn" msprop:Generator_UserColumnName="TRNType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Datex" msprop:Generator_ColumnVarNameInTable="columnDatex" msprop:Generator_ColumnPropNameInRow="Datex" msprop:Generator_ColumnPropNameInTable="DatexColumn" msprop:Generator_UserColumnName="Datex" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RecivedBy" msprop:Generator_ColumnVarNameInTable="columnRecivedBy" msprop:Generator_ColumnPropNameInRow="RecivedBy" msprop:Generator_ColumnPropNameInTable="RecivedByColumn" msprop:Generator_UserColumnName="RecivedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CheckedBy" msprop:Generator_ColumnVarNameInTable="columnCheckedBy" msprop:Generator_ColumnPropNameInRow="CheckedBy" msprop:Generator_ColumnPropNameInTable="CheckedByColumn" msprop:Generator_UserColumnName="CheckedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Approved" msprop:Generator_ColumnVarNameInTable="columnApproved" msprop:Generator_ColumnPropNameInRow="Approved" msprop:Generator_ColumnPropNameInTable="ApprovedColumn" msprop:Generator_UserColumnName="Approved" type="xs:int" />
+              <xs:element name="ApprovedBy" msprop:Generator_ColumnVarNameInTable="columnApprovedBy" msprop:Generator_ColumnPropNameInRow="ApprovedBy" msprop:Generator_ColumnPropNameInTable="ApprovedByColumn" msprop:Generator_UserColumnName="ApprovedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApprovedDate" msprop:Generator_ColumnVarNameInTable="columnApprovedDate" msprop:Generator_ColumnPropNameInRow="ApprovedDate" msprop:Generator_ColumnPropNameInTable="ApprovedDateColumn" msprop:Generator_UserColumnName="ApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RecivedDate" msprop:Generator_ColumnVarNameInTable="columnRecivedDate" msprop:Generator_ColumnPropNameInRow="RecivedDate" msprop:Generator_ColumnPropNameInTable="RecivedDateColumn" msprop:Generator_UserColumnName="RecivedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Userx" msprop:Generator_ColumnVarNameInTable="columnUserx" msprop:Generator_ColumnPropNameInRow="Userx" msprop:Generator_ColumnPropNameInTable="UserxColumn" msprop:Generator_UserColumnName="Userx" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CQNO" msprop:Generator_ColumnVarNameInTable="columnCQNO" msprop:Generator_ColumnPropNameInRow="CQNO" msprop:Generator_ColumnPropNameInTable="CQNOColumn" msprop:Generator_UserColumnName="CQNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CQDate" msprop:Generator_ColumnVarNameInTable="columnCQDate" msprop:Generator_ColumnPropNameInRow="CQDate" msprop:Generator_ColumnPropNameInTable="CQDateColumn" msprop:Generator_UserColumnName="CQDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BANK" msprop:Generator_ColumnVarNameInTable="columnBANK" msprop:Generator_ColumnPropNameInRow="BANK" msprop:Generator_ColumnPropNameInTable="BANKColumn" msprop:Generator_UserColumnName="BANK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BRANCH" msprop:Generator_ColumnVarNameInTable="columnBRANCH" msprop:Generator_ColumnPropNameInRow="BRANCH" msprop:Generator_ColumnPropNameInTable="BRANCHColumn" msprop:Generator_UserColumnName="BRANCH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subtotal" msprop:Generator_ColumnVarNameInTable="columnSubtotal" msprop:Generator_ColumnPropNameInRow="Subtotal" msprop:Generator_ColumnPropNameInTable="SubtotalColumn" msprop:Generator_UserColumnName="Subtotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DiscountPer" msprop:Generator_ColumnVarNameInTable="columnDiscountPer" msprop:Generator_ColumnPropNameInRow="DiscountPer" msprop:Generator_ColumnPropNameInTable="DiscountPerColumn" msprop:Generator_UserColumnName="DiscountPer" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SubtotalDisc" msprop:Generator_ColumnVarNameInTable="columnSubtotalDisc" msprop:Generator_ColumnPropNameInRow="SubtotalDisc" msprop:Generator_ColumnPropNameInTable="SubtotalDiscColumn" msprop:Generator_UserColumnName="SubtotalDisc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ItemdiscTotal" msprop:Generator_ColumnVarNameInTable="columnItemdiscTotal" msprop:Generator_ColumnPropNameInRow="ItemdiscTotal" msprop:Generator_ColumnPropNameInTable="ItemdiscTotalColumn" msprop:Generator_UserColumnName="ItemdiscTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalDisc" msprop:Generator_ColumnVarNameInTable="columnTotalDisc" msprop:Generator_ColumnPropNameInRow="TotalDisc" msprop:Generator_ColumnPropNameInTable="TotalDiscColumn" msprop:Generator_UserColumnName="TotalDisc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NetTotal" msprop:Generator_ColumnVarNameInTable="columnNetTotal" msprop:Generator_ColumnPropNameInRow="NetTotal" msprop:Generator_ColumnPropNameInTable="NetTotalColumn" msprop:Generator_UserColumnName="NetTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Processed" msprop:Generator_ColumnVarNameInTable="columnProcessed" msprop:Generator_ColumnPropNameInRow="Processed" msprop:Generator_ColumnPropNameInTable="ProcessedColumn" msprop:Generator_UserColumnName="Processed" type="xs:int" />
+              <xs:element name="ProcessedDate" msprop:Generator_ColumnVarNameInTable="columnProcessedDate" msprop:Generator_ColumnPropNameInRow="ProcessedDate" msprop:Generator_ColumnPropNameInTable="ProcessedDateColumn" msprop:Generator_UserColumnName="ProcessedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProcessedUser" msprop:Generator_ColumnVarNameInTable="columnProcessedUser" msprop:Generator_ColumnPropNameInRow="ProcessedUser" msprop:Generator_ColumnPropNameInTable="ProcessedUserColumn" msprop:Generator_UserColumnName="ProcessedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quntity" msprop:Generator_ColumnVarNameInTable="columnQuntity" msprop:Generator_ColumnPropNameInRow="Quntity" msprop:Generator_ColumnPropNameInTable="QuntityColumn" msprop:Generator_UserColumnName="Quntity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_UserColumnName="UnitPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CostPrice" msprop:Generator_ColumnVarNameInTable="columnCostPrice" msprop:Generator_ColumnPropNameInRow="CostPrice" msprop:Generator_ColumnPropNameInTable="CostPriceColumn" msprop:Generator_UserColumnName="CostPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amountx" msprop:Generator_ColumnVarNameInTable="columnAmountx" msprop:Generator_ColumnPropNameInRow="Amountx" msprop:Generator_ColumnPropNameInTable="AmountxColumn" msprop:Generator_UserColumnName="Amountx" type="xs:decimal" minOccurs="0" />
+              <xs:element name="discper" msprop:Generator_ColumnVarNameInTable="columndiscper" msprop:Generator_ColumnPropNameInRow="discper" msprop:Generator_ColumnPropNameInTable="discperColumn" msprop:Generator_UserColumnName="discper" type="xs:decimal" minOccurs="0" />
+              <xs:element name="discount" msprop:Generator_ColumnVarNameInTable="columndiscount" msprop:Generator_ColumnPropNameInRow="discount" msprop:Generator_ColumnPropNameInTable="discountColumn" msprop:Generator_UserColumnName="discount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Namex" msprop:Generator_ColumnVarNameInTable="columnNamex" msprop:Generator_ColumnPropNameInRow="Namex" msprop:Generator_ColumnPropNameInTable="NamexColumn" msprop:Generator_UserColumnName="Namex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DO_x0020_Print" msprop:Generator_TableClassName="DO_PrintDataTable" msprop:Generator_TableVarName="tableDO_Print" msprop:Generator_RowChangedName="DO_PrintRowChanged" msprop:Generator_TablePropName="DO_Print" msprop:Generator_RowDeletingName="DO_PrintRowDeleting" msprop:Generator_RowChangingName="DO_PrintRowChanging" msprop:Generator_RowEvHandlerName="DO_PrintRowChangeEventHandler" msprop:Generator_RowDeletedName="DO_PrintRowDeleted" msprop:Generator_RowClassName="DO_PrintRow" msprop:Generator_UserTableName="DO Print" msprop:Generator_RowEvArgName="DO_PrintRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DoNo" msprop:Generator_ColumnVarNameInTable="columnDoNo" msprop:Generator_ColumnPropNameInRow="DoNo" msprop:Generator_ColumnPropNameInTable="DoNoColumn" msprop:Generator_UserColumnName="DoNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvNo" msprop:Generator_ColumnVarNameInTable="columnInvNo" msprop:Generator_ColumnPropNameInRow="InvNo" msprop:Generator_ColumnPropNameInTable="InvNoColumn" msprop:Generator_UserColumnName="InvNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceAmount" msprop:Generator_ColumnVarNameInTable="columnInvoiceAmount" msprop:Generator_ColumnPropNameInRow="InvoiceAmount" msprop:Generator_ColumnPropNameInTable="InvoiceAmountColumn" msprop:Generator_UserColumnName="InvoiceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Datex" msprop:Generator_ColumnVarNameInTable="columnDatex" msprop:Generator_ColumnPropNameInRow="Datex" msprop:Generator_ColumnPropNameInTable="DatexColumn" msprop:Generator_UserColumnName="Datex" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Agent" msprop:Generator_ColumnVarNameInTable="columnAgent" msprop:Generator_ColumnPropNameInRow="Agent" msprop:Generator_ColumnPropNameInTable="AgentColumn" msprop:Generator_UserColumnName="Agent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AgentName" msprop:Generator_ColumnVarNameInTable="columnAgentName" msprop:Generator_ColumnPropNameInRow="AgentName" msprop:Generator_ColumnPropNameInTable="AgentNameColumn" msprop:Generator_UserColumnName="AgentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lorry" msprop:Generator_ColumnVarNameInTable="columnLorry" msprop:Generator_ColumnPropNameInRow="Lorry" msprop:Generator_ColumnPropNameInTable="LorryColumn" msprop:Generator_UserColumnName="Lorry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VehicleNo" msprop:Generator_ColumnVarNameInTable="columnVehicleNo" msprop:Generator_ColumnPropNameInRow="VehicleNo" msprop:Generator_ColumnPropNameInTable="VehicleNoColumn" msprop:Generator_UserColumnName="VehicleNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoOfCartons" msprop:Generator_ColumnVarNameInTable="columnNoOfCartons" msprop:Generator_ColumnPropNameInRow="NoOfCartons" msprop:Generator_ColumnPropNameInTable="NoOfCartonsColumn" msprop:Generator_UserColumnName="NoOfCartons" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Checked" msprop:Generator_ColumnVarNameInTable="columnChecked" msprop:Generator_ColumnPropNameInRow="Checked" msprop:Generator_ColumnPropNameInTable="CheckedColumn" msprop:Generator_UserColumnName="Checked" type="xs:int" minOccurs="0" />
+              <xs:element name="Checkeddate" msprop:Generator_ColumnVarNameInTable="columnCheckeddate" msprop:Generator_ColumnPropNameInRow="Checkeddate" msprop:Generator_ColumnPropNameInTable="CheckeddateColumn" msprop:Generator_UserColumnName="Checkeddate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Approved" msprop:Generator_ColumnVarNameInTable="columnApproved" msprop:Generator_ColumnPropNameInRow="Approved" msprop:Generator_ColumnPropNameInTable="ApprovedColumn" msprop:Generator_UserColumnName="Approved" type="xs:int" minOccurs="0" />
+              <xs:element name="ApprovedDate" msprop:Generator_ColumnVarNameInTable="columnApprovedDate" msprop:Generator_ColumnPropNameInRow="ApprovedDate" msprop:Generator_ColumnPropNameInTable="ApprovedDateColumn" msprop:Generator_UserColumnName="ApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ApprovedUser" msprop:Generator_ColumnVarNameInTable="columnApprovedUser" msprop:Generator_ColumnPropNameInRow="ApprovedUser" msprop:Generator_ColumnPropNameInTable="ApprovedUserColumn" msprop:Generator_UserColumnName="ApprovedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HandoverCartons" msprop:Generator_ColumnVarNameInTable="columnHandoverCartons" msprop:Generator_ColumnPropNameInRow="HandoverCartons" msprop:Generator_ColumnPropNameInTable="HandoverCartonsColumn" msprop:Generator_UserColumnName="HandoverCartons" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Delivered" msprop:Generator_ColumnVarNameInTable="columnDelivered" msprop:Generator_ColumnPropNameInRow="Delivered" msprop:Generator_ColumnPropNameInTable="DeliveredColumn" msprop:Generator_UserColumnName="Delivered" type="xs:int" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrintUser" msprop:Generator_ColumnVarNameInTable="columnPrintUser" msprop:Generator_ColumnPropNameInRow="PrintUser" msprop:Generator_ColumnPropNameInTable="PrintUserColumn" msprop:Generator_UserColumnName="PrintUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Processed" msprop:Generator_ColumnVarNameInTable="columnProcessed" msprop:Generator_ColumnPropNameInRow="Processed" msprop:Generator_ColumnPropNameInTable="ProcessedColumn" msprop:Generator_UserColumnName="Processed" type="xs:int" minOccurs="0" />
+              <xs:element name="Audited" msprop:Generator_ColumnVarNameInTable="columnAudited" msprop:Generator_ColumnPropNameInRow="Audited" msprop:Generator_ColumnPropNameInTable="AuditedColumn" msprop:Generator_UserColumnName="Audited" type="xs:int" minOccurs="0" />
+              <xs:element name="Item" msprop:Generator_ColumnVarNameInTable="columnItem" msprop:Generator_ColumnPropNameInRow="Item" msprop:Generator_ColumnPropNameInTable="ItemColumn" msprop:Generator_UserColumnName="Item">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemNamex" msprop:Generator_ColumnVarNameInTable="columnItemNamex" msprop:Generator_ColumnPropNameInRow="ItemNamex" msprop:Generator_ColumnPropNameInTable="ItemNamexColumn" msprop:Generator_UserColumnName="ItemNamex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Carton" msprop:Generator_ColumnVarNameInTable="columnCarton" msprop:Generator_ColumnPropNameInRow="Carton" msprop:Generator_ColumnPropNameInTable="CartonColumn" msprop:Generator_UserColumnName="Carton" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Invoice_x0020_Print" msprop:Generator_TableClassName="Invoice_PrintDataTable" msprop:Generator_TableVarName="tableInvoice_Print" msprop:Generator_RowChangedName="Invoice_PrintRowChanged" msprop:Generator_TablePropName="Invoice_Print" msprop:Generator_RowDeletingName="Invoice_PrintRowDeleting" msprop:Generator_RowChangingName="Invoice_PrintRowChanging" msprop:Generator_RowEvHandlerName="Invoice_PrintRowChangeEventHandler" msprop:Generator_RowDeletedName="Invoice_PrintRowDeleted" msprop:Generator_RowClassName="Invoice_PrintRow" msprop:Generator_UserTableName="Invoice Print" msprop:Generator_RowEvArgName="Invoice_PrintRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetAmt" msprop:Generator_ColumnVarNameInTable="columnNetAmt" msprop:Generator_ColumnPropNameInRow="NetAmt" msprop:Generator_ColumnPropNameInTable="NetAmtColumn" msprop:Generator_UserColumnName="NetAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Datex" msprop:Generator_ColumnVarNameInTable="columnDatex" msprop:Generator_ColumnPropNameInRow="Datex" msprop:Generator_ColumnPropNameInTable="DatexColumn" msprop:Generator_UserColumnName="Datex" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DueAmt" msprop:Generator_ColumnVarNameInTable="columnDueAmt" msprop:Generator_ColumnPropNameInRow="DueAmt" msprop:Generator_ColumnPropNameInTable="DueAmtColumn" msprop:Generator_UserColumnName="DueAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PaidAmt" msprop:Generator_ColumnVarNameInTable="columnPaidAmt" msprop:Generator_ColumnPropNameInRow="PaidAmt" msprop:Generator_ColumnPropNameInTable="PaidAmtColumn" msprop:Generator_UserColumnName="PaidAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CancelledDate" msprop:Generator_ColumnVarNameInTable="columnCancelledDate" msprop:Generator_ColumnPropNameInRow="CancelledDate" msprop:Generator_ColumnPropNameInTable="CancelledDateColumn" msprop:Generator_UserColumnName="CancelledDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Docno" msprop:Generator_ColumnVarNameInTable="columnDocno" msprop:Generator_ColumnPropNameInRow="Docno" msprop:Generator_ColumnPropNameInTable="DocnoColumn" msprop:Generator_UserColumnName="Docno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReceiptDate" msprop:Generator_ColumnVarNameInTable="columnReceiptDate" msprop:Generator_ColumnPropNameInRow="ReceiptDate" msprop:Generator_ColumnPropNameInTable="ReceiptDateColumn" msprop:Generator_UserColumnName="ReceiptDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="refNo" msprop:Generator_ColumnVarNameInTable="columnrefNo" msprop:Generator_ColumnPropNameInRow="refNo" msprop:Generator_ColumnPropNameInTable="refNoColumn" msprop:Generator_UserColumnName="refNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Memo" msprop:Generator_ColumnVarNameInTable="columnMemo" msprop:Generator_ColumnPropNameInRow="Memo" msprop:Generator_ColumnPropNameInTable="MemoColumn" msprop:Generator_UserColumnName="Memo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Recivedfrom" msprop:Generator_ColumnVarNameInTable="columnRecivedfrom" msprop:Generator_ColumnPropNameInRow="Recivedfrom" msprop:Generator_ColumnPropNameInTable="RecivedfromColumn" msprop:Generator_UserColumnName="Recivedfrom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remarks" msprop:Generator_ColumnVarNameInTable="columnremarks" msprop:Generator_ColumnPropNameInRow="remarks" msprop:Generator_ColumnPropNameInTable="remarksColumn" msprop:Generator_UserColumnName="remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="isProcessed" msprop:Generator_ColumnVarNameInTable="columnisProcessed" msprop:Generator_ColumnPropNameInRow="isProcessed" msprop:Generator_ColumnPropNameInTable="isProcessedColumn" msprop:Generator_UserColumnName="isProcessed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="processDate" msprop:Generator_ColumnVarNameInTable="columnprocessDate" msprop:Generator_ColumnPropNameInRow="processDate" msprop:Generator_ColumnPropNameInTable="processDateColumn" msprop:Generator_UserColumnName="processDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="processUser" msprop:Generator_ColumnVarNameInTable="columnprocessUser" msprop:Generator_ColumnPropNameInRow="processUser" msprop:Generator_ColumnPropNameInTable="processUserColumn" msprop:Generator_UserColumnName="processUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CancelledUser" msprop:Generator_ColumnVarNameInTable="columnCancelledUser" msprop:Generator_ColumnPropNameInRow="CancelledUser" msprop:Generator_ColumnPropNameInTable="CancelledUserColumn" msprop:Generator_UserColumnName="CancelledUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sequence" msprop:Generator_ColumnVarNameInTable="columnSequence" msprop:Generator_ColumnPropNameInRow="Sequence" msprop:Generator_ColumnPropNameInTable="SequenceColumn" msprop:Generator_UserColumnName="Sequence" type="xs:int" />
+              <xs:element name="Paytype" msprop:Generator_ColumnVarNameInTable="columnPaytype" msprop:Generator_ColumnPropNameInRow="Paytype" msprop:Generator_ColumnPropNameInTable="PaytypeColumn" msprop:Generator_UserColumnName="Paytype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HeadAmt" msprop:Generator_ColumnVarNameInTable="columnHeadAmt" msprop:Generator_ColumnPropNameInRow="HeadAmt" msprop:Generator_ColumnPropNameInTable="HeadAmtColumn" msprop:Generator_UserColumnName="HeadAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amt" msprop:Generator_ColumnVarNameInTable="columnAmt" msprop:Generator_ColumnPropNameInRow="Amt" msprop:Generator_ColumnPropNameInTable="AmtColumn" msprop:Generator_UserColumnName="Amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvNo" msprop:Generator_ColumnVarNameInTable="columnInvNo" msprop:Generator_ColumnPropNameInRow="InvNo" msprop:Generator_ColumnPropNameInTable="InvNoColumn" msprop:Generator_UserColumnName="InvNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CQno" msprop:Generator_ColumnVarNameInTable="columnCQno" msprop:Generator_ColumnPropNameInRow="CQno" msprop:Generator_ColumnPropNameInTable="CQnoColumn" msprop:Generator_UserColumnName="CQno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bank" msprop:Generator_ColumnVarNameInTable="columnBank" msprop:Generator_ColumnPropNameInRow="Bank" msprop:Generator_ColumnPropNameInTable="BankColumn" msprop:Generator_UserColumnName="Bank" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankBranch" msprop:Generator_ColumnVarNameInTable="columnBankBranch" msprop:Generator_ColumnPropNameInRow="BankBranch" msprop:Generator_ColumnPropNameInTable="BankBranchColumn" msprop:Generator_UserColumnName="BankBranch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankDate" msprop:Generator_ColumnVarNameInTable="columnBankDate" msprop:Generator_ColumnPropNameInRow="BankDate" msprop:Generator_ColumnPropNameInTable="BankDateColumn" msprop:Generator_UserColumnName="BankDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="isReconsile" msprop:Generator_ColumnVarNameInTable="columnisReconsile" msprop:Generator_ColumnPropNameInRow="isReconsile" msprop:Generator_ColumnPropNameInTable="isReconsileColumn" msprop:Generator_UserColumnName="isReconsile" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ReconsileDate" msprop:Generator_ColumnVarNameInTable="columnReconsileDate" msprop:Generator_ColumnPropNameInRow="ReconsileDate" msprop:Generator_ColumnPropNameInTable="ReconsileDateColumn" msprop:Generator_UserColumnName="ReconsileDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="isreturned" msprop:Generator_ColumnVarNameInTable="columnisreturned" msprop:Generator_ColumnPropNameInRow="isreturned" msprop:Generator_ColumnPropNameInTable="isreturnedColumn" msprop:Generator_UserColumnName="isreturned" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ReturnDate" msprop:Generator_ColumnVarNameInTable="columnReturnDate" msprop:Generator_ColumnPropNameInRow="ReturnDate" msprop:Generator_ColumnPropNameInTable="ReturnDateColumn" msprop:Generator_UserColumnName="ReturnDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="settleRefno" msprop:Generator_ColumnVarNameInTable="columnsettleRefno" msprop:Generator_ColumnPropNameInRow="settleRefno" msprop:Generator_ColumnPropNameInTable="settleRefnoColumn" msprop:Generator_UserColumnName="settleRefno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Settlement" msprop:Generator_ColumnVarNameInTable="columnSettlement" msprop:Generator_ColumnPropNameInRow="Settlement" msprop:Generator_ColumnPropNameInTable="SettlementColumn" msprop:Generator_UserColumnName="Settlement" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DO_x0020_Printc" msprop:Generator_TableClassName="DO_PrintcDataTable" msprop:Generator_TableVarName="tableDO_Printc" msprop:Generator_RowChangedName="DO_PrintcRowChanged" msprop:Generator_TablePropName="DO_Printc" msprop:Generator_RowDeletingName="DO_PrintcRowDeleting" msprop:Generator_RowChangingName="DO_PrintcRowChanging" msprop:Generator_RowEvHandlerName="DO_PrintcRowChangeEventHandler" msprop:Generator_RowDeletedName="DO_PrintcRowDeleted" msprop:Generator_RowClassName="DO_PrintcRow" msprop:Generator_UserTableName="DO Printc" msprop:Generator_RowEvArgName="DO_PrintcRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DoNo" msprop:Generator_ColumnVarNameInTable="columnDoNo" msprop:Generator_ColumnPropNameInRow="DoNo" msprop:Generator_ColumnPropNameInTable="DoNoColumn" msprop:Generator_UserColumnName="DoNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvNo" msprop:Generator_ColumnVarNameInTable="columnInvNo" msprop:Generator_ColumnPropNameInRow="InvNo" msprop:Generator_ColumnPropNameInTable="InvNoColumn" msprop:Generator_UserColumnName="InvNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TP" msprop:Generator_ColumnVarNameInTable="columnTP" msprop:Generator_ColumnPropNameInRow="TP" msprop:Generator_ColumnPropNameInTable="TPColumn" msprop:Generator_UserColumnName="TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_UserColumnName="Fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address1" msprop:Generator_ColumnVarNameInTable="columnAddress1" msprop:Generator_ColumnPropNameInRow="Address1" msprop:Generator_ColumnPropNameInTable="Address1Column" msprop:Generator_UserColumnName="Address1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address2" msprop:Generator_ColumnVarNameInTable="columnAddress2" msprop:Generator_ColumnPropNameInRow="Address2" msprop:Generator_ColumnPropNameInTable="Address2Column" msprop:Generator_UserColumnName="Address2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address3" msprop:Generator_ColumnVarNameInTable="columnAddress3" msprop:Generator_ColumnPropNameInRow="Address3" msprop:Generator_ColumnPropNameInTable="Address3Column" msprop:Generator_UserColumnName="Address3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Datex" msprop:Generator_ColumnVarNameInTable="columnDatex" msprop:Generator_ColumnPropNameInRow="Datex" msprop:Generator_ColumnPropNameInTable="DatexColumn" msprop:Generator_UserColumnName="Datex" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Item" msprop:Generator_ColumnVarNameInTable="columnItem" msprop:Generator_ColumnPropNameInRow="Item" msprop:Generator_ColumnPropNameInTable="ItemColumn" msprop:Generator_UserColumnName="Item">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemNamex" msprop:Generator_ColumnVarNameInTable="columnItemNamex" msprop:Generator_ColumnPropNameInRow="ItemNamex" msprop:Generator_ColumnPropNameInTable="ItemNamexColumn" msprop:Generator_UserColumnName="ItemNamex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Carton" msprop:Generator_ColumnVarNameInTable="columnCarton" msprop:Generator_ColumnPropNameInRow="Carton" msprop:Generator_ColumnPropNameInTable="CartonColumn" msprop:Generator_UserColumnName="Carton" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ActualCartons" msprop:Generator_ColumnVarNameInTable="columnActualCartons" msprop:Generator_ColumnPropNameInRow="ActualCartons" msprop:Generator_ColumnPropNameInTable="ActualCartonsColumn" msprop:Generator_UserColumnName="ActualCartons" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Agent" msprop:Generator_ColumnVarNameInTable="columnAgent" msprop:Generator_ColumnPropNameInRow="Agent" msprop:Generator_ColumnPropNameInTable="AgentColumn" msprop:Generator_UserColumnName="Agent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lorry" msprop:Generator_ColumnVarNameInTable="columnLorry" msprop:Generator_ColumnPropNameInRow="Lorry" msprop:Generator_ColumnPropNameInTable="LorryColumn" msprop:Generator_UserColumnName="Lorry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoOfCartons" msprop:Generator_ColumnVarNameInTable="columnNoOfCartons" msprop:Generator_ColumnPropNameInRow="NoOfCartons" msprop:Generator_ColumnPropNameInTable="NoOfCartonsColumn" msprop:Generator_UserColumnName="NoOfCartons" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Agent_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnAgent_Name" msprop:Generator_ColumnPropNameInRow="Agent_Name" msprop:Generator_ColumnPropNameInTable="Agent_NameColumn" msprop:Generator_UserColumnName="Agent Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PackingList" msprop:Generator_TableClassName="PackingListDataTable" msprop:Generator_TableVarName="tablePackingList" msprop:Generator_RowChangedName="PackingListRowChanged" msprop:Generator_TablePropName="PackingList" msprop:Generator_RowDeletingName="PackingListRowDeleting" msprop:Generator_RowChangingName="PackingListRowChanging" msprop:Generator_RowEvHandlerName="PackingListRowChangeEventHandler" msprop:Generator_RowDeletedName="PackingListRowDeleted" msprop:Generator_RowClassName="PackingListRow" msprop:Generator_UserTableName="PackingList" msprop:Generator_RowEvArgName="PackingListRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PackingNo" msprop:Generator_ColumnVarNameInTable="columnPackingNo" msprop:Generator_ColumnPropNameInRow="PackingNo" msprop:Generator_ColumnPropNameInTable="PackingNoColumn" msprop:Generator_UserColumnName="PackingNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RefNumber" msprop:Generator_ColumnVarNameInTable="columnRefNumber" msprop:Generator_ColumnPropNameInRow="RefNumber" msprop:Generator_ColumnPropNameInTable="RefNumberColumn" msprop:Generator_UserColumnName="RefNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Datex" msprop:Generator_ColumnVarNameInTable="columnDatex" msprop:Generator_ColumnPropNameInRow="Datex" msprop:Generator_ColumnPropNameInTable="DatexColumn" msprop:Generator_UserColumnName="Datex" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NoOfCartons" msprop:Generator_ColumnVarNameInTable="columnNoOfCartons" msprop:Generator_ColumnPropNameInRow="NoOfCartons" msprop:Generator_ColumnPropNameInTable="NoOfCartonsColumn" msprop:Generator_UserColumnName="NoOfCartons" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Vehicle" msprop:Generator_ColumnVarNameInTable="columnVehicle" msprop:Generator_ColumnPropNameInRow="Vehicle" msprop:Generator_ColumnPropNameInTable="VehicleColumn" msprop:Generator_UserColumnName="Vehicle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Driver" msprop:Generator_ColumnVarNameInTable="columnDriver" msprop:Generator_ColumnPropNameInRow="Driver" msprop:Generator_ColumnPropNameInTable="DriverColumn" msprop:Generator_UserColumnName="Driver" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedUser" msprop:Generator_ColumnVarNameInTable="columnCreatedUser" msprop:Generator_ColumnPropNameInRow="CreatedUser" msprop:Generator_ColumnPropNameInTable="CreatedUserColumn" msprop:Generator_UserColumnName="CreatedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedTime" msprop:Generator_ColumnVarNameInTable="columnCreatedTime" msprop:Generator_ColumnPropNameInRow="CreatedTime" msprop:Generator_ColumnPropNameInTable="CreatedTimeColumn" msprop:Generator_UserColumnName="CreatedTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dono" msprop:Generator_ColumnVarNameInTable="columnDono" msprop:Generator_ColumnPropNameInRow="Dono" msprop:Generator_ColumnPropNameInTable="DonoColumn" msprop:Generator_UserColumnName="Dono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TP" msprop:Generator_ColumnVarNameInTable="columnTP" msprop:Generator_ColumnPropNameInRow="TP" msprop:Generator_ColumnPropNameInTable="TPColumn" msprop:Generator_UserColumnName="TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address1" msprop:Generator_ColumnVarNameInTable="columnAddress1" msprop:Generator_ColumnPropNameInRow="Address1" msprop:Generator_ColumnPropNameInTable="Address1Column" msprop:Generator_UserColumnName="Address1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address2" msprop:Generator_ColumnVarNameInTable="columnAddress2" msprop:Generator_ColumnPropNameInRow="Address2" msprop:Generator_ColumnPropNameInTable="Address2Column" msprop:Generator_UserColumnName="Address2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address3" msprop:Generator_ColumnVarNameInTable="columnAddress3" msprop:Generator_ColumnPropNameInRow="Address3" msprop:Generator_ColumnPropNameInTable="Address3Column" msprop:Generator_UserColumnName="Address3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Agent" msprop:Generator_ColumnVarNameInTable="columnAgent" msprop:Generator_ColumnPropNameInRow="Agent" msprop:Generator_ColumnPropNameInTable="AgentColumn" msprop:Generator_UserColumnName="Agent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Namex" msprop:Generator_ColumnVarNameInTable="columnNamex" msprop:Generator_ColumnPropNameInRow="Namex" msprop:Generator_ColumnPropNameInTable="NamexColumn" msprop:Generator_UserColumnName="Namex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AgentAddress1" msprop:Generator_ColumnVarNameInTable="columnAgentAddress1" msprop:Generator_ColumnPropNameInRow="AgentAddress1" msprop:Generator_ColumnPropNameInTable="AgentAddress1Column" msprop:Generator_UserColumnName="AgentAddress1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AgentAddress2" msprop:Generator_ColumnVarNameInTable="columnAgentAddress2" msprop:Generator_ColumnPropNameInRow="AgentAddress2" msprop:Generator_ColumnPropNameInTable="AgentAddress2Column" msprop:Generator_UserColumnName="AgentAddress2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AgentAddress3" msprop:Generator_ColumnVarNameInTable="columnAgentAddress3" msprop:Generator_ColumnPropNameInRow="AgentAddress3" msprop:Generator_ColumnPropNameInTable="AgentAddress3Column" msprop:Generator_UserColumnName="AgentAddress3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TPOffice" msprop:Generator_ColumnVarNameInTable="columnTPOffice" msprop:Generator_ColumnPropNameInRow="TPOffice" msprop:Generator_ColumnPropNameInTable="TPOfficeColumn" msprop:Generator_UserColumnName="TPOffice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TPPersonal" msprop:Generator_ColumnVarNameInTable="columnTPPersonal" msprop:Generator_ColumnPropNameInRow="TPPersonal" msprop:Generator_ColumnPropNameInTable="TPPersonalColumn" msprop:Generator_UserColumnName="TPPersonal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateCreated" msprop:Generator_ColumnVarNameInTable="columnDateCreated" msprop:Generator_ColumnPropNameInRow="DateCreated" msprop:Generator_ColumnPropNameInTable="DateCreatedColumn" msprop:Generator_UserColumnName="DateCreated" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TTLCartons" msprop:Generator_ColumnVarNameInTable="columnTTLCartons" msprop:Generator_ColumnPropNameInRow="TTLCartons" msprop:Generator_ColumnPropNameInTable="TTLCartonsColumn" msprop:Generator_UserColumnName="TTLCartons" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReceiptPrint" msprop:Generator_TableClassName="ReceiptPrintDataTable" msprop:Generator_TableVarName="tableReceiptPrint" msprop:Generator_RowChangedName="ReceiptPrintRowChanged" msprop:Generator_TablePropName="ReceiptPrint" msprop:Generator_RowDeletingName="ReceiptPrintRowDeleting" msprop:Generator_RowChangingName="ReceiptPrintRowChanging" msprop:Generator_RowEvHandlerName="ReceiptPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="ReceiptPrintRowDeleted" msprop:Generator_RowClassName="ReceiptPrintRow" msprop:Generator_UserTableName="ReceiptPrint" msprop:Generator_RowEvArgName="ReceiptPrintRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Docno" msprop:Generator_ColumnVarNameInTable="columnDocno" msprop:Generator_ColumnPropNameInRow="Docno" msprop:Generator_ColumnPropNameInTable="DocnoColumn" msprop:Generator_UserColumnName="Docno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="refNo" msprop:Generator_ColumnVarNameInTable="columnrefNo" msprop:Generator_ColumnPropNameInRow="refNo" msprop:Generator_ColumnPropNameInTable="refNoColumn" msprop:Generator_UserColumnName="refNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Memo" msprop:Generator_ColumnVarNameInTable="columnMemo" msprop:Generator_ColumnPropNameInRow="Memo" msprop:Generator_ColumnPropNameInTable="MemoColumn" msprop:Generator_UserColumnName="Memo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Recivedfrom" msprop:Generator_ColumnVarNameInTable="columnRecivedfrom" msprop:Generator_ColumnPropNameInRow="Recivedfrom" msprop:Generator_ColumnPropNameInTable="RecivedfromColumn" msprop:Generator_UserColumnName="Recivedfrom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remarks" msprop:Generator_ColumnVarNameInTable="columnremarks" msprop:Generator_ColumnPropNameInRow="remarks" msprop:Generator_ColumnPropNameInTable="remarksColumn" msprop:Generator_UserColumnName="remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="isProcessed" msprop:Generator_ColumnVarNameInTable="columnisProcessed" msprop:Generator_ColumnPropNameInRow="isProcessed" msprop:Generator_ColumnPropNameInTable="isProcessedColumn" msprop:Generator_UserColumnName="isProcessed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="processDate" msprop:Generator_ColumnVarNameInTable="columnprocessDate" msprop:Generator_ColumnPropNameInRow="processDate" msprop:Generator_ColumnPropNameInTable="processDateColumn" msprop:Generator_UserColumnName="processDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="processUser" msprop:Generator_ColumnVarNameInTable="columnprocessUser" msprop:Generator_ColumnPropNameInRow="processUser" msprop:Generator_ColumnPropNameInTable="processUserColumn" msprop:Generator_UserColumnName="processUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CancelledUser" msprop:Generator_ColumnVarNameInTable="columnCancelledUser" msprop:Generator_ColumnPropNameInRow="CancelledUser" msprop:Generator_ColumnPropNameInTable="CancelledUserColumn" msprop:Generator_UserColumnName="CancelledUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CancelledDate" msprop:Generator_ColumnVarNameInTable="columnCancelledDate" msprop:Generator_ColumnPropNameInRow="CancelledDate" msprop:Generator_ColumnPropNameInTable="CancelledDateColumn" msprop:Generator_UserColumnName="CancelledDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Sequence" msprop:Generator_ColumnVarNameInTable="columnSequence" msprop:Generator_ColumnPropNameInRow="Sequence" msprop:Generator_ColumnPropNameInTable="SequenceColumn" msprop:Generator_UserColumnName="Sequence" type="xs:int" />
+              <xs:element name="Paytype" msprop:Generator_ColumnVarNameInTable="columnPaytype" msprop:Generator_ColumnPropNameInRow="Paytype" msprop:Generator_ColumnPropNameInTable="PaytypeColumn" msprop:Generator_UserColumnName="Paytype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HeadAmt" msprop:Generator_ColumnVarNameInTable="columnHeadAmt" msprop:Generator_ColumnPropNameInRow="HeadAmt" msprop:Generator_ColumnPropNameInTable="HeadAmtColumn" msprop:Generator_UserColumnName="HeadAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amt" msprop:Generator_ColumnVarNameInTable="columnAmt" msprop:Generator_ColumnPropNameInRow="Amt" msprop:Generator_ColumnPropNameInTable="AmtColumn" msprop:Generator_UserColumnName="Amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvNo" msprop:Generator_ColumnVarNameInTable="columnInvNo" msprop:Generator_ColumnPropNameInRow="InvNo" msprop:Generator_ColumnPropNameInTable="InvNoColumn" msprop:Generator_UserColumnName="InvNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Datex" msprop:Generator_ColumnVarNameInTable="columnDatex" msprop:Generator_ColumnPropNameInRow="Datex" msprop:Generator_ColumnPropNameInTable="DatexColumn" msprop:Generator_UserColumnName="Datex" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CQno" msprop:Generator_ColumnVarNameInTable="columnCQno" msprop:Generator_ColumnPropNameInRow="CQno" msprop:Generator_ColumnPropNameInTable="CQnoColumn" msprop:Generator_UserColumnName="CQno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bank" msprop:Generator_ColumnVarNameInTable="columnBank" msprop:Generator_ColumnPropNameInRow="Bank" msprop:Generator_ColumnPropNameInTable="BankColumn" msprop:Generator_UserColumnName="Bank" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankBranch" msprop:Generator_ColumnVarNameInTable="columnBankBranch" msprop:Generator_ColumnPropNameInRow="BankBranch" msprop:Generator_ColumnPropNameInTable="BankBranchColumn" msprop:Generator_UserColumnName="BankBranch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankDate" msprop:Generator_ColumnVarNameInTable="columnBankDate" msprop:Generator_ColumnPropNameInRow="BankDate" msprop:Generator_ColumnPropNameInTable="BankDateColumn" msprop:Generator_UserColumnName="BankDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="isReconsile" msprop:Generator_ColumnVarNameInTable="columnisReconsile" msprop:Generator_ColumnPropNameInRow="isReconsile" msprop:Generator_ColumnPropNameInTable="isReconsileColumn" msprop:Generator_UserColumnName="isReconsile" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ReconsileDate" msprop:Generator_ColumnVarNameInTable="columnReconsileDate" msprop:Generator_ColumnPropNameInRow="ReconsileDate" msprop:Generator_ColumnPropNameInTable="ReconsileDateColumn" msprop:Generator_UserColumnName="ReconsileDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="isreturned" msprop:Generator_ColumnVarNameInTable="columnisreturned" msprop:Generator_ColumnPropNameInRow="isreturned" msprop:Generator_ColumnPropNameInTable="isreturnedColumn" msprop:Generator_UserColumnName="isreturned" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ReturnDate" msprop:Generator_ColumnVarNameInTable="columnReturnDate" msprop:Generator_ColumnPropNameInRow="ReturnDate" msprop:Generator_ColumnPropNameInTable="ReturnDateColumn" msprop:Generator_UserColumnName="ReturnDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="settleRefno" msprop:Generator_ColumnVarNameInTable="columnsettleRefno" msprop:Generator_ColumnPropNameInRow="settleRefno" msprop:Generator_ColumnPropNameInTable="settleRefnoColumn" msprop:Generator_UserColumnName="settleRefno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetAmt" msprop:Generator_ColumnVarNameInTable="columnNetAmt" msprop:Generator_ColumnPropNameInRow="NetAmt" msprop:Generator_ColumnPropNameInTable="NetAmtColumn" msprop:Generator_UserColumnName="NetAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PaidAmt" msprop:Generator_ColumnVarNameInTable="columnPaidAmt" msprop:Generator_ColumnPropNameInRow="PaidAmt" msprop:Generator_ColumnPropNameInTable="PaidAmtColumn" msprop:Generator_UserColumnName="PaidAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DueAmt" msprop:Generator_ColumnVarNameInTable="columnDueAmt" msprop:Generator_ColumnPropNameInRow="DueAmt" msprop:Generator_ColumnPropNameInTable="DueAmtColumn" msprop:Generator_UserColumnName="DueAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Settlement" msprop:Generator_ColumnVarNameInTable="columnSettlement" msprop:Generator_ColumnPropNameInRow="Settlement" msprop:Generator_ColumnPropNameInTable="SettlementColumn" msprop:Generator_UserColumnName="Settlement" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ReceiptDate" msprop:Generator_ColumnVarNameInTable="columnReceiptDate" msprop:Generator_ColumnPropNameInRow="ReceiptDate" msprop:Generator_ColumnPropNameInTable="ReceiptDateColumn" msprop:Generator_UserColumnName="ReceiptDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PENDING_APPROVALS" msprop:Generator_TableClassName="PENDING_APPROVALSDataTable" msprop:Generator_TableVarName="tablePENDING_APPROVALS" msprop:Generator_RowChangedName="PENDING_APPROVALSRowChanged" msprop:Generator_TablePropName="PENDING_APPROVALS" msprop:Generator_RowDeletingName="PENDING_APPROVALSRowDeleting" msprop:Generator_RowChangingName="PENDING_APPROVALSRowChanging" msprop:Generator_RowEvHandlerName="PENDING_APPROVALSRowChangeEventHandler" msprop:Generator_RowDeletedName="PENDING_APPROVALSRowDeleted" msprop:Generator_RowClassName="PENDING_APPROVALSRow" msprop:Generator_UserTableName="PENDING_APPROVALS" msprop:Generator_RowEvArgName="PENDING_APPROVALSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OFNo" msprop:Generator_ColumnVarNameInTable="columnOFNo" msprop:Generator_ColumnPropNameInRow="OFNo" msprop:Generator_ColumnPropNameInTable="OFNoColumn" msprop:Generator_UserColumnName="OFNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SalesMan" msprop:Generator_ColumnVarNameInTable="columnSalesMan" msprop:Generator_ColumnPropNameInRow="SalesMan" msprop:Generator_ColumnPropNameInTable="SalesManColumn" msprop:Generator_UserColumnName="SalesMan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userName" msprop:Generator_ColumnVarNameInTable="columnuserName" msprop:Generator_ColumnPropNameInRow="userName" msprop:Generator_ColumnPropNameInTable="userNameColumn" msprop:Generator_UserColumnName="userName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OFApproved" msprop:Generator_ColumnVarNameInTable="columnOFApproved" msprop:Generator_ColumnPropNameInRow="OFApproved" msprop:Generator_ColumnPropNameInTable="OFApprovedColumn" msprop:Generator_UserColumnName="OFApproved" type="xs:int" minOccurs="0" />
+              <xs:element name="OFApprovedUser" msprop:Generator_ColumnVarNameInTable="columnOFApprovedUser" msprop:Generator_ColumnPropNameInRow="OFApprovedUser" msprop:Generator_ColumnPropNameInTable="OFApprovedUserColumn" msprop:Generator_UserColumnName="OFApprovedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OFApprovedDate" msprop:Generator_ColumnVarNameInTable="columnOFApprovedDate" msprop:Generator_ColumnPropNameInRow="OFApprovedDate" msprop:Generator_ColumnPropNameInTable="OFApprovedDateColumn" msprop:Generator_UserColumnName="OFApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InvCreated" msprop:Generator_ColumnVarNameInTable="columnInvCreated" msprop:Generator_ColumnPropNameInRow="InvCreated" msprop:Generator_ColumnPropNameInTable="InvCreatedColumn" msprop:Generator_UserColumnName="InvCreated" type="xs:int" minOccurs="0" />
+              <xs:element name="InvNo" msprop:Generator_ColumnVarNameInTable="columnInvNo" msprop:Generator_ColumnPropNameInRow="InvNo" msprop:Generator_ColumnPropNameInTable="InvNoColumn" msprop:Generator_UserColumnName="InvNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvAmount" msprop:Generator_ColumnVarNameInTable="columnInvAmount" msprop:Generator_ColumnPropNameInRow="InvAmount" msprop:Generator_ColumnPropNameInTable="InvAmountColumn" msprop:Generator_UserColumnName="InvAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvApproved" msprop:Generator_ColumnVarNameInTable="columnInvApproved" msprop:Generator_ColumnPropNameInRow="InvApproved" msprop:Generator_ColumnPropNameInTable="InvApprovedColumn" msprop:Generator_UserColumnName="InvApproved" type="xs:int" minOccurs="0" />
+              <xs:element name="InvApprovedUser" msprop:Generator_ColumnVarNameInTable="columnInvApprovedUser" msprop:Generator_ColumnPropNameInRow="InvApprovedUser" msprop:Generator_ColumnPropNameInTable="InvApprovedUserColumn" msprop:Generator_UserColumnName="InvApprovedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvApprovedDate" msprop:Generator_ColumnVarNameInTable="columnInvApprovedDate" msprop:Generator_ColumnPropNameInRow="InvApprovedDate" msprop:Generator_ColumnPropNameInTable="InvApprovedDateColumn" msprop:Generator_UserColumnName="InvApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DOCreated" msprop:Generator_ColumnVarNameInTable="columnDOCreated" msprop:Generator_ColumnPropNameInRow="DOCreated" msprop:Generator_ColumnPropNameInTable="DOCreatedColumn" msprop:Generator_UserColumnName="DOCreated" type="xs:int" minOccurs="0" />
+              <xs:element name="DONo" msprop:Generator_ColumnVarNameInTable="columnDONo" msprop:Generator_ColumnPropNameInRow="DONo" msprop:Generator_ColumnPropNameInTable="DONoColumn" msprop:Generator_UserColumnName="DONo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOAmount" msprop:Generator_ColumnVarNameInTable="columnDOAmount" msprop:Generator_ColumnPropNameInRow="DOAmount" msprop:Generator_ColumnPropNameInTable="DOAmountColumn" msprop:Generator_UserColumnName="DOAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DOMultipleNO" msprop:Generator_ColumnVarNameInTable="columnDOMultipleNO" msprop:Generator_ColumnPropNameInRow="DOMultipleNO" msprop:Generator_ColumnPropNameInTable="DOMultipleNOColumn" msprop:Generator_UserColumnName="DOMultipleNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOProcessed" msprop:Generator_ColumnVarNameInTable="columnDOProcessed" msprop:Generator_ColumnPropNameInRow="DOProcessed" msprop:Generator_ColumnPropNameInTable="DOProcessedColumn" msprop:Generator_UserColumnName="DOProcessed" type="xs:int" minOccurs="0" />
+              <xs:element name="DOProcessedUser" msprop:Generator_ColumnVarNameInTable="columnDOProcessedUser" msprop:Generator_ColumnPropNameInRow="DOProcessedUser" msprop:Generator_ColumnPropNameInTable="DOProcessedUserColumn" msprop:Generator_UserColumnName="DOProcessedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOProcessedDate" msprop:Generator_ColumnVarNameInTable="columnDOProcessedDate" msprop:Generator_ColumnPropNameInRow="DOProcessedDate" msprop:Generator_ColumnPropNameInTable="DOProcessedDateColumn" msprop:Generator_UserColumnName="DOProcessedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DOApproved" msprop:Generator_ColumnVarNameInTable="columnDOApproved" msprop:Generator_ColumnPropNameInRow="DOApproved" msprop:Generator_ColumnPropNameInTable="DOApprovedColumn" msprop:Generator_UserColumnName="DOApproved" type="xs:int" minOccurs="0" />
+              <xs:element name="DOApprovedUser" msprop:Generator_ColumnVarNameInTable="columnDOApprovedUser" msprop:Generator_ColumnPropNameInRow="DOApprovedUser" msprop:Generator_ColumnPropNameInTable="DOApprovedUserColumn" msprop:Generator_UserColumnName="DOApprovedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOApprovedDate" msprop:Generator_ColumnVarNameInTable="columnDOApprovedDate" msprop:Generator_ColumnPropNameInRow="DOApprovedDate" msprop:Generator_ColumnPropNameInTable="DOApprovedDateColumn" msprop:Generator_UserColumnName="DOApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Audited" msprop:Generator_ColumnVarNameInTable="columnAudited" msprop:Generator_ColumnPropNameInRow="Audited" msprop:Generator_ColumnPropNameInTable="AuditedColumn" msprop:Generator_UserColumnName="Audited" type="xs:int" minOccurs="0" />
+              <xs:element name="AuditDate" msprop:Generator_ColumnVarNameInTable="columnAuditDate" msprop:Generator_ColumnPropNameInRow="AuditDate" msprop:Generator_ColumnPropNameInTable="AuditDateColumn" msprop:Generator_UserColumnName="AuditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuditUser" msprop:Generator_ColumnVarNameInTable="columnAuditUser" msprop:Generator_ColumnPropNameInRow="AuditUser" msprop:Generator_ColumnPropNameInTable="AuditUserColumn" msprop:Generator_UserColumnName="AuditUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dispatched" msprop:Generator_ColumnVarNameInTable="columnDispatched" msprop:Generator_ColumnPropNameInRow="Dispatched" msprop:Generator_ColumnPropNameInTable="DispatchedColumn" msprop:Generator_UserColumnName="Dispatched" type="xs:int" minOccurs="0" />
+              <xs:element name="DispatchedDate" msprop:Generator_ColumnVarNameInTable="columnDispatchedDate" msprop:Generator_ColumnPropNameInRow="DispatchedDate" msprop:Generator_ColumnPropNameInTable="DispatchedDateColumn" msprop:Generator_UserColumnName="DispatchedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DispatchedUser" msprop:Generator_ColumnVarNameInTable="columnDispatchedUser" msprop:Generator_ColumnPropNameInRow="DispatchedUser" msprop:Generator_ColumnPropNameInTable="DispatchedUserColumn" msprop:Generator_UserColumnName="DispatchedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Handedover" msprop:Generator_ColumnVarNameInTable="columnHandedover" msprop:Generator_ColumnPropNameInRow="Handedover" msprop:Generator_ColumnPropNameInTable="HandedoverColumn" msprop:Generator_UserColumnName="Handedover" type="xs:int" minOccurs="0" />
+              <xs:element name="HandedoverUser" msprop:Generator_ColumnVarNameInTable="columnHandedoverUser" msprop:Generator_ColumnPropNameInRow="HandedoverUser" msprop:Generator_ColumnPropNameInTable="HandedoverUserColumn" msprop:Generator_UserColumnName="HandedoverUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HandedoverDate" msprop:Generator_ColumnVarNameInTable="columnHandedoverDate" msprop:Generator_ColumnPropNameInRow="HandedoverDate" msprop:Generator_ColumnPropNameInTable="HandedoverDateColumn" msprop:Generator_UserColumnName="HandedoverDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Completed" msprop:Generator_ColumnVarNameInTable="columnCompleted" msprop:Generator_ColumnPropNameInRow="Completed" msprop:Generator_ColumnPropNameInTable="CompletedColumn" msprop:Generator_UserColumnName="Completed" type="xs:int" minOccurs="0" />
+              <xs:element name="CompletedUser" msprop:Generator_ColumnVarNameInTable="columnCompletedUser" msprop:Generator_ColumnPropNameInRow="CompletedUser" msprop:Generator_ColumnPropNameInTable="CompletedUserColumn" msprop:Generator_UserColumnName="CompletedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompletedDate" msprop:Generator_ColumnVarNameInTable="columnCompletedDate" msprop:Generator_ColumnPropNameInRow="CompletedDate" msprop:Generator_ColumnPropNameInTable="CompletedDateColumn" msprop:Generator_UserColumnName="CompletedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PackingListCreated" msprop:Generator_ColumnVarNameInTable="columnPackingListCreated" msprop:Generator_ColumnPropNameInRow="PackingListCreated" msprop:Generator_ColumnPropNameInTable="PackingListCreatedColumn" msprop:Generator_UserColumnName="PackingListCreated" type="xs:int" minOccurs="0" />
+              <xs:element name="PackingListNo" msprop:Generator_ColumnVarNameInTable="columnPackingListNo" msprop:Generator_ColumnPropNameInRow="PackingListNo" msprop:Generator_ColumnPropNameInTable="PackingListNoColumn" msprop:Generator_UserColumnName="PackingListNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PackingListDate" msprop:Generator_ColumnVarNameInTable="columnPackingListDate" msprop:Generator_ColumnPropNameInRow="PackingListDate" msprop:Generator_ColumnPropNameInTable="PackingListDateColumn" msprop:Generator_UserColumnName="PackingListDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PackingListUser" msprop:Generator_ColumnVarNameInTable="columnPackingListUser" msprop:Generator_ColumnPropNameInRow="PackingListUser" msprop:Generator_ColumnPropNameInTable="PackingListUserColumn" msprop:Generator_UserColumnName="PackingListUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HandOverLorry" msprop:Generator_ColumnVarNameInTable="columnHandOverLorry" msprop:Generator_ColumnPropNameInRow="HandOverLorry" msprop:Generator_ColumnPropNameInTable="HandOverLorryColumn" msprop:Generator_UserColumnName="HandOverLorry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompleteRemark" msprop:Generator_ColumnVarNameInTable="columnCompleteRemark" msprop:Generator_ColumnPropNameInRow="CompleteRemark" msprop:Generator_ColumnPropNameInTable="CompleteRemarkColumn" msprop:Generator_UserColumnName="CompleteRemark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderDate" msprop:Generator_ColumnVarNameInTable="columnOrderDate" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_UserColumnName="OrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InvoiceDate" msprop:Generator_ColumnVarNameInTable="columnInvoiceDate" msprop:Generator_ColumnPropNameInRow="InvoiceDate" msprop:Generator_ColumnPropNameInTable="InvoiceDateColumn" msprop:Generator_UserColumnName="InvoiceDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dodate" msprop:Generator_ColumnVarNameInTable="columnDodate" msprop:Generator_ColumnPropNameInRow="Dodate" msprop:Generator_ColumnPropNameInTable="DodateColumn" msprop:Generator_UserColumnName="Dodate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PendingOrders" msprop:Generator_TableClassName="PendingOrdersDataTable" msprop:Generator_TableVarName="tablePendingOrders" msprop:Generator_TablePropName="PendingOrders" msprop:Generator_RowDeletingName="PendingOrdersRowDeleting" msprop:Generator_RowChangingName="PendingOrdersRowChanging" msprop:Generator_RowEvHandlerName="PendingOrdersRowChangeEventHandler" msprop:Generator_RowDeletedName="PendingOrdersRowDeleted" msprop:Generator_UserTableName="PendingOrders" msprop:Generator_RowChangedName="PendingOrdersRowChanged" msprop:Generator_RowEvArgName="PendingOrdersRowChangeEvent" msprop:Generator_RowClassName="PendingOrdersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OFNo" msprop:Generator_ColumnVarNameInTable="columnOFNo" msprop:Generator_ColumnPropNameInRow="OFNo" msprop:Generator_ColumnPropNameInTable="OFNoColumn" msprop:Generator_UserColumnName="OFNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TP" msprop:Generator_ColumnVarNameInTable="columnTP" msprop:Generator_ColumnPropNameInRow="TP" msprop:Generator_ColumnPropNameInTable="TPColumn" msprop:Generator_UserColumnName="TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_UserColumnName="Fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address1" msprop:Generator_ColumnVarNameInTable="columnAddress1" msprop:Generator_ColumnPropNameInRow="Address1" msprop:Generator_ColumnPropNameInTable="Address1Column" msprop:Generator_UserColumnName="Address1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address2" msprop:Generator_ColumnVarNameInTable="columnAddress2" msprop:Generator_ColumnPropNameInRow="Address2" msprop:Generator_ColumnPropNameInTable="Address2Column" msprop:Generator_UserColumnName="Address2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address3" msprop:Generator_ColumnVarNameInTable="columnAddress3" msprop:Generator_ColumnPropNameInRow="Address3" msprop:Generator_ColumnPropNameInTable="Address3Column" msprop:Generator_UserColumnName="Address3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OFApproved" msprop:Generator_ColumnVarNameInTable="columnOFApproved" msprop:Generator_ColumnPropNameInRow="OFApproved" msprop:Generator_ColumnPropNameInTable="OFApprovedColumn" msprop:Generator_UserColumnName="OFApproved" type="xs:int" minOccurs="0" />
+              <xs:element name="OFApprovedUser" msprop:Generator_ColumnVarNameInTable="columnOFApprovedUser" msprop:Generator_ColumnPropNameInRow="OFApprovedUser" msprop:Generator_ColumnPropNameInTable="OFApprovedUserColumn" msprop:Generator_UserColumnName="OFApprovedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OFApprovedDate" msprop:Generator_ColumnVarNameInTable="columnOFApprovedDate" msprop:Generator_ColumnPropNameInRow="OFApprovedDate" msprop:Generator_ColumnPropNameInTable="OFApprovedDateColumn" msprop:Generator_UserColumnName="OFApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OFNoOfPrints" msprop:Generator_ColumnVarNameInTable="columnOFNoOfPrints" msprop:Generator_ColumnPropNameInRow="OFNoOfPrints" msprop:Generator_ColumnPropNameInTable="OFNoOfPrintsColumn" msprop:Generator_UserColumnName="OFNoOfPrints" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OFPrintUser" msprop:Generator_ColumnVarNameInTable="columnOFPrintUser" msprop:Generator_ColumnPropNameInRow="OFPrintUser" msprop:Generator_ColumnPropNameInTable="OFPrintUserColumn" msprop:Generator_UserColumnName="OFPrintUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderDate" msprop:Generator_ColumnVarNameInTable="columnOrderDate" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_UserColumnName="OrderDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PendingInvoices" msprop:Generator_TableClassName="PendingInvoicesDataTable" msprop:Generator_TableVarName="tablePendingInvoices" msprop:Generator_TablePropName="PendingInvoices" msprop:Generator_RowDeletingName="PendingInvoicesRowDeleting" msprop:Generator_RowChangingName="PendingInvoicesRowChanging" msprop:Generator_RowEvHandlerName="PendingInvoicesRowChangeEventHandler" msprop:Generator_RowDeletedName="PendingInvoicesRowDeleted" msprop:Generator_UserTableName="PendingInvoices" msprop:Generator_RowChangedName="PendingInvoicesRowChanged" msprop:Generator_RowEvArgName="PendingInvoicesRowChangeEvent" msprop:Generator_RowClassName="PendingInvoicesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OFNo" msprop:Generator_ColumnVarNameInTable="columnOFNo" msprop:Generator_ColumnPropNameInRow="OFNo" msprop:Generator_ColumnPropNameInTable="OFNoColumn" msprop:Generator_UserColumnName="OFNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvCreated" msprop:Generator_ColumnVarNameInTable="columnInvCreated" msprop:Generator_ColumnPropNameInRow="InvCreated" msprop:Generator_ColumnPropNameInTable="InvCreatedColumn" msprop:Generator_UserColumnName="InvCreated" type="xs:int" minOccurs="0" />
+              <xs:element name="InvNo" msprop:Generator_ColumnVarNameInTable="columnInvNo" msprop:Generator_ColumnPropNameInRow="InvNo" msprop:Generator_ColumnPropNameInTable="InvNoColumn" msprop:Generator_UserColumnName="InvNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvAmount" msprop:Generator_ColumnVarNameInTable="columnInvAmount" msprop:Generator_ColumnPropNameInRow="InvAmount" msprop:Generator_ColumnPropNameInTable="InvAmountColumn" msprop:Generator_UserColumnName="InvAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvApproved" msprop:Generator_ColumnVarNameInTable="columnInvApproved" msprop:Generator_ColumnPropNameInRow="InvApproved" msprop:Generator_ColumnPropNameInTable="InvApprovedColumn" msprop:Generator_UserColumnName="InvApproved" type="xs:int" minOccurs="0" />
+              <xs:element name="InvApprovedUser" msprop:Generator_ColumnVarNameInTable="columnInvApprovedUser" msprop:Generator_ColumnPropNameInRow="InvApprovedUser" msprop:Generator_ColumnPropNameInTable="InvApprovedUserColumn" msprop:Generator_UserColumnName="InvApprovedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvApprovedDate" msprop:Generator_ColumnVarNameInTable="columnInvApprovedDate" msprop:Generator_ColumnPropNameInRow="InvApprovedDate" msprop:Generator_ColumnPropNameInTable="InvApprovedDateColumn" msprop:Generator_UserColumnName="InvApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InvNoOfPrints" msprop:Generator_ColumnVarNameInTable="columnInvNoOfPrints" msprop:Generator_ColumnPropNameInRow="InvNoOfPrints" msprop:Generator_ColumnPropNameInTable="InvNoOfPrintsColumn" msprop:Generator_UserColumnName="InvNoOfPrints" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InvPrintUser" msprop:Generator_ColumnVarNameInTable="columnInvPrintUser" msprop:Generator_ColumnPropNameInRow="InvPrintUser" msprop:Generator_ColumnPropNameInTable="InvPrintUserColumn" msprop:Generator_UserColumnName="InvPrintUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TP" msprop:Generator_ColumnVarNameInTable="columnTP" msprop:Generator_ColumnPropNameInRow="TP" msprop:Generator_ColumnPropNameInTable="TPColumn" msprop:Generator_UserColumnName="TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_UserColumnName="Fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address1" msprop:Generator_ColumnVarNameInTable="columnAddress1" msprop:Generator_ColumnPropNameInRow="Address1" msprop:Generator_ColumnPropNameInTable="Address1Column" msprop:Generator_UserColumnName="Address1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address2" msprop:Generator_ColumnVarNameInTable="columnAddress2" msprop:Generator_ColumnPropNameInRow="Address2" msprop:Generator_ColumnPropNameInTable="Address2Column" msprop:Generator_UserColumnName="Address2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address3" msprop:Generator_ColumnVarNameInTable="columnAddress3" msprop:Generator_ColumnPropNameInRow="Address3" msprop:Generator_ColumnPropNameInTable="Address3Column" msprop:Generator_UserColumnName="Address3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceDate" msprop:Generator_ColumnVarNameInTable="columnInvoiceDate" msprop:Generator_ColumnPropNameInRow="InvoiceDate" msprop:Generator_ColumnPropNameInTable="InvoiceDateColumn" msprop:Generator_UserColumnName="InvoiceDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PendingDos" msprop:Generator_TableClassName="PendingDosDataTable" msprop:Generator_TableVarName="tablePendingDos" msprop:Generator_TablePropName="PendingDos" msprop:Generator_RowDeletingName="PendingDosRowDeleting" msprop:Generator_RowChangingName="PendingDosRowChanging" msprop:Generator_RowEvHandlerName="PendingDosRowChangeEventHandler" msprop:Generator_RowDeletedName="PendingDosRowDeleted" msprop:Generator_UserTableName="PendingDos" msprop:Generator_RowChangedName="PendingDosRowChanged" msprop:Generator_RowEvArgName="PendingDosRowChangeEvent" msprop:Generator_RowClassName="PendingDosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OFNo" msprop:Generator_ColumnVarNameInTable="columnOFNo" msprop:Generator_ColumnPropNameInRow="OFNo" msprop:Generator_ColumnPropNameInTable="OFNoColumn" msprop:Generator_UserColumnName="OFNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOAmount" msprop:Generator_ColumnVarNameInTable="columnDOAmount" msprop:Generator_ColumnPropNameInRow="DOAmount" msprop:Generator_ColumnPropNameInTable="DOAmountColumn" msprop:Generator_UserColumnName="DOAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DOMultipleNO" msprop:Generator_ColumnVarNameInTable="columnDOMultipleNO" msprop:Generator_ColumnPropNameInRow="DOMultipleNO" msprop:Generator_ColumnPropNameInTable="DOMultipleNOColumn" msprop:Generator_UserColumnName="DOMultipleNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOProcessed" msprop:Generator_ColumnVarNameInTable="columnDOProcessed" msprop:Generator_ColumnPropNameInRow="DOProcessed" msprop:Generator_ColumnPropNameInTable="DOProcessedColumn" msprop:Generator_UserColumnName="DOProcessed" type="xs:int" minOccurs="0" />
+              <xs:element name="DOProcessedUser" msprop:Generator_ColumnVarNameInTable="columnDOProcessedUser" msprop:Generator_ColumnPropNameInRow="DOProcessedUser" msprop:Generator_ColumnPropNameInTable="DOProcessedUserColumn" msprop:Generator_UserColumnName="DOProcessedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DONo" msprop:Generator_ColumnVarNameInTable="columnDONo" msprop:Generator_ColumnPropNameInRow="DONo" msprop:Generator_ColumnPropNameInTable="DONoColumn" msprop:Generator_UserColumnName="DONo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOCreated" msprop:Generator_ColumnVarNameInTable="columnDOCreated" msprop:Generator_ColumnPropNameInRow="DOCreated" msprop:Generator_ColumnPropNameInTable="DOCreatedColumn" msprop:Generator_UserColumnName="DOCreated" type="xs:int" minOccurs="0" />
+              <xs:element name="DOProcessedDate" msprop:Generator_ColumnVarNameInTable="columnDOProcessedDate" msprop:Generator_ColumnPropNameInRow="DOProcessedDate" msprop:Generator_ColumnPropNameInTable="DOProcessedDateColumn" msprop:Generator_UserColumnName="DOProcessedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DOApproved" msprop:Generator_ColumnVarNameInTable="columnDOApproved" msprop:Generator_ColumnPropNameInRow="DOApproved" msprop:Generator_ColumnPropNameInTable="DOApprovedColumn" msprop:Generator_UserColumnName="DOApproved" type="xs:int" minOccurs="0" />
+              <xs:element name="DOApprovedUser" msprop:Generator_ColumnVarNameInTable="columnDOApprovedUser" msprop:Generator_ColumnPropNameInRow="DOApprovedUser" msprop:Generator_ColumnPropNameInTable="DOApprovedUserColumn" msprop:Generator_UserColumnName="DOApprovedUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOApprovedDate" msprop:Generator_ColumnVarNameInTable="columnDOApprovedDate" msprop:Generator_ColumnPropNameInRow="DOApprovedDate" msprop:Generator_ColumnPropNameInTable="DOApprovedDateColumn" msprop:Generator_UserColumnName="DOApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DONoOfPrints" msprop:Generator_ColumnVarNameInTable="columnDONoOfPrints" msprop:Generator_ColumnPropNameInRow="DONoOfPrints" msprop:Generator_ColumnPropNameInTable="DONoOfPrintsColumn" msprop:Generator_UserColumnName="DONoOfPrints" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DOvPrintUser" msprop:Generator_ColumnVarNameInTable="columnDOvPrintUser" msprop:Generator_ColumnPropNameInRow="DOvPrintUser" msprop:Generator_ColumnPropNameInTable="DOvPrintUserColumn" msprop:Generator_UserColumnName="DOvPrintUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TP" msprop:Generator_ColumnVarNameInTable="columnTP" msprop:Generator_ColumnPropNameInRow="TP" msprop:Generator_ColumnPropNameInTable="TPColumn" msprop:Generator_UserColumnName="TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_UserColumnName="Fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address1" msprop:Generator_ColumnVarNameInTable="columnAddress1" msprop:Generator_ColumnPropNameInRow="Address1" msprop:Generator_ColumnPropNameInTable="Address1Column" msprop:Generator_UserColumnName="Address1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address2" msprop:Generator_ColumnVarNameInTable="columnAddress2" msprop:Generator_ColumnPropNameInRow="Address2" msprop:Generator_ColumnPropNameInTable="Address2Column" msprop:Generator_UserColumnName="Address2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address3" msprop:Generator_ColumnVarNameInTable="columnAddress3" msprop:Generator_ColumnPropNameInRow="Address3" msprop:Generator_ColumnPropNameInTable="Address3Column" msprop:Generator_UserColumnName="Address3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dodate" msprop:Generator_ColumnVarNameInTable="columnDodate" msprop:Generator_ColumnPropNameInRow="Dodate" msprop:Generator_ColumnPropNameInTable="DodateColumn" msprop:Generator_UserColumnName="Dodate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TRACKING" msprop:Generator_TableClassName="TRACKINGDataTable" msprop:Generator_TableVarName="tableTRACKING" msprop:Generator_RowChangedName="TRACKINGRowChanged" msprop:Generator_TablePropName="TRACKING" msprop:Generator_RowDeletingName="TRACKINGRowDeleting" msprop:Generator_RowChangingName="TRACKINGRowChanging" msprop:Generator_RowEvHandlerName="TRACKINGRowChangeEventHandler" msprop:Generator_RowDeletedName="TRACKINGRowDeleted" msprop:Generator_RowClassName="TRACKINGRow" msprop:Generator_UserTableName="TRACKING" msprop:Generator_RowEvArgName="TRACKINGRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OFNo" msprop:Generator_ColumnVarNameInTable="columnOFNo" msprop:Generator_ColumnPropNameInRow="OFNo" msprop:Generator_ColumnPropNameInTable="OFNoColumn" msprop:Generator_UserColumnName="OFNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderDate" msprop:Generator_ColumnVarNameInTable="columnOrderDate" msprop:Generator_ColumnPropNameInRow="OrderDate" msprop:Generator_ColumnPropNameInTable="OrderDateColumn" msprop:Generator_UserColumnName="OrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InvoiceDate" msprop:Generator_ColumnVarNameInTable="columnInvoiceDate" msprop:Generator_ColumnPropNameInRow="InvoiceDate" msprop:Generator_ColumnPropNameInTable="InvoiceDateColumn" msprop:Generator_UserColumnName="InvoiceDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INVvari" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINVvari" msprop:Generator_ColumnPropNameInRow="INVvari" msprop:Generator_ColumnPropNameInTable="INVvariColumn" msprop:Generator_UserColumnName="INVvari" type="xs:int" minOccurs="0" />
+              <xs:element name="Dodate" msprop:Generator_ColumnVarNameInTable="columnDodate" msprop:Generator_ColumnPropNameInRow="Dodate" msprop:Generator_ColumnPropNameInTable="DodateColumn" msprop:Generator_UserColumnName="Dodate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DOvari" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDOvari" msprop:Generator_ColumnPropNameInRow="DOvari" msprop:Generator_ColumnPropNameInTable="DOvariColumn" msprop:Generator_UserColumnName="DOvari" type="xs:int" minOccurs="0" />
+              <xs:element name="AuditDate" msprop:Generator_ColumnVarNameInTable="columnAuditDate" msprop:Generator_ColumnPropNameInRow="AuditDate" msprop:Generator_ColumnPropNameInTable="AuditDateColumn" msprop:Generator_UserColumnName="AuditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AUDITvari" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAUDITvari" msprop:Generator_ColumnPropNameInRow="AUDITvari" msprop:Generator_ColumnPropNameInTable="AUDITvariColumn" msprop:Generator_UserColumnName="AUDITvari" type="xs:int" minOccurs="0" />
+              <xs:element name="DispatchedDate" msprop:Generator_ColumnVarNameInTable="columnDispatchedDate" msprop:Generator_ColumnPropNameInRow="DispatchedDate" msprop:Generator_ColumnPropNameInTable="DispatchedDateColumn" msprop:Generator_UserColumnName="DispatchedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Dispatchvari" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDispatchvari" msprop:Generator_ColumnPropNameInRow="Dispatchvari" msprop:Generator_ColumnPropNameInTable="DispatchvariColumn" msprop:Generator_UserColumnName="Dispatchvari" type="xs:int" minOccurs="0" />
+              <xs:element name="HandedoverDate" msprop:Generator_ColumnVarNameInTable="columnHandedoverDate" msprop:Generator_ColumnPropNameInRow="HandedoverDate" msprop:Generator_ColumnPropNameInTable="HandedoverDateColumn" msprop:Generator_UserColumnName="HandedoverDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HandoeverVari" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHandoeverVari" msprop:Generator_ColumnPropNameInRow="HandoeverVari" msprop:Generator_ColumnPropNameInTable="HandoeverVariColumn" msprop:Generator_UserColumnName="HandoeverVari" type="xs:int" minOccurs="0" />
+              <xs:element name="CompletedDate" msprop:Generator_ColumnVarNameInTable="columnCompletedDate" msprop:Generator_ColumnPropNameInRow="CompletedDate" msprop:Generator_ColumnPropNameInTable="CompletedDateColumn" msprop:Generator_UserColumnName="CompletedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CompleteVari" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCompleteVari" msprop:Generator_ColumnPropNameInRow="CompleteVari" msprop:Generator_ColumnPropNameInTable="CompleteVariColumn" msprop:Generator_UserColumnName="CompleteVari" type="xs:int" minOccurs="0" />
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TP" msprop:Generator_ColumnVarNameInTable="columnTP" msprop:Generator_ColumnPropNameInRow="TP" msprop:Generator_ColumnPropNameInTable="TPColumn" msprop:Generator_UserColumnName="TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_UserColumnName="Fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address1" msprop:Generator_ColumnVarNameInTable="columnAddress1" msprop:Generator_ColumnPropNameInRow="Address1" msprop:Generator_ColumnPropNameInTable="Address1Column" msprop:Generator_UserColumnName="Address1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address2" msprop:Generator_ColumnVarNameInTable="columnAddress2" msprop:Generator_ColumnPropNameInRow="Address2" msprop:Generator_ColumnPropNameInTable="Address2Column" msprop:Generator_UserColumnName="Address2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address3" msprop:Generator_ColumnVarNameInTable="columnAddress3" msprop:Generator_ColumnPropNameInRow="Address3" msprop:Generator_ColumnPropNameInTable="Address3Column" msprop:Generator_UserColumnName="Address3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cusliability" msprop:Generator_TableClassName="CusliabilityDataTable" msprop:Generator_TableVarName="tableCusliability" msprop:Generator_RowChangedName="CusliabilityRowChanged" msprop:Generator_TablePropName="Cusliability" msprop:Generator_RowDeletingName="CusliabilityRowDeleting" msprop:Generator_RowChangingName="CusliabilityRowChanging" msprop:Generator_RowEvHandlerName="CusliabilityRowChangeEventHandler" msprop:Generator_RowDeletedName="CusliabilityRowDeleted" msprop:Generator_RowClassName="CusliabilityRow" msprop:Generator_UserTableName="Cusliability" msprop:Generator_RowEvArgName="CusliabilityRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Salesman" msprop:Generator_ColumnVarNameInTable="columnSalesman" msprop:Generator_ColumnPropNameInRow="Salesman" msprop:Generator_ColumnPropNameInTable="SalesmanColumn" msprop:Generator_UserColumnName="Salesman">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userName" msprop:Generator_ColumnVarNameInTable="columnuserName" msprop:Generator_ColumnPropNameInRow="userName" msprop:Generator_ColumnPropNameInTable="userNameColumn" msprop:Generator_UserColumnName="userName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer" msprop:Generator_ColumnVarNameInTable="columnCustomer" msprop:Generator_ColumnPropNameInRow="Customer" msprop:Generator_ColumnPropNameInTable="CustomerColumn" msprop:Generator_UserColumnName="Customer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" msprop:Generator_UserColumnName="CustName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Outstanding" msprop:Generator_ColumnVarNameInTable="columnOutstanding" msprop:Generator_ColumnPropNameInRow="Outstanding" msprop:Generator_ColumnPropNameInTable="OutstandingColumn" msprop:Generator_UserColumnName="Outstanding" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pd" msprop:Generator_ColumnVarNameInTable="columnPd" msprop:Generator_ColumnPropNameInRow="Pd" msprop:Generator_ColumnPropNameInTable="PdColumn" msprop:Generator_UserColumnName="Pd" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rtn" msprop:Generator_ColumnVarNameInTable="columnRtn" msprop:Generator_ColumnPropNameInRow="Rtn" msprop:Generator_ColumnPropNameInTable="RtnColumn" msprop:Generator_UserColumnName="Rtn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Unreqalized" msprop:Generator_ColumnVarNameInTable="columnUnreqalized" msprop:Generator_ColumnPropNameInRow="Unreqalized" msprop:Generator_ColumnPropNameInTable="UnreqalizedColumn" msprop:Generator_UserColumnName="Unreqalized" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Datex" msprop:Generator_ColumnVarNameInTable="columnDatex" msprop:Generator_ColumnPropNameInRow="Datex" msprop:Generator_ColumnPropNameInTable="DatexColumn" msprop:Generator_UserColumnName="Datex" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Z_Salessum" msprop:Generator_TableClassName="Z_SalessumDataTable" msprop:Generator_TableVarName="tableZ_Salessum" msprop:Generator_TablePropName="Z_Salessum" msprop:Generator_RowDeletingName="Z_SalessumRowDeleting" msprop:Generator_RowChangingName="Z_SalessumRowChanging" msprop:Generator_RowEvHandlerName="Z_SalessumRowChangeEventHandler" msprop:Generator_RowDeletedName="Z_SalessumRowDeleted" msprop:Generator_UserTableName="Z_Salessum" msprop:Generator_RowChangedName="Z_SalessumRowChanged" msprop:Generator_RowEvArgName="Z_SalessumRowChangeEvent" msprop:Generator_RowClassName="Z_SalessumRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="netamt" msprop:Generator_ColumnVarNameInTable="columnnetamt" msprop:Generator_ColumnPropNameInRow="netamt" msprop:Generator_ColumnPropNameInTable="netamtColumn" msprop:Generator_UserColumnName="netamt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="paidamt" msprop:Generator_ColumnVarNameInTable="columnpaidamt" msprop:Generator_ColumnPropNameInRow="paidamt" msprop:Generator_ColumnPropNameInTable="paidamtColumn" msprop:Generator_UserColumnName="paidamt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="dueamt" msprop:Generator_ColumnVarNameInTable="columndueamt" msprop:Generator_ColumnPropNameInRow="dueamt" msprop:Generator_ColumnPropNameInTable="dueamtColumn" msprop:Generator_UserColumnName="dueamt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cash" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCash" msprop:Generator_ColumnPropNameInRow="Cash" msprop:Generator_ColumnPropNameInTable="CashColumn" msprop:Generator_UserColumnName="Cash" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cheque" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCheque" msprop:Generator_ColumnPropNameInRow="Cheque" msprop:Generator_ColumnPropNameInTable="ChequeColumn" msprop:Generator_UserColumnName="Cheque" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Other" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOther" msprop:Generator_ColumnPropNameInRow="Other" msprop:Generator_ColumnPropNameInTable="OtherColumn" msprop:Generator_UserColumnName="Other" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PENDING_APPROVALS" />
+      <xs:field xpath="mstns:OFNo" />
+    </xs:unique>
+    <xs:unique name="PendingOrders_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PendingOrders" />
+      <xs:field xpath="mstns:OFNo" />
+    </xs:unique>
+    <xs:unique name="PendingInvoices_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PendingInvoices" />
+      <xs:field xpath="mstns:OFNo" />
+    </xs:unique>
+    <xs:unique name="PendingDos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PendingDos" />
+      <xs:field xpath="mstns:OFNo" />
+    </xs:unique>
+    <xs:unique name="TRACKING_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TRACKING" />
+      <xs:field xpath="mstns:OFNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

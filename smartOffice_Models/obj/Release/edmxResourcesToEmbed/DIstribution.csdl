@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RIT_ATModel2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RIT_ATEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_packingdet" EntityType="RIT_ATModel2.T_packingdet" />
+    <EntitySet Name="T_packinghead" EntityType="RIT_ATModel2.T_packinghead" />
+    <EntitySet Name="T_CreditNoteHead" EntityType="RIT_ATModel2.T_CreditNoteHead" />
+    <EntitySet Name="T_OrderFormHead" EntityType="RIT_ATModel2.T_OrderFormHead" />
+    <EntitySet Name="T_SalesCustomerAlloc" EntityType="RIT_ATModel2.T_SalesCustomerAlloc" />
+    <EntitySet Name="T_SalesItemAlloc" EntityType="RIT_ATModel2.T_SalesItemAlloc" />
+    <EntitySet Name="T_CustomerItemAlloc" EntityType="RIT_ATModel2.T_CustomerItemAlloc" />
+    <EntitySet Name="T_DIliveryHed" EntityType="RIT_ATModel2.T_DIliveryHed" />
+    <EntitySet Name="T_DIliveryAudit" EntityType="RIT_ATModel2.T_DIliveryAudit" />
+    <EntitySet Name="T_DiliveryDet" EntityType="RIT_ATModel2.T_DiliveryDet" />
+    <EntitySet Name="T_OrderTracking" EntityType="RIT_ATModel2.T_OrderTracking" />
+    <EntitySet Name="T_CNGrouping" EntityType="RIT_ATModel2.T_CNGrouping" />
+    <EntitySet Name="T_CNBreak" EntityType="RIT_ATModel2.T_CNBreak" />
+    <EntitySet Name="T_SalesAllocDet" EntityType="RIT_ATModel2.T_SalesAllocDet" />
+    <EntitySet Name="T_SalesAllocHead" EntityType="RIT_ATModel2.T_SalesAllocHead" />
+  </EntityContainer>
+  <EntityType Name="T_packingdet">
+    <Key>
+      <PropertyRef Name="PackingNo" />
+      <PropertyRef Name="Dono" />
+    </Key>
+    <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Dono" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Agent" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="datex" Precision="3" />
+    <Property Type="Decimal" Name="TTLCartons" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="T_packinghead">
+    <Key>
+      <PropertyRef Name="PackingNo" />
+    </Key>
+    <Property Type="String" Name="PackingNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RefNumber" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+    <Property Type="Decimal" Name="NoOfCartons" Precision="18" Scale="2" />
+    <Property Type="String" Name="Vehicle" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Driver" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CreatedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreatedTime" Precision="3" />
+    <Property Type="Int32" Name="Processed" />
+    <Property Type="DateTime" Name="ProcessedDate" Precision="3" />
+    <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Glupdated" />
+  </EntityType>
+  <EntityType Name="T_CreditNoteHead">
+    <Key>
+      <PropertyRef Name="DocNo" />
+    </Key>
+    <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OFNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InvNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Dono" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CustomerID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TypeX" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AuditUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Statusx" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+    <Property Type="String" Name="ManualID" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DeliveredDate" Precision="3" />
+    <Property Type="String" Name="PackingList" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DeliveryStatus" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AgentStatus" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Processed" />
+    <Property Type="DateTime" Name="ProcessedDate" Precision="3" />
+    <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Grouped" />
+    <Property Type="DateTime" Name="GroupedDate" Precision="3" />
+    <Property Type="String" Name="GroupedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Approved" />
+    <Property Type="DateTime" Name="ApprovedDate" Precision="3" />
+    <Property Type="String" Name="ApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_OrderFormHead">
+    <Key>
+      <PropertyRef Name="DocNo" />
+    </Key>
+    <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Compcode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Locacode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TRNType" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SalesMan" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+    <Property Type="String" Name="RecivedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CheckedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Approved" Nullable="false" />
+    <Property Type="String" Name="ApprovedBy" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ApprovedDate" Precision="3" />
+    <Property Type="DateTime" Name="RecivedDate" Precision="3" />
+    <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="String" Name="CQNO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CQDate" Precision="3" />
+    <Property Type="String" Name="BANK" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BRANCH" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Subtotal" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="DiscountPer" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="SubtotalDisc" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="ItemdiscTotal" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="TotalDisc" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="NetTotal" Precision="18" Scale="2" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Processed" Nullable="false" />
+    <Property Type="DateTime" Name="ProcessedDate" Precision="3" />
+    <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="InvCreated" />
+    <Property Type="DateTime" Name="InvCreatedDate" Precision="3" />
+    <Property Type="String" Name="INVCreatedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_SalesCustomerAlloc">
+    <Key>
+      <PropertyRef Name="SalesMan" />
+      <PropertyRef Name="Customer" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Type="String" Name="SalesMan" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="AllocQTY" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="DateFrom" Precision="3" />
+    <Property Type="DateTime" Name="Dateto" Precision="3" />
+    <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SalesItemAlloc">
+    <Key>
+      <PropertyRef Name="Salesman" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Type="String" Name="Salesman" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="AllocQTY" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="DateFrom" Precision="3" />
+    <Property Type="DateTime" Name="Dateto" Precision="3" />
+    <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_CustomerItemAlloc">
+    <Key>
+      <PropertyRef Name="Customer" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Type="String" Name="Customer" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="AllocQTY" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="DateFrom" Precision="3" />
+    <Property Type="DateTime" Name="Dateto" Precision="3" />
+    <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_DIliveryHed">
+    <Key>
+      <PropertyRef Name="DoNo" />
+    </Key>
+    <Property Type="String" Name="DoNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LocaCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InvNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="InvoiceAmount" Precision="18" Scale="4" />
+    <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CustomerDIscRate" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+    <Property Type="String" Name="Agent" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Lorry" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="NoOfCartons" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Dispatched" />
+    <Property Type="DateTime" Name="DispatchedDate" Precision="3" />
+    <Property Type="String" Name="DispatchedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Checked" />
+    <Property Type="String" Name="CheckedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Checkeddate" Precision="3" />
+    <Property Type="Int32" Name="Approved" />
+    <Property Type="String" Name="ApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ApprovedDate" Precision="3" />
+    <Property Type="Int32" Name="Handovered" />
+    <Property Type="String" Name="HandoverdUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="HandoverDate" Precision="3" />
+    <Property Type="Decimal" Name="HandoverCartons" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Delivered" />
+    <Property Type="String" Name="DiliveredUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DiliveryDate" Precision="3" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="NoOfPrints" Precision="18" Scale="2" />
+    <Property Type="String" Name="PrintUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Processed" />
+    <Property Type="DateTime" Name="ProcessedDate" Precision="3" />
+    <Property Type="String" Name="ProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Audited" />
+    <Property Type="DateTime" Name="AuditDate" Precision="3" />
+    <Property Type="String" Name="AuditUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Completed" />
+    <Property Type="DateTime" Name="CompletedDate" Precision="3" />
+    <Property Type="Int32" Name="PackingListCreated" />
+    <Property Type="String" Name="PackingListNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PackingListDate" Precision="3" />
+    <Property Type="String" Name="PackingListUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ReportedProblems" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AuditRemarks" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_DIliveryAudit">
+    <Key>
+      <PropertyRef Name="Dono" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Type="String" Name="Dono" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DoQty" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ActualQTY" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Variance" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Pass" />
+  </EntityType>
+  <EntityType Name="T_DiliveryDet">
+    <Key>
+      <PropertyRef Name="DoNo" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Type="String" Name="DoNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Item" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ItemNamex" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Unit" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Qty" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Carton" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="ActualCartons" Precision="18" Scale="0" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Pass" />
+    <Property Type="Boolean" Name="IsCNitem" Nullable="false" />
+    <Property Type="String" Name="CNNumber" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_OrderTracking">
+    <Key>
+      <PropertyRef Name="OFNo" />
+    </Key>
+    <Property Type="String" Name="OFNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LocaCode" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Customer" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CustomerDIscRate" Precision="18" Scale="4" />
+    <Property Type="String" Name="SalesMan" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="OFApproved" />
+    <Property Type="String" Name="OFApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="OFApprovedDate" Precision="3" />
+    <Property Type="Decimal" Name="OFNoOfPrints" Precision="18" Scale="0" />
+    <Property Type="String" Name="OFPrintUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="InvCreated" />
+    <Property Type="String" Name="InvNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="InvAmount" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="InvApproved" />
+    <Property Type="String" Name="InvApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="InvApprovedDate" Precision="3" />
+    <Property Type="Decimal" Name="InvNoOfPrints" Precision="18" Scale="0" />
+    <Property Type="String" Name="InvPrintUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOCreated" />
+    <Property Type="String" Name="DONo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DOAmount" Precision="18" Scale="4" />
+    <Property Type="String" Name="DOMultipleNO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DOProcessed" />
+    <Property Type="String" Name="DOProcessedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DOProcessedDate" Precision="3" />
+    <Property Type="Int32" Name="DOApproved" />
+    <Property Type="String" Name="DOApprovedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DOApprovedDate" Precision="3" />
+    <Property Type="Decimal" Name="DONoOfPrints" Precision="18" Scale="0" />
+    <Property Type="String" Name="DOvPrintUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Audited" />
+    <Property Type="DateTime" Name="AuditDate" Precision="3" />
+    <Property Type="String" Name="AuditUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Dispatched" />
+    <Property Type="DateTime" Name="DispatchedDate" Precision="3" />
+    <Property Type="String" Name="DispatchedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Handedover" />
+    <Property Type="String" Name="HandedoverUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="HandedoverDate" Precision="3" />
+    <Property Type="Int32" Name="Completed" />
+    <Property Type="String" Name="CompletedUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CompletedDate" Precision="3" />
+    <Property Type="Int32" Name="PackingListCreated" />
+    <Property Type="String" Name="PackingListNo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PackingListDate" Precision="3" />
+    <Property Type="String" Name="PackingListUser" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HandOverLorry" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompleteRemark" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="OrderDate" Precision="3" />
+    <Property Type="DateTime" Name="InvoiceDate" Precision="3" />
+    <Property Type="DateTime" Name="Dodate" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_CNGrouping">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="ItemCode" />
+      <PropertyRef Name="CNType" />
+      <PropertyRef Name="CNReason" />
+    </Key>
+    <Property Type="String" Name="Docno" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CNType" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CNReason" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="InvoiceQty" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CNQTY" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="BreakdownQTY" Precision="18" Scale="2" />
+    <Property Type="String" Name="TagNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Selected" />
+    <Property Type="Decimal" Name="SelectedQTY" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="balanceQTY" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="Shipped" />
+    <Property Type="DateTime" Name="ShippedDate" Precision="3" />
+    <Property Type="String" Name="ShippedDO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CNnumber" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_CNBreak">
+    <Key>
+      <PropertyRef Name="DocNo" />
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Type="String" Name="DocNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Namex" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="InvQTY" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="QTY" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Datex" Precision="3" />
+    <Property Type="String" Name="Userx" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Grouped" />
+    <Property Type="Decimal" Name="BalanceQty" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="T_SalesAllocDet">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="SalesMan" />
+      <PropertyRef Name="Customer" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Docno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SalesMan" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Customer" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Item" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AllowedQTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AllocQTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DateFrom" Type="DateTime" Precision="3" />
+    <Property Name="Dateto" Type="DateTime" Precision="3" />
+    <Property Name="Userx" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Datex" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_SalesAllocHead">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="Salesman" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Docno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Salesman" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Item" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AllocQTY" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DateFrom" Type="DateTime" Precision="3" />
+    <Property Name="Dateto" Type="DateTime" Precision="3" />
+    <Property Name="Userx" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Datex" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

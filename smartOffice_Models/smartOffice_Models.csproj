@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A844812-3FFC-4B90-9085-E7BC2D2F8260}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>smartOffice_Models</RootNamespace>
+    <AssemblyName>smartOffice_Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\smartOffice_DL\Libraries\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bulk\m_cus_messages.cs" />
+    <Compile Include="Bulk\u_Employee.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DIstribution.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIstribution.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIstribution.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIstribution.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIstribution.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payment.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bulk\u_MenuTag.cs" />
+    <Compile Include="Bulk\u_SysSetup.cs" />
+    <Compile Include="Bulk\u_User.cs" />
+    <Compile Include="Bulk\u_UserRights.cs" />
+    <Compile Include="Bulk\u_UserRole.cs" />
+    <Compile Include="Bulk\u_UserRoleRights.cs" />
+    <Compile Include="transaction.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>transaction.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="T_CNBreak.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CNGrouping.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CNParts.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CreditNoteHead.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_CustomerItemAlloc.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DIliveryAudit.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DiliveryDet.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_DIliveryHed.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OrderFormHead.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_OrderTracking.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_packingdet.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_packinghead.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SalesAllocDet.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SalesAllocHead.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SalesCustomerAlloc.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SalesItemAlloc.cs">
+      <DependentUpon>DIstribution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="u_DBConnection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="transaction.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>transaction.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DIstribution.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DIstribution.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Payment.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Payment.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DIstribution.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DIstribution.Context.cs</LastGenOutput>
+      <DependentUpon>DIstribution.edmx</DependentUpon>
+    </None>
+    <None Include="DIstribution.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DIstribution.cs</LastGenOutput>
+      <DependentUpon>DIstribution.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\RIT_ATEntities.datasource" />
+    <None Include="Properties\DataSources\RIT_ATEntities1.datasource" />
+    <None Include="Properties\DataSources\RIT_ATEntities2.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

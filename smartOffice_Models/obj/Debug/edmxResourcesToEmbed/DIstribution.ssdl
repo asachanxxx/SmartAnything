@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RIT_ATModel2.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RIT_ATModel2StoreContainer">
+    <EntitySet Name="T_CNBreak" EntityType="RIT_ATModel2.Store.T_CNBreak" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_CNGrouping" EntityType="RIT_ATModel2.Store.T_CNGrouping" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_CNParts" EntityType="RIT_ATModel2.Store.T_CNParts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_CreditNoteHead" EntityType="RIT_ATModel2.Store.T_CreditNoteHead" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_CustomerItemAlloc" EntityType="RIT_ATModel2.Store.T_CustomerItemAlloc" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_DIliveryAudit" EntityType="RIT_ATModel2.Store.T_DIliveryAudit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_DiliveryDet" EntityType="RIT_ATModel2.Store.T_DiliveryDet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_DIliveryHed" EntityType="RIT_ATModel2.Store.T_DIliveryHed" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_OrderFormHead" EntityType="RIT_ATModel2.Store.T_OrderFormHead" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_OrderTracking" EntityType="RIT_ATModel2.Store.T_OrderTracking" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_packingdet" EntityType="RIT_ATModel2.Store.T_packingdet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_packinghead" EntityType="RIT_ATModel2.Store.T_packinghead" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_SalesAllocDet" EntityType="RIT_ATModel2.Store.T_SalesAllocDet" store:Type="Tables" store:Schema="dbo" store:Name="T_SalesAllocDet">
+      <DefiningQuery>SELECT 
+      [T_SalesAllocDet].[Docno] AS [Docno], 
+      [T_SalesAllocDet].[SalesMan] AS [SalesMan], 
+      [T_SalesAllocDet].[Customer] AS [Customer], 
+      [T_SalesAllocDet].[Item] AS [Item], 
+      [T_SalesAllocDet].[AllowedQTY] AS [AllowedQTY], 
+      [T_SalesAllocDet].[AllocQTY] AS [AllocQTY], 
+      [T_SalesAllocDet].[DateFrom] AS [DateFrom], 
+      [T_SalesAllocDet].[Dateto] AS [Dateto], 
+      [T_SalesAllocDet].[Userx] AS [Userx], 
+      [T_SalesAllocDet].[Datex] AS [Datex]
+      FROM [dbo].[T_SalesAllocDet] AS [T_SalesAllocDet]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="T_SalesAllocHead" EntityType="RIT_ATModel2.Store.T_SalesAllocHead" store:Type="Tables" store:Schema="dbo" store:Name="T_SalesAllocHead">
+      <DefiningQuery>SELECT 
+      [T_SalesAllocHead].[Docno] AS [Docno], 
+      [T_SalesAllocHead].[Salesman] AS [Salesman], 
+      [T_SalesAllocHead].[Item] AS [Item], 
+      [T_SalesAllocHead].[AllocQTY] AS [AllocQTY], 
+      [T_SalesAllocHead].[DateFrom] AS [DateFrom], 
+      [T_SalesAllocHead].[Dateto] AS [Dateto], 
+      [T_SalesAllocHead].[Userx] AS [Userx], 
+      [T_SalesAllocHead].[Datex] AS [Datex]
+      FROM [dbo].[T_SalesAllocHead] AS [T_SalesAllocHead]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="T_SalesCustomerAlloc" EntityType="RIT_ATModel2.Store.T_SalesCustomerAlloc" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_SalesItemAlloc" EntityType="RIT_ATModel2.Store.T_SalesItemAlloc" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="T_CNBreak">
+    <Key>
+      <PropertyRef Name="DocNo" />
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Name="DocNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Namex" Type="varchar" MaxLength="150" />
+    <Property Name="InvQTY" Type="numeric" Scale="2" />
+    <Property Name="QTY" Type="numeric" Scale="2" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Grouped" Type="bit" />
+    <Property Name="BalanceQty" Type="numeric" Scale="2" />
+  </EntityType>
+  <EntityType Name="T_CNGrouping">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="ItemCode" />
+      <PropertyRef Name="CNType" />
+      <PropertyRef Name="CNReason" />
+    </Key>
+    <Property Name="Docno" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+    <Property Name="CNType" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CNReason" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="InvoiceQty" Type="numeric" Scale="2" />
+    <Property Name="CNQTY" Type="numeric" Scale="2" />
+    <Property Name="BreakdownQTY" Type="numeric" Scale="2" />
+    <Property Name="TagNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Selected" Type="bit" />
+    <Property Name="SelectedQTY" Type="numeric" Scale="2" />
+    <Property Name="balanceQTY" Type="numeric" Scale="2" />
+    <Property Name="Shipped" Type="bit" />
+    <Property Name="ShippedDate" Type="datetime" />
+    <Property Name="ShippedDO" Type="varchar" MaxLength="20" />
+    <Property Name="CNnumber" Type="varchar" MaxLength="20" />
+    <Property Name="PartEntered" Type="bit" />
+  </EntityType>
+  <EntityType Name="T_CNParts">
+    <Key>
+      <PropertyRef Name="CNno" />
+      <PropertyRef Name="ItemCode" />
+      <PropertyRef Name="PartCode" />
+    </Key>
+    <Property Name="CNno" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TagNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PartCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="QTY" Type="numeric" Scale="2" />
+    <Property Name="Saved" Type="bit" />
+    <Property Name="Processed" Type="bit" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_CreditNoteHead">
+    <Key>
+      <PropertyRef Name="DocNo" />
+    </Key>
+    <Property Name="DocNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CompCode" Type="varchar" MaxLength="20" />
+    <Property Name="LocaCode" Type="varchar" MaxLength="20" />
+    <Property Name="OFNo" Type="varchar" MaxLength="20" />
+    <Property Name="InvNo" Type="varchar" MaxLength="20" />
+    <Property Name="Dono" Type="varchar" MaxLength="20" />
+    <Property Name="CustomerID" Type="varchar" MaxLength="20" />
+    <Property Name="TypeX" Type="varchar" MaxLength="20" />
+    <Property Name="AuditUser" Type="varchar" MaxLength="20" />
+    <Property Name="Statusx" Type="varchar" MaxLength="10" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="ManualID" Type="varchar" MaxLength="20" />
+    <Property Name="DeliveredDate" Type="datetime" />
+    <Property Name="PackingList" Type="varchar" MaxLength="20" />
+    <Property Name="DeliveryStatus" Type="varchar" MaxLength="10" />
+    <Property Name="AgentStatus" Type="varchar" MaxLength="10" />
+    <Property Name="Remarks" Type="varchar" MaxLength="150" />
+    <Property Name="Processed" Type="bit" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+    <Property Name="Grouped" Type="bit" />
+    <Property Name="GroupedDate" Type="datetime" />
+    <Property Name="GroupedUser" Type="varchar" MaxLength="20" />
+    <Property Name="Approved" Type="bit" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="ApprovedUser" Type="varchar" MaxLength="20" />
+    <Property Name="PartEnterComplete" Type="bit" />
+    <Property Name="PartEnterCompleteDate" Type="datetime" />
+    <Property Name="PartEnterCompleteUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_CustomerItemAlloc">
+    <Key>
+      <PropertyRef Name="Customer" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Customer" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="AllocQTY" Type="numeric" Scale="2" />
+    <Property Name="DateFrom" Type="datetime" />
+    <Property Name="Dateto" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_DIliveryAudit">
+    <Key>
+      <PropertyRef Name="Dono" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Dono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="DoQty" Type="decimal" Scale="2" />
+    <Property Name="ActualQTY" Type="decimal" Scale="2" />
+    <Property Name="Variance" Type="decimal" Scale="2" />
+    <Property Name="Pass" Type="int" />
+  </EntityType>
+  <EntityType Name="T_DiliveryDet">
+    <Key>
+      <PropertyRef Name="DoNo" />
+      <PropertyRef Name="Item" />
+      <PropertyRef Name="IsCNitem" />
+    </Key>
+    <Property Name="DoNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ItemNamex" Type="varchar" MaxLength="50" />
+    <Property Name="Unit" Type="varchar" MaxLength="10" />
+    <Property Name="Qty" Type="numeric" Scale="2" />
+    <Property Name="Carton" Type="numeric" />
+    <Property Name="ActualCartons" Type="numeric" />
+    <Property Name="Remarks" Type="varchar" MaxLength="150" />
+    <Property Name="Pass" Type="bit" />
+    <Property Name="IsCNitem" Type="bit" Nullable="false" />
+    <Property Name="CNNumber" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_DIliveryHed">
+    <Key>
+      <PropertyRef Name="DoNo" />
+    </Key>
+    <Property Name="DoNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CompCode" Type="varchar" MaxLength="20" />
+    <Property Name="LocaCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="InvNo" Type="varchar" MaxLength="20" />
+    <Property Name="InvoiceAmount" Type="numeric" Scale="4" />
+    <Property Name="Customer" Type="varchar" MaxLength="20" />
+    <Property Name="CustomerDIscRate" Type="numeric" Scale="4" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="Agent" Type="varchar" MaxLength="20" />
+    <Property Name="Lorry" Type="varchar" MaxLength="20" />
+    <Property Name="NoOfCartons" Type="numeric" Scale="2" />
+    <Property Name="Dispatched" Type="int" />
+    <Property Name="DispatchedDate" Type="datetime" />
+    <Property Name="DispatchedUser" Type="varchar" MaxLength="20" />
+    <Property Name="Checked" Type="int" />
+    <Property Name="CheckedUser" Type="varchar" MaxLength="20" />
+    <Property Name="Checkeddate" Type="datetime" />
+    <Property Name="Approved" Type="int" />
+    <Property Name="ApprovedUser" Type="varchar" MaxLength="20" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="Handovered" Type="int" />
+    <Property Name="HandoverdUser" Type="varchar" MaxLength="20" />
+    <Property Name="HandoverDate" Type="datetime" />
+    <Property Name="HandoverCartons" Type="numeric" Scale="2" />
+    <Property Name="Delivered" Type="int" />
+    <Property Name="DiliveredUser" Type="varchar" MaxLength="20" />
+    <Property Name="DiliveryDate" Type="datetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="150" />
+    <Property Name="NoOfPrints" Type="numeric" Scale="2" />
+    <Property Name="PrintUser" Type="varchar" MaxLength="20" />
+    <Property Name="Status" Type="varchar" MaxLength="10" />
+    <Property Name="Processed" Type="int" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+    <Property Name="Audited" Type="int" />
+    <Property Name="AuditDate" Type="datetime" />
+    <Property Name="AuditUser" Type="varchar" MaxLength="20" />
+    <Property Name="Completed" Type="int" />
+    <Property Name="CompletedDate" Type="datetime" />
+    <Property Name="PackingListCreated" Type="int" />
+    <Property Name="PackingListNo" Type="varchar" MaxLength="20" />
+    <Property Name="PackingListDate" Type="datetime" />
+    <Property Name="PackingListUser" Type="varchar" MaxLength="20" />
+    <Property Name="ReportedProblems" Type="varchar" MaxLength="250" />
+    <Property Name="AuditRemarks" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="T_OrderFormHead">
+    <Key>
+      <PropertyRef Name="DocNo" />
+    </Key>
+    <Property Name="DocNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Compcode" Type="varchar" MaxLength="20" />
+    <Property Name="Locacode" Type="varchar" MaxLength="20" />
+    <Property Name="TRNType" Type="varchar" MaxLength="10" />
+    <Property Name="SalesMan" Type="varchar" MaxLength="20" />
+    <Property Name="Customer" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="RecivedBy" Type="varchar" MaxLength="20" />
+    <Property Name="CheckedBy" Type="varchar" MaxLength="20" />
+    <Property Name="Approved" Type="int" Nullable="false" />
+    <Property Name="ApprovedBy" Type="varchar" MaxLength="20" />
+    <Property Name="ApprovedDate" Type="datetime" />
+    <Property Name="RecivedDate" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CQNO" Type="varchar" MaxLength="20" />
+    <Property Name="CQDate" Type="datetime" />
+    <Property Name="BANK" Type="varchar" MaxLength="20" />
+    <Property Name="BRANCH" Type="varchar" MaxLength="20" />
+    <Property Name="Subtotal" Type="numeric" Scale="2" />
+    <Property Name="DiscountPer" Type="numeric" Scale="2" />
+    <Property Name="SubtotalDisc" Type="numeric" Scale="4" />
+    <Property Name="ItemdiscTotal" Type="numeric" Scale="4" />
+    <Property Name="TotalDisc" Type="numeric" Scale="2" />
+    <Property Name="NetTotal" Type="numeric" Scale="2" />
+    <Property Name="Remarks" Type="varchar" MaxLength="250" />
+    <Property Name="Processed" Type="int" Nullable="false" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+    <Property Name="InvCreated" Type="int" />
+    <Property Name="InvCreatedDate" Type="datetime" />
+    <Property Name="INVCreatedUser" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_OrderTracking">
+    <Key>
+      <PropertyRef Name="OFNo" />
+    </Key>
+    <Property Name="OFNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CompCode" Type="varchar" MaxLength="20" />
+    <Property Name="LocaCode" Type="varchar" MaxLength="20" />
+    <Property Name="Customer" Type="varchar" MaxLength="20" />
+    <Property Name="CustomerDIscRate" Type="numeric" Scale="4" />
+    <Property Name="SalesMan" Type="varchar" MaxLength="20" />
+    <Property Name="OFApproved" Type="int" />
+    <Property Name="OFApprovedUser" Type="varchar" MaxLength="20" />
+    <Property Name="OFApprovedDate" Type="datetime" />
+    <Property Name="OFNoOfPrints" Type="numeric" />
+    <Property Name="OFPrintUser" Type="varchar" MaxLength="20" />
+    <Property Name="InvCreated" Type="int" />
+    <Property Name="InvNo" Type="varchar" MaxLength="20" />
+    <Property Name="InvAmount" Type="numeric" Scale="4" />
+    <Property Name="InvApproved" Type="int" />
+    <Property Name="InvApprovedUser" Type="varchar" MaxLength="20" />
+    <Property Name="InvApprovedDate" Type="datetime" />
+    <Property Name="InvNoOfPrints" Type="numeric" />
+    <Property Name="InvPrintUser" Type="varchar" MaxLength="20" />
+    <Property Name="DOCreated" Type="int" />
+    <Property Name="DONo" Type="varchar" MaxLength="20" />
+    <Property Name="DOAmount" Type="numeric" Scale="4" />
+    <Property Name="DOMultipleNO" Type="varchar" MaxLength="20" />
+    <Property Name="DOProcessed" Type="int" />
+    <Property Name="DOProcessedUser" Type="varchar" MaxLength="20" />
+    <Property Name="DOProcessedDate" Type="datetime" />
+    <Property Name="DOApproved" Type="int" />
+    <Property Name="DOApprovedUser" Type="varchar" MaxLength="20" />
+    <Property Name="DOApprovedDate" Type="datetime" />
+    <Property Name="DONoOfPrints" Type="numeric" />
+    <Property Name="DOvPrintUser" Type="varchar" MaxLength="20" />
+    <Property Name="Audited" Type="int" />
+    <Property Name="AuditDate" Type="datetime" />
+    <Property Name="AuditUser" Type="varchar" MaxLength="20" />
+    <Property Name="Dispatched" Type="int" />
+    <Property Name="DispatchedDate" Type="datetime" />
+    <Property Name="DispatchedUser" Type="varchar" MaxLength="20" />
+    <Property Name="Handedover" Type="int" />
+    <Property Name="HandedoverUser" Type="varchar" MaxLength="20" />
+    <Property Name="HandedoverDate" Type="datetime" />
+    <Property Name="Completed" Type="int" />
+    <Property Name="CompletedUser" Type="varchar" MaxLength="20" />
+    <Property Name="CompletedDate" Type="datetime" />
+    <Property Name="PackingListCreated" Type="int" />
+    <Property Name="PackingListNo" Type="varchar" MaxLength="20" />
+    <Property Name="PackingListDate" Type="datetime" />
+    <Property Name="PackingListUser" Type="varchar" MaxLength="20" />
+    <Property Name="Remarks" Type="varchar" MaxLength="250" />
+    <Property Name="HandOverLorry" Type="varchar" MaxLength="20" />
+    <Property Name="CompleteRemark" Type="varchar" MaxLength="250" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="InvoiceDate" Type="datetime" />
+    <Property Name="Dodate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_packingdet">
+    <Key>
+      <PropertyRef Name="PackingNo" />
+      <PropertyRef Name="Dono" />
+    </Key>
+    <Property Name="PackingNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Dono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Customer" Type="varchar" MaxLength="20" />
+    <Property Name="Agent" Type="varchar" MaxLength="20" />
+    <Property Name="datex" Type="datetime" />
+    <Property Name="TTLCartons" Type="numeric" Scale="2" />
+  </EntityType>
+  <EntityType Name="T_packinghead">
+    <Key>
+      <PropertyRef Name="PackingNo" />
+    </Key>
+    <Property Name="PackingNo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RefNumber" Type="varchar" MaxLength="20" />
+    <Property Name="CompCode" Type="varchar" MaxLength="20" />
+    <Property Name="LocaCode" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+    <Property Name="NoOfCartons" Type="numeric" Scale="2" />
+    <Property Name="Vehicle" Type="varchar" MaxLength="20" />
+    <Property Name="Driver" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="20" />
+    <Property Name="CreatedTime" Type="datetime" />
+    <Property Name="Processed" Type="int" />
+    <Property Name="ProcessedDate" Type="datetime" />
+    <Property Name="ProcessedUser" Type="varchar" MaxLength="20" />
+    <Property Name="Glupdated" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.T_SalesAllocDet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="T_SalesAllocDet">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="SalesMan" />
+      <PropertyRef Name="Customer" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Docno" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SalesMan" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Customer" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="AllowedQTY" Type="numeric" Scale="2" />
+    <Property Name="AllocQTY" Type="numeric" Scale="2" />
+    <Property Name="DateFrom" Type="datetime" />
+    <Property Name="Dateto" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RIT_AT.dbo.T_SalesAllocHead' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="T_SalesAllocHead">
+    <Key>
+      <PropertyRef Name="Docno" />
+      <PropertyRef Name="Salesman" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Docno" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Salesman" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="AllocQTY" Type="numeric" Scale="2" />
+    <Property Name="DateFrom" Type="datetime" />
+    <Property Name="Dateto" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SalesCustomerAlloc">
+    <Key>
+      <PropertyRef Name="SalesMan" />
+      <PropertyRef Name="Customer" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="SalesMan" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Customer" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="AllocQTY" Type="numeric" Scale="2" />
+    <Property Name="DateFrom" Type="datetime" />
+    <Property Name="Dateto" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SalesItemAlloc">
+    <Key>
+      <PropertyRef Name="Salesman" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="Salesman" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Item" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="AllocQTY" Type="numeric" Scale="2" />
+    <Property Name="DateFrom" Type="datetime" />
+    <Property Name="Dateto" Type="datetime" />
+    <Property Name="Userx" Type="varchar" MaxLength="20" />
+    <Property Name="Datex" Type="datetime" />
+  </EntityType>
+</Schema>

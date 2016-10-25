@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Stock" targetNamespace="http://tempuri.org/Stock.xsd" xmlns:mstns="http://tempuri.org/Stock.xsd" xmlns="http://tempuri.org/Stock.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RIT_ATConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RIT_ATConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartAnything.Properties.Settings.GlobalReference.Default.RIT_ATConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RIT_ATConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RIT_ATConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartAnything.Properties.Settings.GlobalReference.Default.RIT_ATConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StockTableAdapter" GeneratorDataComponentClassName="StockTableAdapter" Name="Stock" UserDataComponentName="StockTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_Stock.StockCode, dbo.T_Stock.ProductId, dbo.M_Products.Namex, dbo.T_Stock.Stock, dbo.T_Stock.ReservedStock, dbo.M_Products.UnitPrice, 
+                      dbo.M_Products.SellingPrice, dbo.M_Products.CostPrice
+FROM         dbo.T_Stock INNER JOIN
+                      dbo.M_Products ON dbo.T_Stock.Locacode = dbo.M_Products.Locacode AND dbo.T_Stock.ProductId = dbo.M_Products.IDX</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StockCode" DataSetColumn="StockCode" />
+              <Mapping SourceColumn="ProductId" DataSetColumn="ProductId" />
+              <Mapping SourceColumn="Namex" DataSetColumn="Namex" />
+              <Mapping SourceColumn="Stock" DataSetColumn="Stock" />
+              <Mapping SourceColumn="ReservedStock" DataSetColumn="ReservedStock" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="SellingPrice" DataSetColumn="SellingPrice" />
+              <Mapping SourceColumn="CostPrice" DataSetColumn="CostPrice" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StockEvoNewTableAdapter" GeneratorDataComponentClassName="StockEvoNewTableAdapter" Name="StockEvoNew" UserDataComponentName="StockEvoNewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_Stock.StockCode, dbo.M_Products.IDX, dbo.M_Products.Namex, dbo.T_Stock.Compcode, dbo.T_Stock.Locacode, dbo.M_Products.Category, 
+                      dbo.M_Category.Descr, dbo.T_Stock.Stock, dbo.T_Stock.AvgCost, dbo.M_Products.CostPrice, dbo.M_Products.SellingPrice
+FROM         dbo.T_Stock INNER JOIN
+                      dbo.M_Products ON dbo.T_Stock.ProductId = dbo.M_Products.IDX INNER JOIN
+                      dbo.M_Category ON dbo.M_Products.Category = dbo.M_Category.Codex
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StockCode" DataSetColumn="StockCode" />
+              <Mapping SourceColumn="IDX" DataSetColumn="IDX" />
+              <Mapping SourceColumn="Namex" DataSetColumn="Namex" />
+              <Mapping SourceColumn="Compcode" DataSetColumn="Compcode" />
+              <Mapping SourceColumn="Locacode" DataSetColumn="Locacode" />
+              <Mapping SourceColumn="Category" DataSetColumn="Category" />
+              <Mapping SourceColumn="Descr" DataSetColumn="Descr" />
+              <Mapping SourceColumn="Stock" DataSetColumn="Stock" />
+              <Mapping SourceColumn="AvgCost" DataSetColumn="AvgCost" />
+              <Mapping SourceColumn="CostPrice" DataSetColumn="CostPrice" />
+              <Mapping SourceColumn="SellingPrice" DataSetColumn="SellingPrice" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StockBalance_ProductTableAdapter" GeneratorDataComponentClassName="StockBalance_ProductTableAdapter" Name="StockBalance_Product" UserDataComponentName="StockBalance_ProductTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_Stock.ProductId, dbo.M_Products.Namex, dbo.M_Products.Category, dbo.M_Category.Descr, SUM(dbo.T_Stock.Stock) AS SIH FROM dbo.T_Stock INNER JOIN dbo.M_Products ON dbo.T_Stock.ProductId = dbo.M_Products.IDX INNER JOIN dbo.M_Category ON dbo.M_Products.Category = dbo.M_Category.Codex
+WHERE (LTRIM(RTRIM((dbo.T_Stock.Locacode )))BETWEEN '001' AND '003') AND (LTRIM(RTRIM(ProductId))BETWEEN 'DDDFSASD' AND 'PELM0001') 
+AND (LTRIM(RTRIM(Category))BETWEEN 'T001' AND '001') 
+GROUP BY dbo.T_Stock.ProductId, dbo.M_Products.Namex, dbo.M_Products.Category, dbo.M_Category.Descr
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProductId" DataSetColumn="ProductId" />
+              <Mapping SourceColumn="Namex" DataSetColumn="Namex" />
+              <Mapping SourceColumn="Category" DataSetColumn="Category" />
+              <Mapping SourceColumn="Descr" DataSetColumn="Descr" />
+              <Mapping SourceColumn="SIH" DataSetColumn="SIH" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StockBalance_StockTableAdapter" GeneratorDataComponentClassName="StockBalance_StockTableAdapter" Name="StockBalance_Stock" UserDataComponentName="StockBalance_StockTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.T_Stock.StockCode, dbo.M_Products.Namex, dbo.M_Products.Category, dbo.M_Category.Descr, dbo.T_Stock.Stock FROM dbo.T_Stock INNER JOIN dbo.M_Products ON dbo.T_Stock.ProductId = dbo.M_Products.IDX INNER JOIN dbo.M_Category ON dbo.M_Products.Category = dbo.M_Category.Codex</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StockCode" DataSetColumn="StockCode" />
+              <Mapping SourceColumn="Namex" DataSetColumn="Namex" />
+              <Mapping SourceColumn="Category" DataSetColumn="Category" />
+              <Mapping SourceColumn="Descr" DataSetColumn="Descr" />
+              <Mapping SourceColumn="Stock" DataSetColumn="Stock" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBLM_PRODUCTTableAdapter" GeneratorDataComponentClassName="TBLM_PRODUCTTableAdapter" Name="TBLM_PRODUCT" UserDataComponentName="TBLM_PRODUCTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RIT_ATConnectionString (Settings)" DbObjectName="RIT_AT.dbo.TBLM_PRODUCT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PRODUCT_CODE, PRODUCT_DESC, PRODUCT_OTHERNAME, PRODUCT_MRPPER, PRODUCT_WSPPER
+FROM            TBLM_PRODUCT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PRODUCT_CODE" DataSetColumn="PRODUCT_CODE" />
+              <Mapping SourceColumn="PRODUCT_DESC" DataSetColumn="PRODUCT_DESC" />
+              <Mapping SourceColumn="PRODUCT_OTHERNAME" DataSetColumn="PRODUCT_OTHERNAME" />
+              <Mapping SourceColumn="PRODUCT_MRPPER" DataSetColumn="PRODUCT_MRPPER" />
+              <Mapping SourceColumn="PRODUCT_WSPPER" DataSetColumn="PRODUCT_WSPPER" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Stock" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Stock" msprop:Generator_UserDSName="Stock">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Stock" msprop:Generator_TableClassName="StockDataTable" msprop:Generator_TableVarName="tableStock" msprop:Generator_RowChangedName="StockRowChanged" msprop:Generator_TablePropName="_Stock" msprop:Generator_RowDeletingName="StockRowDeleting" msprop:Generator_RowChangingName="StockRowChanging" msprop:Generator_RowEvHandlerName="StockRowChangeEventHandler" msprop:Generator_RowDeletedName="StockRowDeleted" msprop:Generator_RowClassName="StockRow" msprop:Generator_UserTableName="Stock" msprop:Generator_RowEvArgName="StockRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StockCode" msprop:Generator_ColumnVarNameInTable="columnStockCode" msprop:Generator_ColumnPropNameInRow="StockCode" msprop:Generator_ColumnPropNameInTable="StockCodeColumn" msprop:Generator_UserColumnName="StockCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductId" msprop:Generator_ColumnVarNameInTable="columnProductId" msprop:Generator_ColumnPropNameInRow="ProductId" msprop:Generator_ColumnPropNameInTable="ProductIdColumn" msprop:Generator_UserColumnName="ProductId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Namex" msprop:Generator_ColumnVarNameInTable="columnNamex" msprop:Generator_ColumnPropNameInRow="Namex" msprop:Generator_ColumnPropNameInTable="NamexColumn" msprop:Generator_UserColumnName="Namex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Stock" msprop:Generator_ColumnVarNameInTable="columnStock" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_UserColumnName="Stock" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ReservedStock" msprop:Generator_ColumnVarNameInTable="columnReservedStock" msprop:Generator_ColumnPropNameInRow="ReservedStock" msprop:Generator_ColumnPropNameInTable="ReservedStockColumn" msprop:Generator_UserColumnName="ReservedStock" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_UserColumnName="UnitPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SellingPrice" msprop:Generator_ColumnVarNameInTable="columnSellingPrice" msprop:Generator_ColumnPropNameInRow="SellingPrice" msprop:Generator_ColumnPropNameInTable="SellingPriceColumn" msprop:Generator_UserColumnName="SellingPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CostPrice" msprop:Generator_ColumnVarNameInTable="columnCostPrice" msprop:Generator_ColumnPropNameInRow="CostPrice" msprop:Generator_ColumnPropNameInTable="CostPriceColumn" msprop:Generator_UserColumnName="CostPrice" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StockEvoNew" msprop:Generator_TableClassName="StockEvoNewDataTable" msprop:Generator_TableVarName="tableStockEvoNew" msprop:Generator_RowChangedName="StockEvoNewRowChanged" msprop:Generator_TablePropName="StockEvoNew" msprop:Generator_RowDeletingName="StockEvoNewRowDeleting" msprop:Generator_RowChangingName="StockEvoNewRowChanging" msprop:Generator_RowEvHandlerName="StockEvoNewRowChangeEventHandler" msprop:Generator_RowDeletedName="StockEvoNewRowDeleted" msprop:Generator_RowClassName="StockEvoNewRow" msprop:Generator_UserTableName="StockEvoNew" msprop:Generator_RowEvArgName="StockEvoNewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StockCode" msprop:Generator_ColumnVarNameInTable="columnStockCode" msprop:Generator_ColumnPropNameInRow="StockCode" msprop:Generator_ColumnPropNameInTable="StockCodeColumn" msprop:Generator_UserColumnName="StockCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDX" msprop:Generator_ColumnVarNameInTable="columnIDX" msprop:Generator_ColumnPropNameInRow="IDX" msprop:Generator_ColumnPropNameInTable="IDXColumn" msprop:Generator_UserColumnName="IDX">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Namex" msprop:Generator_ColumnVarNameInTable="columnNamex" msprop:Generator_ColumnPropNameInRow="Namex" msprop:Generator_ColumnPropNameInTable="NamexColumn" msprop:Generator_UserColumnName="Namex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Compcode" msprop:Generator_ColumnVarNameInTable="columnCompcode" msprop:Generator_ColumnPropNameInRow="Compcode" msprop:Generator_ColumnPropNameInTable="CompcodeColumn" msprop:Generator_UserColumnName="Compcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Locacode" msprop:Generator_ColumnVarNameInTable="columnLocacode" msprop:Generator_ColumnPropNameInRow="Locacode" msprop:Generator_ColumnPropNameInTable="LocacodeColumn" msprop:Generator_UserColumnName="Locacode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descr" msprop:Generator_ColumnVarNameInTable="columnDescr" msprop:Generator_ColumnPropNameInRow="Descr" msprop:Generator_ColumnPropNameInTable="DescrColumn" msprop:Generator_UserColumnName="Descr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Stock" msprop:Generator_ColumnVarNameInTable="columnStock" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_UserColumnName="Stock" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AvgCost" msprop:Generator_ColumnVarNameInTable="columnAvgCost" msprop:Generator_ColumnPropNameInRow="AvgCost" msprop:Generator_ColumnPropNameInTable="AvgCostColumn" msprop:Generator_UserColumnName="AvgCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CostPrice" msprop:Generator_ColumnVarNameInTable="columnCostPrice" msprop:Generator_ColumnPropNameInRow="CostPrice" msprop:Generator_ColumnPropNameInTable="CostPriceColumn" msprop:Generator_UserColumnName="CostPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SellingPrice" msprop:Generator_ColumnVarNameInTable="columnSellingPrice" msprop:Generator_ColumnPropNameInRow="SellingPrice" msprop:Generator_ColumnPropNameInTable="SellingPriceColumn" msprop:Generator_UserColumnName="SellingPrice" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StockBalance_Product" msprop:Generator_TableClassName="StockBalance_ProductDataTable" msprop:Generator_TableVarName="tableStockBalance_Product" msprop:Generator_TablePropName="StockBalance_Product" msprop:Generator_RowDeletingName="StockBalance_ProductRowDeleting" msprop:Generator_RowChangingName="StockBalance_ProductRowChanging" msprop:Generator_RowEvHandlerName="StockBalance_ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="StockBalance_ProductRowDeleted" msprop:Generator_UserTableName="StockBalance_Product" msprop:Generator_RowChangedName="StockBalance_ProductRowChanged" msprop:Generator_RowEvArgName="StockBalance_ProductRowChangeEvent" msprop:Generator_RowClassName="StockBalance_ProductRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductId" msprop:Generator_ColumnVarNameInTable="columnProductId" msprop:Generator_ColumnPropNameInRow="ProductId" msprop:Generator_ColumnPropNameInTable="ProductIdColumn" msprop:Generator_UserColumnName="ProductId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Namex" msprop:Generator_ColumnVarNameInTable="columnNamex" msprop:Generator_ColumnPropNameInRow="Namex" msprop:Generator_ColumnPropNameInTable="NamexColumn" msprop:Generator_UserColumnName="Namex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descr" msprop:Generator_ColumnVarNameInTable="columnDescr" msprop:Generator_ColumnPropNameInRow="Descr" msprop:Generator_ColumnPropNameInTable="DescrColumn" msprop:Generator_UserColumnName="Descr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SIH" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSIH" msprop:Generator_ColumnPropNameInRow="SIH" msprop:Generator_ColumnPropNameInTable="SIHColumn" msprop:Generator_UserColumnName="SIH" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StockBalance_Stock" msprop:Generator_TableClassName="StockBalance_StockDataTable" msprop:Generator_TableVarName="tableStockBalance_Stock" msprop:Generator_RowChangedName="StockBalance_StockRowChanged" msprop:Generator_TablePropName="StockBalance_Stock" msprop:Generator_RowDeletingName="StockBalance_StockRowDeleting" msprop:Generator_RowChangingName="StockBalance_StockRowChanging" msprop:Generator_RowEvHandlerName="StockBalance_StockRowChangeEventHandler" msprop:Generator_RowDeletedName="StockBalance_StockRowDeleted" msprop:Generator_RowClassName="StockBalance_StockRow" msprop:Generator_UserTableName="StockBalance_Stock" msprop:Generator_RowEvArgName="StockBalance_StockRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StockCode" msprop:Generator_ColumnVarNameInTable="columnStockCode" msprop:Generator_ColumnPropNameInRow="StockCode" msprop:Generator_ColumnPropNameInTable="StockCodeColumn" msprop:Generator_UserColumnName="StockCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Namex" msprop:Generator_ColumnVarNameInTable="columnNamex" msprop:Generator_ColumnPropNameInRow="Namex" msprop:Generator_ColumnPropNameInTable="NamexColumn" msprop:Generator_UserColumnName="Namex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descr" msprop:Generator_ColumnVarNameInTable="columnDescr" msprop:Generator_ColumnPropNameInRow="Descr" msprop:Generator_ColumnPropNameInTable="DescrColumn" msprop:Generator_UserColumnName="Descr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Stock" msprop:Generator_ColumnVarNameInTable="columnStock" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_UserColumnName="Stock" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBLM_PRODUCT" msprop:Generator_TableClassName="TBLM_PRODUCTDataTable" msprop:Generator_TableVarName="tableTBLM_PRODUCT" msprop:Generator_RowChangedName="TBLM_PRODUCTRowChanged" msprop:Generator_TablePropName="TBLM_PRODUCT" msprop:Generator_RowDeletingName="TBLM_PRODUCTRowDeleting" msprop:Generator_RowChangingName="TBLM_PRODUCTRowChanging" msprop:Generator_RowEvHandlerName="TBLM_PRODUCTRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLM_PRODUCTRowDeleted" msprop:Generator_RowClassName="TBLM_PRODUCTRow" msprop:Generator_UserTableName="TBLM_PRODUCT" msprop:Generator_RowEvArgName="TBLM_PRODUCTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PRODUCT_CODE" msprop:Generator_ColumnVarNameInTable="columnPRODUCT_CODE" msprop:Generator_ColumnPropNameInRow="PRODUCT_CODE" msprop:Generator_ColumnPropNameInTable="PRODUCT_CODEColumn" msprop:Generator_UserColumnName="PRODUCT_CODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRODUCT_DESC" msprop:Generator_ColumnVarNameInTable="columnPRODUCT_DESC" msprop:Generator_ColumnPropNameInRow="PRODUCT_DESC" msprop:Generator_ColumnPropNameInTable="PRODUCT_DESCColumn" msprop:Generator_UserColumnName="PRODUCT_DESC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRODUCT_OTHERNAME" msprop:Generator_ColumnVarNameInTable="columnPRODUCT_OTHERNAME" msprop:Generator_ColumnPropNameInRow="PRODUCT_OTHERNAME" msprop:Generator_ColumnPropNameInTable="PRODUCT_OTHERNAMEColumn" msprop:Generator_UserColumnName="PRODUCT_OTHERNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRODUCT_MRPPER" msprop:Generator_ColumnVarNameInTable="columnPRODUCT_MRPPER" msprop:Generator_ColumnPropNameInRow="PRODUCT_MRPPER" msprop:Generator_ColumnPropNameInTable="PRODUCT_MRPPERColumn" msprop:Generator_UserColumnName="PRODUCT_MRPPER" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRODUCT_WSPPER" msprop:Generator_ColumnVarNameInTable="columnPRODUCT_WSPPER" msprop:Generator_ColumnPropNameInRow="PRODUCT_WSPPER" msprop:Generator_ColumnPropNameInTable="PRODUCT_WSPPERColumn" msprop:Generator_UserColumnName="PRODUCT_WSPPER" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
